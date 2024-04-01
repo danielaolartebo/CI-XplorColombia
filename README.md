@@ -102,7 +102,7 @@ destinos populares, y rendimiento operativo.*
 <p align="left">
   <a href="https://github.com/danielaolartebo" target="_blank"> <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/u/53228651?v=4&h=60&w=60&fit=cover&mask=circle"</a>
   <a href="https://github.com/Sebas-gifPaz777" target="_blank"> <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/u/84254040?v=4&h=60&w=60&fit=cover&mask=circle"</a>
-
+  <a href="https://github.com/Sebas3004tian" target="_blank"> <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/u/93749651?v=4&h=60&w=60&fit=cover&mask=circle"</a>
 
 ---
 
