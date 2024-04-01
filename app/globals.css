@@ -33,9 +33,10 @@ body {
 }
 
 .title_style{
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
   margin-top: -30%;
+  font-family: bold;
 }
 
 .description{
@@ -90,6 +91,97 @@ li{
   justify-content: center;
 }
 
+.btn_btn_login{
+  background-image: linear-gradient(#42A1EC, #0070C9);
+  border: 1px solid #0077CC;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  direction: ltr;
+  display: block;
+  font-family: "SF Pro Text","SF Pro Icons","AOS Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.47059;
+  min-width: 20px;
+  overflow: visible;
+  padding: 4px 15px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  margin-left: 5rem;
+  touch-action: manipulation;  
+}
+
+
+/* --------------- BANNER  --------------- */
+
+h1{
+  align-content: center;
+  color: black !important;
+}
+
+h2{
+  align-items: center;
+  color: black !important;
+}
+
+.banner {
+  width: 100%;
+	height: auto;
+}
+
+.banner-img {
+	position: static;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-container {
+  width: auto;
+  height: auto;
+}
+
+.vg-page {
+  position: relative;
+  display: block;
+  padding: 30px 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* --------------- GRID  --------------- */
+
+.package-grid {
+  padding-top: 8%;
+  width: auto;
+  height: auto;
+}
+
+.grid {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid with minimum column width of 250px */
+  gap: 30px; /* Add some gap between grid items */
+}
+
+.grid-container {
+  width: 100%; /* Adjusted to take full width of the grid */
+  height: 300px;
+  margin-bottom: 15px; /* Changed to margin-bottom for better spacing */
+  text-align: center;
+  line-height: 150px;
+}
+
+.grid-img {
+  height: 80%;
+  width: 100%;
+  border: 1px solid black;
+}
+
 .btn_btn{
   background-image: linear-gradient(#42A1EC, #0070C9);
   border: 1px solid #0077CC;
@@ -109,34 +201,54 @@ li{
   text-align: center;
   user-select: none;
   -webkit-user-select: none;
-  touch-action: manipulation;
-  
-  
-}
-/* --------------- BANNER  --------------- */
-
-h1{
-  align-content: center;
-  color: white !important;
+  touch-action: manipulation;  
 }
 
-h2{
+.button-container {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  color: white !important;
-}
-
-.banner {
-  width: 100%;
-	height: auto;
-}
-
-.banner-img {
-	position: static;
-  width: 100%;
-  height: 100%;
-}
-
-.banner-container {
-  width: auto;
   height: auto;
+  width: 100%;
+  padding: 1em;
+}
+
+.deals-subtitle{
+  font-size: 2rem;
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --------------- ABOUT US  --------------- */
+
+.aboutus-container {
+  width: 100%;
+  height: auto; /* Change height to auto for responsiveness */
+  padding: 50px 20px; /* Add padding for better spacing */
+  margin-top: 23%;
+}
+
+.text-aboutus {
+  margin-top: 1.5em;
+  text-align: center;
+  font-style: normal;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 20; /* Font weight should be a numerical value */
+  width: 85%;
+}
+
+.text-container {
+  width: 100%; /* Adjusted to take full width */
+  height: auto; /* Change height to auto for responsiveness */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Align text vertically */
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .text-container {
+    width: 90%; /* Adjust width for smaller screens */
+  }
 }
