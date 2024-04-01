@@ -19,8 +19,11 @@ export default function Home() {
             </div>
           </header>
       
-          <h1 className="title_style">Welcome to Fly Global!</h1>
-          <h2 className="description"> Let's start looking for your dream vacation </h2>
+          <div className="banner"> 
+              <img className="banner-img" src="../images/ima3.jpg" />
+               <h1 className="title_style">Welcome to Fly Global!</h1>
+              <h2 className="description">Let's find your dream vacation</h2>
+          </div>
     </main>
   );
 }
