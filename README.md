@@ -37,21 +37,21 @@ destinos populares, y rendimiento operativo.*
 
 ### *Requisitos Detallados🖥️*
 ### *Requisitos Funcionales*
-*1. Gestión de Usuarios y Roles: Creación, modificación, y eliminación de usuarios y roles, incluyendo la asignación de permisos específicos.*
-*2. Catalogación Dinámica de Destinos y Servicios: Herramientas para añadir y categorizar destinos y servicios asociados, como alojamientos y transporte.*
-*3. Interfaz Intuitiva para Reservas y Ventas: Interfaces diseñadas específicamente para facilitar el proceso de reservas y ventas por parte de los agentes.*
-*4. Módulos de Reporte: Capacidad para generar diversos tipos de reportes y análisis de datos para apoyar la toma de decisiones estratégicas.*
+    1. Gestión de Usuarios y Roles: Creación, modificación, y eliminación de usuarios y roles, incluyendo la asignación de permisos específicos.
+    2. Catalogación Dinámica de Destinos y Servicios: Herramientas para añadir y categorizar destinos y servicios asociados, como alojamientos y transporte.
+    3. Interfaz Intuitiva para Reservas y Ventas: Interfaces diseñadas específicamente para facilitar el proceso de reservas y ventas por parte de los agentes.
+    4. Módulos de Reporte: Capacidad para generar diversos tipos de reportes y análisis de datos para apoyar la toma de decisiones estratégicas.
 
 
 ### *Requisitos No Funcionales*
-*1. Seguridad y Protección de Datos: Implementación de estándares de seguridad para la protección de datos personales y transacciones financieras.*
-*2. Usabilidad: Diseño de interfaces que aseguren una experiencia de usuario óptima para todos los roles de usuario.*
-*3. Disponibilidad y Escalabilidad: Alta disponibilidad del sistema y capacidad para escalar en función del crecimiento de la agencia.*
-*4. Integrabilidad: Diseño que permita la fácil integración con otros sistemas y servicios externos en el futuro.*
+    1. Seguridad y Protección de Datos: Implementación de estándares de seguridad para la protección de datos personales y transacciones financieras.
+    2. Usabilidad: Diseño de interfaces que aseguren una experiencia de usuario óptima para todos los roles de usuario.
+    3. Disponibilidad y Escalabilidad: Alta disponibilidad del sistema y capacidad para escalar en función del crecimiento de la agencia.
+    4. Integrabilidad: Diseño que permita la fácil integración con otros sistemas y servicios externos en el futuro.
 
 ### *Requisitos Futuros*
-- *Expansión de Funcionalidades: Inclusión de nuevas características como la integración con plataformas de pago en línea y servicios de terceros.*
-- *Personalización del Cliente: Herramientas avanzadas para la personalización de servicios y ofertas basadas en el historial y preferencias del cliente.*
+    1. Expansión de Funcionalidades: Inclusión de nuevas características como la integración con plataformas de pago en línea y servicios de terceros.
+    2. Personalización del Cliente: Herramientas avanzadas para la personalización de servicios y ofertas basadas en el historial y preferencias del cliente.
 
 ### *Apéndices📂*
 ### *Glosario de Términos*
