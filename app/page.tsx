@@ -150,7 +150,7 @@ export default function Home() {
 
             {/* CONTACT US PAGE STARTS */}
             <div className="contactus-container">
-              <img className="contact-img" src="../images/desierto.jpeg" />
+              {/*  <img className="contact-img" src="../images/desierto.jpeg" />*/}
                 <div className="contact-container">
                 <div className="half-container ">
                   <div className="contactus-subtitle" id="contactus">
