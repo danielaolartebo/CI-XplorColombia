@@ -1,18 +1,20 @@
 import Image from "next/image";
+import React from 'react';
 
 export default function Home() {
   return (
     <main className="title_container">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
           {/* HEADER BEGINS */}
           <header className="main-header"> 
             <div className="container">
               <div className="nav-header">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#aboutus">About us</a></li>
-                <li><a href="#deals">Deals</a></li>
-                <li><a href="#mostpopular">Most Popular</a></li>
-                <li><a href="#contactus">Contact us</a></li>
+                <li><a href="#home" className="white-link">Home</a></li>
+                <li><a href="#aboutus" className="white-link">About us</a></li>
+                <li><a href="#deals" className="white-link">Deals</a></li>
+                <li><a href="#mostpopular" className="white-link">Most Popular</a></li>
+                <li><a href="#contactus" className="white-link">Contact us</a></li>
                 <button className="btn_btn_login"> Login/Register </button>
               </div>
             </div>
@@ -35,11 +37,9 @@ export default function Home() {
             </div>
             <div className="text-container">
                 <div className="text-aboutus">
-                    Nos dedicamos apasionadamente a mostrar la belleza y diversidad de nuestro amado país a través de emocionantes tours y experiencias inolvidables. Nos enorgullece ser tu puerta de entrada al fascinante mundo del turismo en Colombia.<br/><br/>
-                    Sumérgete en la magia de nuestra tierra mientras exploras destinos emblemáticos como Caño Cristales, el tesoro multicolor de la naturaleza que cautiva con sus aguas cristalinas y algas de colores vibrantes. Siente la adrenalina en el Parque del Café, donde la cultura del café cobra vida en un entorno de diversión y aprendizaje. Embárcate en una aventura única hacia las alturas del Nevado del Ruiz, donde serás testigo de la majestuosidad de los paisajes andinos y la vida silvestre que los habita. Admira el impresionante paisaje del Valle del Cocora, hogar de las icónicas palmas de cera, las más altas del mundo. Descubre la mágica Ciudad Perdida, una antigua maravilla arqueológica escondida en las selvas de la Sierra Nevada de Santa Marta. Explora las playas paradisíacas y la exuberante selva del Parque Tayrona, donde la naturaleza te recibe con brazos abiertos. Contempla la imponente Piedra del Peñol y maravíllate con las vistas panorámicas que ofrece desde su cima. Sumérgete en el desierto rojo y árido de la Tatacoa, un paisaje lunar que te dejará sin aliento con su belleza única.<br/><br/>
-                    
-                    En Xplor Colombia, nos comprometemos a proporcionarte experiencias auténticas, seguras y memorables que te permitirán descubrir la verdadera esencia de Colombia. Únete a nosotros y deja que tu aventura comience. ¡Explora Colombia con nosotros y crea recuerdos para toda la vida!
-                    Únete a nosotros en esta emocionante aventura y déjanos mostrarte el verdadero corazón de Colombia.¡Tu viaje de ensueño comienza aquí con Xplor Colombia!
+                    We are passionately dedicated to showcasing the beauty and diversity of our beloved country through exciting tours and unforgettable experiences. We are proud to be your gateway to the fascinating world of tourism in Colombia.<br/><br/>
+                    Immerse yourself in the magic of our land as you explore emblematic destinations such as Caño Cristales, nature's multicolored treasure that captivates with its crystalline waters and vibrantly colored algae. Feel the adrenaline at the Coffee Park, where coffee culture comes to life in an environment of fun and learning. Embark on a unique adventure to the heights of Nevado del Ruiz, where you will witness the majesty of the Andean landscapes and the wildlife that inhabits them. Admire the stunning landscape of the Cocora Valley, home to the iconic wax palms, the tallest in the world. Discover the magical Lost City, an ancient archaeological wonder hidden in the jungles of the Sierra Nevada de Santa Marta. Explore the paradisiacal beaches and lush jungle of Tayrona Park, where nature welcomes you with open arms. Contemplate the imposing Piedra del Peñol and marvel at the panoramic views it offers from its summit. Immerse yourself in the red and arid desert of Tatacoa, a lunar landscape that will leave you breathless with its unique beauty.<br/><br/>
+                    At Xplor Colombia, we are committed to providing you with authentic, safe and memorable experiences that will allow you to discover the true essence of Colombia. Join us and let your adventure begin. Explore Colombia with us and create memories to last a lifetime! Join us on this exciting adventure and let us show you the true heart of Colombia. Your dream trip starts here with Xplor Colombia!
                 </div>
             </div>
           </div>
@@ -119,6 +119,43 @@ export default function Home() {
             </div>
             {/* DEALS PAGE ENDS */}
 
+            {/* MOST POPULAR PAGE STARTS */}
+              <div className="mostpop-container">
+                <div className="deals-subtitle" id="mostpopular">
+                  Get to know our most popular trips
+                </div>
+                <div className="progressbar-container">
+                    <div className="w3-white">
+                        {/* 1 PROGRESS BAR */}
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '95%'} as React.CSSProperties}> Parque Tayrona </div>
+                        {/* 2 PROGRESS BAR */}
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '87%'} as React.CSSProperties}> Piedra el Peñol</div>
+                        {/* 3 PROGRESS BAR */}
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '80%'} as React.CSSProperties}> Valle del Cocora </div>
+                        {/* 4 PROGRESS BAR */}
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '70%'} as React.CSSProperties}> Parque del Café </div>
+                        {/* 5 PROGRESS BAR */}
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '65%'} as React.CSSProperties}> Desierto de la Tatacoa </div>
+                        {/* 6 PROGRESS BAR */}
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '50%'} as React.CSSProperties}> Nevado del ruiz </div>
+                        {/* 7 PROGRESS BAR */}
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '40%'} as React.CSSProperties}> Caño Cristales </div>
+                        {/* 8 PROGRESS BAR */}
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '25%'} as React.CSSProperties}> Ciudad Perdida </div>
+                    </div>
+                </div>
+              </div>
+            {/* MOST POPULAR PAGE ENDS */}
+
+
+            {/* CONTACT US PAGE STARTS */}
+            <div className="contactus-container">
+                <div className="deals-subtitle" id="contactus">
+                  Contact us
+                </div>
+                
+            </div>
+            {/* CONTACT US PAGE ENDS */}
 
     </main>
   );
