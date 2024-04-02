@@ -137,7 +137,7 @@ export default function Home() {
                         {/* 5 PROGRESS BAR */}
                         <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '65%'} as React.CSSProperties}> Desierto de la Tatacoa </div>
                         {/* 6 PROGRESS BAR */}
-                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '50%'} as React.CSSProperties}> Nevado del ruiz </div>
+                        <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '50%'} as React.CSSProperties}> Nevado del Ruiz </div>
                         {/* 7 PROGRESS BAR */}
                         <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '40%'} as React.CSSProperties}> Caño Cristales </div>
                         {/* 8 PROGRESS BAR */}
@@ -150,10 +150,22 @@ export default function Home() {
 
             {/* CONTACT US PAGE STARTS */}
             <div className="contactus-container">
-                <div className="deals-subtitle" id="contactus">
-                  Contact us
+              <img className="contact-img" src="../images/desierto.jpeg" />
+                <div className="contact-container">
+                <div className="half-container ">
+                  <div className="contactus-subtitle" id="contactus">
+                    Contact us
+                  </div>
+                <form action="https://formspree.io/f/mknlrooy" method="POST">
+                  <div className="form-row">
+                      <div className="col-12"><input className="form-control" placeholder="Name" type="text" name="name" required/> </div>
+                      <div className="col-12"><input className="form-control" placeholder="Email Address" type="email" name="email" required/></div>
+                      <div className="col-12"><textarea className="form-control" placeholder="Message" typeof="text" name="message" required></textarea></div>
+                      <div className="button-contact"><button type="submit" className="btn_btn-theme">Send Message</button></div>
+                  </div>
+                </form>
                 </div>
-                
+                </div>
             </div>
             {/* CONTACT US PAGE ENDS */}
 
