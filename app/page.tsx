@@ -1,11 +1,12 @@
-import Image from "next/image";
-import React from 'react';
+import Link from 'next/link'
+
 
 export default function Home() {
   return (
     <main className="title_container">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
           {/* HEADER BEGINS */}
           <header className="main-header"> 
             <div className="container">
@@ -56,9 +57,10 @@ export default function Home() {
               <div className="grid-container">
                     <img className="grid-img" src="../images/cano.jpeg" />
                     <div className="button-container">
-                      <button className="btn_btn"> Caño Cristales </button>
+                      <Link href='/cano'>
+                        <button className="btn_btn" > Caño Cristales </button>
+                      </Link>
                     </div>
-                      
               </div> 
               {/* 2 box */}
               <div className="grid-container">
@@ -88,7 +90,9 @@ export default function Home() {
               <div className="grid-container">
                     <img className="grid-img" src="../images/cafe.webp" />
                     <div className="button-container">
+                    <Link href='/cafe'>
                       <button className="btn_btn"> Parque del Café </button>
+                    </Link>
                     </div>
                       
               </div> 
@@ -150,7 +154,7 @@ export default function Home() {
 
             {/* CONTACT US PAGE STARTS */}
             <div className="contactus-container">
-              {/*  <img className="contact-img" src="../images/desierto.jpeg" />*/}
+                <img className="contact-img" src="../images/desierto.jpeg"></img>
                 <div className="contact-container">
                 <div className="half-container ">
                   <div className="contactus-subtitle" id="contactus">
