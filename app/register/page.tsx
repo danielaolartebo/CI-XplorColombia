@@ -35,7 +35,8 @@ export default function Register() {
                                 <div className="col2-register"><input className="form-control-register" type="text" name="last_name" required/></div>
                                 <div className="col2-register"><input className="form-control-register" type="email" name="email" required/></div>
                                 <div className="col2-register"><input className="form-control-register" type="phone" name="phone" required/></div>
-                                <div className="login-button-contact"><button type="submit" className="login-btn-theme">Sign up</button></div>
+                                <div className="register-button-contact"><button type="submit" className="register-btn-theme">Sign up</button></div>
+                                <h6>Have an account already? <a href="/login" style={{color: 'lightblue'}}> Sign in! </a></h6>
                             </div>
                     </div>
                 </div>
