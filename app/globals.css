@@ -652,7 +652,7 @@ h1, h2 {
   font-size: 1em;
 }
 
-/* LOGIN-REGISTER PAGE */
+/* LOGIN PAGE */
 
 .login-first-container {
   position: relative;
@@ -688,6 +688,7 @@ h1, h2 {
   height: unset; /* Restablece la altura */
   padding-top: 10px;
   border-radius: 6px;
+  padding-left: 1em;
 }
 
 .login-btn-theme{
@@ -711,11 +712,64 @@ h1, h2 {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 70%;
+    width: 100%;
+    
 }
 
 .login-banner-img {
 	position: static;
   width: 100%;
   min-height: 100%;
+}
+
+/* REGISTER PAGE */
+
+.register-left-half-container{
+  flex: 1;
+  align-content: right;
+  text-align: right;
+}
+
+.register-right-half-container{
+  flex: 2.5;
+  width: 70%;
+  padding-right: 3em;
+  padding-bottom: 2em;
+}
+
+.register-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; /* ajusta el ancho según sea necesario */
+  max-width: 35%; /* máximo ancho para asegurar que se vea bien en pantallas grandes */
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.707);
+  color: white;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.flex-container{
+  display: flex;
+}
+
+.register-title{
+  width: 100%;
+}
+
+.form-control-register{
+  width: 100%;
+  display: flex;
+}
+
+.col-register{
+  padding-top: 0.8em;
+  justify-content: right;
+}
+
+.col2-register{
+  padding-top: 0.8em;
+  padding-left: 1em;
 }

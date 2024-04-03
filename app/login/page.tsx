@@ -27,7 +27,7 @@ export default function Cocora() {
                         <div className="col-login"><input className="form-control" placeholder=" Username" type="text" name="username" required/> </div>
                         <div className="col-login"><input className="form-control" placeholder=" Password" type="text" name="password" required/></div>
                         <div className="login-button-contact"><button type="submit" className="login-btn-theme">Login</button></div>
-                        <h6>Not registered yet? <a href="/" style={{color: 'lightblue'}}> Create an account! </a></h6>
+                        <h6>Not registered yet? <a href="/register" style={{color: 'lightblue'}}> Create an account! </a></h6>
                   </div>
                 </div>
             </div>
