@@ -1,7 +1,6 @@
-export default function ParqueCafe() {
+export default function Ruiz() {
     return (
-
-        <main className="title_container">
+      <main className="title_container">
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
@@ -31,16 +30,16 @@ export default function ParqueCafe() {
                             <div className="col-sm-7 py-5 pl-md-0 pl-4">
                                 <div className="heading-section pl-lg-5 ml-md-5">
                                     <h2>
-                                        Parque del Café
+                                        Nevado del Ruiz
                                     </h2>
                                 </div>
                                 <div className="pl-lg-5 ml-md-5">
-                                    <p>Parque del Café is a theme park located in the Coffee Axis of Colombia, specifically in the municipality of Montenegro, Quindío department. It is one of the most popular tourist destinations in the region, attracting visitors from all over the country and abroad. Dedicated to celebrating and promoting Colombian coffee culture, the park offers an educational, recreational, and cultural experience for the whole family. Visitors can learn about the complete coffee production process through an interactive tour, enjoy thrilling mechanical rides, and witness live shows highlighting the music, dance, and cultural traditions of the coffee-growing region. Additionally, the park features a zoo with a variety of native and exotic animal species, as well as natural areas for walking and enjoying the scenic beauty of the Coffee Axis. In summary, Parque del Café is an iconic tourist destination in Colombia, blending fun, education, and culture around coffee and the rich coffee heritage of the region.</p>
+                                    <p>The Nevado del Ruiz, towering as the highest volcano in the Colombian Andes, is a majestic natural wonder that commands attention with its snow-capped peak and rugged beauty. Located within Los Nevados National Natural Park in the Cordillera Central range, this stratovolcano is renowned for its imposing presence and geological significance. Despite its breathtaking vistas and picturesque glaciers, the Nevado del Ruiz holds a tumultuous history, as it remains an active volcano with occasional eruptions. The most devastating eruption in recent history occurred in 1985, resulting in significant loss of life and extensive damage to surrounding areas. Today, visitors can explore the park's diverse ecosystems, which range from paramo grasslands to cloud forests, and witness the awe-inspiring spectacle of the Nevado del Ruiz from various vantage points. While its volatile nature demands caution, the Nevado del Ruiz continues to captivate adventurers and nature enthusiasts alike, offering a glimpse into the powerful forces that shape our planet.</p>
                                     <div className="row">
                                         <div className="trips-container">
                                           <div className="half-trips-container">
                                               <a href="#" className="thumb-menu">
-                                                  <img className="img-fluid img-cover" src="../images/cafe1.png" />
+                                                  <img className="img-fluid img-cover" src="../images/ruiz1.webp" />
                                               </a>
                                           </div>
                                           <div className="half-trips-container">
@@ -65,10 +64,10 @@ export default function ParqueCafe() {
                                             </div>
                                             <div className="cont-subtitle">
                                                 <div className="half-descrip-container left-side">
-                                                    <i className="fa fa-coffee" style={{ fontSize: '36px'}}></i>
+                                                    <i className="fa fa-gift" style={{ fontSize: '36px'}}></i>
                                                 </div>
                                                 <div className="half-descrip-container right-side">
-                                                    <p> Breaskfast </p>
+                                                    <p> Souvenir </p>
                                                 </div>
                                             </div>
                                             <div className="cont-subtitle">
@@ -98,8 +97,8 @@ export default function ParqueCafe() {
                         <div className="sub-title-price" style={{textAlign:'center'}}>Let's start a new adventure!</div>
                           <div className="columns">
                             <ul className="price">
-                              <li className="header">Parque del Café</li>
-                              <li className="grey">$ 350.000 COP </li>
+                              <li className="header">Nevado del Ruiz</li>
+                              <li className="grey">$ 700.000 COP </li>
                               <li>Any weekend of the year</li>
                               <li>Same price all year long</li>
                               <li>Saturday to Sunday accomodation</li>

@@ -1,7 +1,6 @@
-export default function ParqueCafe() {
+export default function Perdida() {
     return (
-
-        <main className="title_container">
+      <main className="title_container">
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
@@ -31,16 +30,16 @@ export default function ParqueCafe() {
                             <div className="col-sm-7 py-5 pl-md-0 pl-4">
                                 <div className="heading-section pl-lg-5 ml-md-5">
                                     <h2>
-                                        Parque del Café
+                                        Ciudad Perdida
                                     </h2>
                                 </div>
                                 <div className="pl-lg-5 ml-md-5">
-                                    <p>Parque del Café is a theme park located in the Coffee Axis of Colombia, specifically in the municipality of Montenegro, Quindío department. It is one of the most popular tourist destinations in the region, attracting visitors from all over the country and abroad. Dedicated to celebrating and promoting Colombian coffee culture, the park offers an educational, recreational, and cultural experience for the whole family. Visitors can learn about the complete coffee production process through an interactive tour, enjoy thrilling mechanical rides, and witness live shows highlighting the music, dance, and cultural traditions of the coffee-growing region. Additionally, the park features a zoo with a variety of native and exotic animal species, as well as natural areas for walking and enjoying the scenic beauty of the Coffee Axis. In summary, Parque del Café is an iconic tourist destination in Colombia, blending fun, education, and culture around coffee and the rich coffee heritage of the region.</p>
+                                    <p>The Ciudad Perdida, also known as the Lost City, is an ancient archaeological site nestled deep within the lush jungles of the Sierra Nevada de Santa Marta mountain range in Colombia. Believed to have been founded around 800 CE, the Ciudad Perdida predates Machu Picchu by several centuries, making it one of the most significant pre-Columbian archaeological sites in South America. Accessible only by a multi-day trek through rugged terrain and dense tropical rainforest, reaching the Lost City is an adventure in itself. The site consists of terraces, plazas, and stone structures built by the indigenous Tayrona civilization, offering glimpses into their advanced engineering and architectural skills. Surrounded by breathtaking natural scenery and cascading waterfalls, the Lost City provides a glimpse into Colombia's rich cultural heritage and serves as a reminder of the region's ancient past. Today, guided tours offer visitors the opportunity to explore this remarkable archaeological treasure and immerse themselves in the history and mystery of the Ciudad Perdida.</p>
                                     <div className="row">
                                         <div className="trips-container">
                                           <div className="half-trips-container">
                                               <a href="#" className="thumb-menu">
-                                                  <img className="img-fluid img-cover" src="../images/cafe1.png" />
+                                                  <img className="img-fluid img-cover" src="../images/perdida1.jpeg" />
                                               </a>
                                           </div>
                                           <div className="half-trips-container">
@@ -65,10 +64,10 @@ export default function ParqueCafe() {
                                             </div>
                                             <div className="cont-subtitle">
                                                 <div className="half-descrip-container left-side">
-                                                    <i className="fa fa-coffee" style={{ fontSize: '36px'}}></i>
+                                                    <i className="fa fa-cutlery" style={{ fontSize: '36px'}}></i>
                                                 </div>
                                                 <div className="half-descrip-container right-side">
-                                                    <p> Breaskfast </p>
+                                                    <p> Lunch </p>
                                                 </div>
                                             </div>
                                             <div className="cont-subtitle">
@@ -77,6 +76,14 @@ export default function ParqueCafe() {
                                                 </div>
                                                 <div className="half-descrip-container right-side">
                                                     <p> Health Insurance </p>
+                                                </div>
+                                            </div>
+                                            <div className="cont-subtitle">
+                                                <div className="half-descrip-container left-side">
+                                                    <i className="fa fa-camera" style={{ fontSize: '36px'}}></i>
+                                                </div>
+                                                <div className="half-descrip-container right-side">
+                                                    <p> Photo session </p>
                                                 </div>
                                             </div>
                                           </div>
@@ -98,8 +105,8 @@ export default function ParqueCafe() {
                         <div className="sub-title-price" style={{textAlign:'center'}}>Let's start a new adventure!</div>
                           <div className="columns">
                             <ul className="price">
-                              <li className="header">Parque del Café</li>
-                              <li className="grey">$ 350.000 COP </li>
+                              <li className="header">Ciudad Perdida</li>
+                              <li className="grey">$ 400.000 COP </li>
                               <li>Any weekend of the year</li>
                               <li>Same price all year long</li>
                               <li>Saturday to Sunday accomodation</li>

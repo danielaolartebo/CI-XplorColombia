@@ -1,7 +1,6 @@
-export default function ParqueCafe() {
+export default function Tatacoa() {
     return (
-
-        <main className="title_container">
+      <main className="title_container">
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
@@ -31,16 +30,16 @@ export default function ParqueCafe() {
                             <div className="col-sm-7 py-5 pl-md-0 pl-4">
                                 <div className="heading-section pl-lg-5 ml-md-5">
                                     <h2>
-                                        Parque del Café
+                                        Desierto de la Tatacoa
                                     </h2>
                                 </div>
                                 <div className="pl-lg-5 ml-md-5">
-                                    <p>Parque del Café is a theme park located in the Coffee Axis of Colombia, specifically in the municipality of Montenegro, Quindío department. It is one of the most popular tourist destinations in the region, attracting visitors from all over the country and abroad. Dedicated to celebrating and promoting Colombian coffee culture, the park offers an educational, recreational, and cultural experience for the whole family. Visitors can learn about the complete coffee production process through an interactive tour, enjoy thrilling mechanical rides, and witness live shows highlighting the music, dance, and cultural traditions of the coffee-growing region. Additionally, the park features a zoo with a variety of native and exotic animal species, as well as natural areas for walking and enjoying the scenic beauty of the Coffee Axis. In summary, Parque del Café is an iconic tourist destination in Colombia, blending fun, education, and culture around coffee and the rich coffee heritage of the region.</p>
+                                    <p>The Tatacoa Desert, located in the Huila Department of Colombia, is a mesmerizing landscape characterized by its otherworldly terrain and stark beauty. Despite its name, the Tatacoa Desert is not a true desert but rather a dry tropical forest, known locally as a "desierto" due to its arid conditions. Spanning over 300 square kilometers, this unique ecosystem comprises labyrinthine canyons, towering rock formations, and sandy plains, creating an atmosphere reminiscent of a lunar landscape. The desert's soil, rich in minerals, displays an array of vibrant colors, ranging from deep reds and oranges to shades of gray and purple, especially during sunset, offering photographers and nature enthusiasts a captivating spectacle. Despite its harsh environment, the Tatacoa Desert teems with life, including a diverse array of flora and fauna adapted to survive in this challenging habitat. Visitors can explore the desert on foot or by horseback, marveling at its rugged beauty and immersing themselves in the tranquility of this remote wilderness. As one of Colombia's hidden gems, the Tatacoa Desert offers a unique and unforgettable experience for adventurers seeking to discover the country's natural wonders.</p>
                                     <div className="row">
                                         <div className="trips-container">
                                           <div className="half-trips-container">
                                               <a href="#" className="thumb-menu">
-                                                  <img className="img-fluid img-cover" src="../images/cafe1.png" />
+                                                  <img className="img-fluid img-cover" src="../images/tatacoa1.jpeg" />
                                               </a>
                                           </div>
                                           <div className="half-trips-container">
@@ -79,6 +78,14 @@ export default function ParqueCafe() {
                                                     <p> Health Insurance </p>
                                                 </div>
                                             </div>
+                                            <div className="cont-subtitle">
+                                                <div className="half-descrip-container left-side">
+                                                    <i className="fa fa-camera" style={{ fontSize: '36px'}}></i>
+                                                </div>
+                                                <div className="half-descrip-container right-side">
+                                                    <p> Photo session </p>
+                                                </div>
+                                            </div>
                                           </div>
                                         </div>                          
                                     </div>
@@ -98,8 +105,8 @@ export default function ParqueCafe() {
                         <div className="sub-title-price" style={{textAlign:'center'}}>Let's start a new adventure!</div>
                           <div className="columns">
                             <ul className="price">
-                              <li className="header">Parque del Café</li>
-                              <li className="grey">$ 350.000 COP </li>
+                              <li className="header">Desierto de la Tatacoa</li>
+                              <li className="grey">$ 750.000 COP </li>
                               <li>Any weekend of the year</li>
                               <li>Same price all year long</li>
                               <li>Saturday to Sunday accomodation</li>

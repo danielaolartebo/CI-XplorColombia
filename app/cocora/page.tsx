@@ -1,7 +1,6 @@
-export default function ParqueCafe() {
+export default function Cocora() {
     return (
-
-        <main className="title_container">
+      <main className="title_container">
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
@@ -31,16 +30,16 @@ export default function ParqueCafe() {
                             <div className="col-sm-7 py-5 pl-md-0 pl-4">
                                 <div className="heading-section pl-lg-5 ml-md-5">
                                     <h2>
-                                        Parque del Café
+                                        Valle del Cocora
                                     </h2>
                                 </div>
                                 <div className="pl-lg-5 ml-md-5">
-                                    <p>Parque del Café is a theme park located in the Coffee Axis of Colombia, specifically in the municipality of Montenegro, Quindío department. It is one of the most popular tourist destinations in the region, attracting visitors from all over the country and abroad. Dedicated to celebrating and promoting Colombian coffee culture, the park offers an educational, recreational, and cultural experience for the whole family. Visitors can learn about the complete coffee production process through an interactive tour, enjoy thrilling mechanical rides, and witness live shows highlighting the music, dance, and cultural traditions of the coffee-growing region. Additionally, the park features a zoo with a variety of native and exotic animal species, as well as natural areas for walking and enjoying the scenic beauty of the Coffee Axis. In summary, Parque del Café is an iconic tourist destination in Colombia, blending fun, education, and culture around coffee and the rich coffee heritage of the region.</p>
+                                    <p>The Cocora Valley, nestled within the breathtaking landscapes of the Colombian Andes near the town of Salento, is a natural paradise renowned for its towering wax palm trees and stunning vistas. Stretching over lush green hillsides and mist-shrouded mountains, the valley is home to the iconic wax palms, which can reach heights of up to 60 meters, making them the tallest palm trees in the world. These majestic trees, with their slender trunks and feathery fronds, create a surreal and enchanting atmosphere that captivates visitors from around the globe. The Cocora Valley is not only a sanctuary for these emblematic palms but also harbors a rich diversity of flora and fauna, including colorful hummingbirds and elusive spectacled bears. Visitors can explore the valley along well-marked hiking trails, winding through cloud forests and past gurgling streams, offering ample opportunities to immerse themselves in the natural beauty and tranquility of this pristine wilderness. With its breathtaking landscapes and unique biodiversity, the Cocora Valley stands as a testament to Colombia's remarkable natural heritage and beckons adventurers to discover its hidden treasures.</p>
                                     <div className="row">
                                         <div className="trips-container">
                                           <div className="half-trips-container">
                                               <a href="#" className="thumb-menu">
-                                                  <img className="img-fluid img-cover" src="../images/cafe1.png" />
+                                                  <img className="img-fluid img-cover" src="../images/cocora1.jpeg" />
                                               </a>
                                           </div>
                                           <div className="half-trips-container">
@@ -73,10 +72,18 @@ export default function ParqueCafe() {
                                             </div>
                                             <div className="cont-subtitle">
                                                 <div className="half-descrip-container left-side">
-                                                    <i className="fa fa-ambulance" style={{ fontSize: '36px'}}></i>
+                                                    <i className="fa fa-cutlery" style={{ fontSize: '36px'}}></i>
                                                 </div>
                                                 <div className="half-descrip-container right-side">
-                                                    <p> Health Insurance </p>
+                                                    <p> Lunch </p>
+                                                </div>
+                                            </div>
+                                            <div className="cont-subtitle">
+                                                <div className="half-descrip-container left-side">
+                                                    <i className="fa fa-camera" style={{ fontSize: '36px'}}></i>
+                                                </div>
+                                                <div className="half-descrip-container right-side">
+                                                    <p> Photo session </p>
                                                 </div>
                                             </div>
                                           </div>
@@ -98,8 +105,8 @@ export default function ParqueCafe() {
                         <div className="sub-title-price" style={{textAlign:'center'}}>Let's start a new adventure!</div>
                           <div className="columns">
                             <ul className="price">
-                              <li className="header">Parque del Café</li>
-                              <li className="grey">$ 350.000 COP </li>
+                              <li className="header">Valle del Cocora</li>
+                              <li className="grey">$ 465.000 COP </li>
                               <li>Any weekend of the year</li>
                               <li>Same price all year long</li>
                               <li>Saturday to Sunday accomodation</li>

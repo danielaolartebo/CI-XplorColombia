@@ -1,7 +1,6 @@
-export default function ParqueCafe() {
+export default function Penol() {
     return (
-
-        <main className="title_container">
+      <main className="title_container">
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
@@ -31,16 +30,16 @@ export default function ParqueCafe() {
                             <div className="col-sm-7 py-5 pl-md-0 pl-4">
                                 <div className="heading-section pl-lg-5 ml-md-5">
                                     <h2>
-                                        Parque del Café
+                                        Piedra del Peñol
                                     </h2>
                                 </div>
                                 <div className="pl-lg-5 ml-md-5">
-                                    <p>Parque del Café is a theme park located in the Coffee Axis of Colombia, specifically in the municipality of Montenegro, Quindío department. It is one of the most popular tourist destinations in the region, attracting visitors from all over the country and abroad. Dedicated to celebrating and promoting Colombian coffee culture, the park offers an educational, recreational, and cultural experience for the whole family. Visitors can learn about the complete coffee production process through an interactive tour, enjoy thrilling mechanical rides, and witness live shows highlighting the music, dance, and cultural traditions of the coffee-growing region. Additionally, the park features a zoo with a variety of native and exotic animal species, as well as natural areas for walking and enjoying the scenic beauty of the Coffee Axis. In summary, Parque del Café is an iconic tourist destination in Colombia, blending fun, education, and culture around coffee and the rich coffee heritage of the region.</p>
+                                    <p>The Piedra del Peñol, or El Peñol Rock, is a colossal granite monolith located near the town of Guatapé in Colombia. Rising over 200 meters above the surrounding landscape, this iconic landmark offers breathtaking panoramic views of the surrounding countryside, including the vast reservoir of the Peñol-Guatapé hydroelectric dam. Visitors can climb a staircase of over 700 steps to reach the summit of the rock, where they are rewarded with awe-inspiring vistas of the winding waterways and verdant hillsides below. The intricate patterns of islands and peninsulas formed by the dam's reservoir create a mesmerizing tapestry of blue and green hues that stretch as far as the eye can see. At the base of the Piedra del Peñol lies the picturesque town of Guatapé, known for its colorful zócalos (decorative tiles) adorning the facades of buildings. The Piedra del Peñol stands as a symbol of both natural beauty and human ingenuity, attracting visitors from around the world to marvel at its grandeur and soak in the splendor of the Colombian countryside.</p>
                                     <div className="row">
                                         <div className="trips-container">
                                           <div className="half-trips-container">
                                               <a href="#" className="thumb-menu">
-                                                  <img className="img-fluid img-cover" src="../images/cafe1.png" />
+                                                  <img className="img-fluid img-cover" src="../images/penol1.jpeg" />
                                               </a>
                                           </div>
                                           <div className="half-trips-container">
@@ -73,10 +72,10 @@ export default function ParqueCafe() {
                                             </div>
                                             <div className="cont-subtitle">
                                                 <div className="half-descrip-container left-side">
-                                                    <i className="fa fa-ambulance" style={{ fontSize: '36px'}}></i>
+                                                    <i className="fa fa-camera" style={{ fontSize: '36px'}}></i>
                                                 </div>
                                                 <div className="half-descrip-container right-side">
-                                                    <p> Health Insurance </p>
+                                                    <p> Photo session </p>
                                                 </div>
                                             </div>
                                           </div>
@@ -98,8 +97,8 @@ export default function ParqueCafe() {
                         <div className="sub-title-price" style={{textAlign:'center'}}>Let's start a new adventure!</div>
                           <div className="columns">
                             <ul className="price">
-                              <li className="header">Parque del Café</li>
-                              <li className="grey">$ 350.000 COP </li>
+                              <li className="header">Piedra del Peñol</li>
+                              <li className="grey">$ 450.000 COP </li>
                               <li>Any weekend of the year</li>
                               <li>Same price all year long</li>
                               <li>Saturday to Sunday accomodation</li>

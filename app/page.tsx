@@ -66,7 +66,9 @@ export default function Home() {
               <div className="grid-container">
                     <img className="grid-img" src="../images/tayrona.jpg" />
                     <div className="button-container">
-                      <button className="btn_btn"> Parque Tayrona </button>
+                      <Link href='/tayrona'>
+                        <button className="btn_btn"> Parque Tayrona </button>
+                      </Link>
                     </div>
                       
               </div> 
@@ -74,7 +76,9 @@ export default function Home() {
               <div className="grid-container">
                     <img className="grid-img" src="../images/ciudad-perdida.webp" />
                     <div className="button-container">
-                      <button className="btn_btn"> Ciudad Perdida </button>
+                      <Link href='/perdida'>
+                        <button className="btn_btn"> Ciudad Perdida </button>
+                      </Link>
                     </div>
                       
               </div> 
@@ -82,7 +86,9 @@ export default function Home() {
               <div className="grid-container">
                     <img className="grid-img" src="../images/tatacoa.webp" />
                     <div className="button-container">
-                      <button className="btn_btn"> Desierto de la Tatacoa </button>
+                    <Link href='/tatacoa'>
+                        <button className="btn_btn"> Desierto de la Tatacoa </button>
+                    </Link>
                     </div>
                       
               </div> 
@@ -100,7 +106,9 @@ export default function Home() {
               <div className="grid-container">
                     <img className="grid-img" src="../images/penol.jpeg" />
                     <div className="button-container">
-                      <button className="btn_btn"> Piedra del Peñol </button>
+                      <Link href='/penol'>
+                        <button className="btn_btn"> Piedra del Peñol </button>
+                      </Link>
                     </div>
                       
               </div> 
@@ -108,7 +116,9 @@ export default function Home() {
               <div className="grid-container">
                     <img className="grid-img" src="../images/nevado.jpeg" />
                     <div className="button-container">
-                      <button className="btn_btn"> Nevado del Ruiz </button>
+                      <Link href='/ruiz'>
+                        <button className="btn_btn"> Nevado del Ruiz </button>
+                      </Link>
                     </div>
                       
               </div> 
@@ -116,7 +126,9 @@ export default function Home() {
               <div className="grid-container">
                     <img className="grid-img" src="../images/cocora.jpeg" />
                     <div className="button-container">
-                      <button className="btn_btn"> Valle del Cocora </button>
+                      <Link href='/cocora'>
+                        <button className="btn_btn"> Valle del Cocora </button>
+                      </Link>
                     </div>
               </div> 
             </div>
@@ -129,7 +141,7 @@ export default function Home() {
                   Get to know our most popular trips
                 </div>
                 <div className="progressbar-container">
-                    <div className="w3-white">
+                    <div className="">
                         {/* 1 PROGRESS BAR */}
                         <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '95%'} as React.CSSProperties}> Parque Tayrona </div>
                         {/* 2 PROGRESS BAR */}
