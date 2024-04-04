@@ -160,6 +160,9 @@ export default function Home() {
                         <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '25%'} as React.CSSProperties}> Ciudad Perdida </div>
                     </div>
                 </div>
+                <ul className="report1">
+                      <li className="button-report1"><a href="#" className="button">Download</a></li>
+                </ul>
               </div>
             {/* MOST POPULAR PAGE ENDS */}
 

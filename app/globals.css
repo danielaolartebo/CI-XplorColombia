@@ -559,12 +559,20 @@ h1, h2 {
   align-content: center;
 }
 
-.left-side{
+.left-left-side{
   flex:1;
 }
 
-.right-side{
-  flex:12;
+.left-right-side{
+  flex:2;
+}
+
+.right-right-side{
+  flex:5;
+}
+
+.right-left-side{
+  flex:11;
 }
 
 .columns {
@@ -806,4 +814,79 @@ h1, h2 {
 .col2-register{
   padding-top: 0.8em;
   padding-left: 1em;
+}
+
+.report1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  justify-content: center;
+  display: flex;
+  margin-top: 1em;
+}
+
+.button-report1{
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    width: 10em;
+}
+
+/* Estilo para el elemento select */
+.dropdown-menu {
+  border: 1px solid black; /* Borde de 1px sólido gris */
+  background-color: rgba(128, 128, 128, 0.693); /* Fondo blanco */
+  border-radius: 0.5em;
+  color: #333; /* Color del texto */
+  padding: 8px; /* Espaciado interno */
+  width: 200px; /* Ancho del elemento */
+  font-size: 16px; /* Tamaño de fuente */
+  appearance: none; /* Eliminar estilos nativos del navegador */
+}
+
+/* Estilo para las opciones del dropdown */
+.dropdown-menu option {
+  background-color: #fff; /* Fondo blanco */
+  color: grey; /* Color del texto */
+}
+
+/* Estilo para cuando se selecciona una opción */
+.dropdown-menu option:checked {
+  background-color: grey; /* Fondo gris claro */
+}
+
+#date {
+  border: 1px solid black; /* Borde de 1px sólido negro */
+  background-color: rgba(128, 128, 128, 0.693); /* Fondo gris */
+  border-radius: 0.5em;
+  color: #333; /* Color del texto */
+  padding: 8px; /* Espaciado interno */
+  width: 200px; /* Ancho del elemento */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+.date-range-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.date-range-container label {
+  margin-bottom: 8px;
+}
+
+.date-range-container input[type="date"] {
+  border: 1px solid black;
+  background-color: rgba(128, 128, 128, 0.693);
+  border-radius: 0.5em;
+  color: #333;
+  padding: 8px;
+  width: 200px;
+  font-size: 16px;
 }
