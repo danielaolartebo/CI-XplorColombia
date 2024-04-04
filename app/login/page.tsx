@@ -20,11 +20,11 @@ export default function Cocora() {
 
             {/* LOGIN PAGE STARTS */}
             <div className="login-first-container" id="home"> 
-                <img className="login-banner-img" src="../images/ima4.jpeg" />
+                <img className="login-banner-img" src="../images/mar.jpeg" />
                 <div className="login-container">
                         <h4>Login to your account</h4>
                         <div className="form-row">
-                        <div className="col-login"><input className="form-control" placeholder=" Username" type="text" name="username" required/> </div>
+                        <div className="col-login"><input className="form-control" placeholder=" Email Address" type="text" name="email" required/> </div>
                         <div className="col-login"><input className="form-control" placeholder=" Password" type="text" name="password" required/></div>
                         <div className="login-button-contact"><button type="submit" className="login-btn-theme">Login</button></div>
                         <h6>Not registered yet? <a href="/register" style={{color: 'lightblue'}}> Create an account! </a></h6>
