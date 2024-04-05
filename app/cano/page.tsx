@@ -44,8 +44,24 @@ export default function Cano() {
                                           </div>
                                           <div className="half-trips-container">
                                             <div className="cont-title">
-                                                  <div className="sub-title"> Create your plan </div>                                           
+                                                  <div className="sub-title"> Create plan: </div>                                           
                                             </div>
+
+                                             {/* ---------------------- # USER STARTS ----------------------------*/}
+
+                                            <div className="cont-subtitle">
+                                                <div className="half-descrip-container left-right-side">
+                                                    <i className="fa fa-user-plus" style={{ fontSize: '36px'}}></i>
+                                                </div>
+                                                <div className="half-descrip-container right-right-side">
+                                                    <div className="col-user"><input className="form-user" placeholder="ID" type="id" name="id" required/> </div>
+                                                </div>
+                                                <div className="half-descrip-container right-left-side">
+                                                    <div className="col-user"><input className="form-user2" placeholder="Full Name" type="name" name="name" required/></div>
+                                                </div>
+                                            </div>
+
+                                            {/* ---------------------- # USER ENDS ----------------------------*/}
 
                                             {/* ---------------------- # PEOPLE STARTS ----------------------------*/}
 
@@ -236,6 +252,7 @@ export default function Cano() {
                             <ul className="price">
                               <li className="header">Caño Cristales</li>
                               <li className="grey">$ 0 COP </li>
+                              <li></li>
                               <li></li>
                               <li></li>
                               <li></li>

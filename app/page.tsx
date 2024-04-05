@@ -132,6 +132,9 @@ export default function Home() {
                     </div>
               </div> 
             </div>
+            <ul className="report1">
+                      <li className="button-report1"><a href="#" className="button">Add Trip</a></li>
+                </ul>
             </div>
             {/* DEALS PAGE ENDS */}
 

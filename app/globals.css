@@ -804,6 +804,7 @@ h1, h2 {
 .form-control-register{
   width: 100%;
   display: flex;
+  border-radius: 0.4em;
 }
 
 .col-register{
@@ -889,4 +890,33 @@ h1, h2 {
   padding: 8px;
   width: 200px;
   font-size: 16px;
+}
+
+.col-user{
+    align-items: center;
+    align-content: center;
+    padding-top: 0.8em;
+    display: flex;
+    justify-content: center;
+    justify-content: left;
+}
+
+.form-user{
+    height: unset;
+    width: 85%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 6px;
+    border: 2px solid #c2c6ce;
+    font-weight: 500;
+}
+
+.form-user2{
+  height: unset;
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 6px;
+  border: 2px solid #c2c6ce;
+  font-weight: 500;
 }
