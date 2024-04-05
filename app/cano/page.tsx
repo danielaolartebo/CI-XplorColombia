@@ -210,14 +210,14 @@ export default function Cano() {
 
                                             {/* ---------------------- FOOD ENDS ----------------------------*/}
 
-                                            {/* ---------------------- HEALTH INSURANCE STARTS ----------------------------*/}
+                                            {/* ---------------------- TRIP INSURANCE STARTS ----------------------------*/}
 
                                             <div className="cont-subtitle">
                                                 <div className="half-descrip-container left-right-side">
                                                     <i className="fa fa-ambulance" style={{ fontSize: '36px'}}></i>
                                                 </div>
                                                 <div className="half-descrip-container right-right-side">
-                                                    <p> Health Insurance </p>
+                                                    <p> Trip Insurance </p>
                                                 </div>
                                                 <div className="half-descrip-container right-left-side">
                                                     <select className="dropdown-menu" id="menu"> 

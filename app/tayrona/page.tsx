@@ -44,48 +44,192 @@ export default function Tayrona() {
                                           </div>
                                           <div className="half-trips-container">
                                             <div className="cont-title">
-                                                  <div className="sub-title"> What do we offer? </div>                                           
+                                                  <div className="sub-title"> Create plan: </div>                                           
                                             </div>
+
+                                             {/* ---------------------- # USER STARTS ----------------------------*/}
+
                                             <div className="cont-subtitle">
-                                                <div className="half-descrip-container left-side">
+                                                <div className="half-descrip-container left-right-side">
+                                                    <i className="fa fa-user-plus" style={{ fontSize: '36px'}}></i>
+                                                </div>
+                                                <div className="half-descrip-container right-right-side">
+                                                    <div className="col-user"><input className="form-user" placeholder="ID" type="id" name="id" required/> </div>
+                                                </div>
+                                                <div className="half-descrip-container right-left-side">
+                                                    <div className="col-user"><input className="form-user2" placeholder="Full Name" type="name" name="name" required/></div>
+                                                </div>
+                                            </div>
+
+                                            {/* ---------------------- # USER ENDS ----------------------------*/}
+
+                                            {/* ---------------------- # PEOPLE STARTS ----------------------------*/}
+
+                                            <div className="cont-subtitle">
+                                                <div className="half-descrip-container left-right-side">
+                                                    <i className="fa fa-users" style={{ fontSize: '36px'}}></i>
+                                                </div>
+                                                <div className="half-descrip-container right-right-side">
+                                                    <p> Number of people </p>
+                                                </div>
+                                                <div className="half-descrip-container right-left-side">
+                                                    <select className="dropdown-menu" id="menu"> 
+                                                        <option value="" disabled selected>Select option</option>
+                                                        <option value=""> 1 </option> 
+                                                        <option value=""> 2 </option> 
+                                                        <option value=""> 3 </option> 
+                                                        <option value=""> 4 </option> 
+                                                        <option value=""> 5 </option> 
+                                                        <option value=""> 6 </option> 
+                                                        <option value=""> 7 </option> 
+                                                        <option value=""> 8 </option> 
+                                                        <option value=""> 9 </option> 
+                                                        <option value=""> 10 </option> 
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                            {/* ---------------------- # PEOPLE ENDS ----------------------------*/}
+
+                                             {/* ---------------------- # DAYS ENDS ----------------------------*/}
+
+
+                                             <div className="cont-subtitle">
+                                                <div className="half-descrip-container left-right-side">
+                                                    <i className="fa fa-calendar-plus-o" style={{ fontSize: '36px'}}></i>
+                                                </div>
+                                                <div className="half-descrip-container right-right-side">
+                                                    <p> Start of trip </p>
+                                                </div>
+                                                <div className="half-descrip-container right-left-side">
+                                                <div className="date-range-container">
+                                                    <input type="date" id="start-date" name="start-date"></input>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="cont-subtitle">
+                                                <div className="half-descrip-container left-right-side">
+                                                    <i className="fa fa-calendar-minus-o" style={{ fontSize: '36px'}}></i>
+                                                </div>
+                                                <div className="half-descrip-container right-right-side">
+                                                    <p> End of trip </p>
+                                                </div>
+                                                <div className="half-descrip-container right-left-side">
+                                                <div className="date-range-container">
+                                                    <input type="date" id="end-date" name="end-date"></input>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                             {/* ---------------------- # DAYS ENDS ----------------------------*/}
+
+                                            {/* ---------------------- TRANSPORTATION STARTS ----------------------------*/}
+
+                                            <div className="cont-subtitle">
+                                                <div className="half-descrip-container left-right-side">
                                                     <i className="fa fa-bus" style={{ fontSize: '36px'}}></i>
                                                 </div>
-                                                <div className="half-descrip-container right-side">
-                                                    <p> Transportation </p>
+                                                <div className="half-descrip-container right-right-side">
+                                                    <p> Transportation</p>
+                                                </div>
+                                                <div className="half-descrip-container right-left-side">
+                                                    <select className="dropdown-menu" id="menu"> 
+                                                        <option value="" disabled selected>Select option</option>
+                                                        <option value=""> No </option> 
+                                                        <option value=""> From/To Bogotá </option> 
+                                                        <option value=""> From/To Medellín </option> 
+                                                        <option value=""> From/To Cali </option> 
+                                                        <option value=""> From/To Pereira </option> 
+                                                        <option value=""> From/To Bucaramanga </option> 
+                                                        <option value=""> From/To Cucuta </option> 
+                                                        <option value=""> From/To Barranquilla </option> 
+                                                        <option value=""> From/To Santa Marta </option> 
+                                                        <option value=""> From/To Manizales </option> 
+                                                        <option value=""> From/To Villavicencio </option> 
+                                                        <option value=""> From/To Neiva </option> 
+                                                        <option value=""> From/To Montería </option> 
+                                                        <option value=""> From/To Pasto </option> 
+                                                        <option value=""> From/To Popayan </option> 
+                                                        <option value=""> From/To Pasto </option>
+                                                        <option value=""> Other </option>
+                                                    </select>
+
                                                 </div>
                                             </div>
+
+                                            {/* ---------------------- TRANSPORTATION ENDS ----------------------------*/}
+
+                                             {/* ---------------------- HOTEL STARTS ----------------------------*/}
+
+                                             <div className="cont-subtitle">
+                                                <div className="half-descrip-container left-right-side">
+                                                    <i className="fa fa-building" style={{ fontSize: '36px'}}></i>
+                                                </div>
+                                                <div className="half-descrip-container right-right-side">
+                                                    <p> Hotel </p>
+                                                </div>
+                                                <div className="half-descrip-container right-left-side">
+                                                    <select className="dropdown-menu" id="menu"> 
+                                                        <option value="" disabled selected>Select option</option>
+                                                        <option value=""> No </option> 
+                                                        <option value=""> Ecohabs Tayrona </option> 
+                                                        <option value=""> Cabañas Arrecifes </option> 
+                                                        <option value=""> Ecohotel Playa Koralia </option> 
+                                                        <option value=""> Villa Maria Tayrona </option> 
+                                                        <option value=""> Camping en el Parque Tayrona </option> 
+                                                    </select>
+
+                                                </div>
+                                            </div>
+
+                                            {/* ---------------------- HOTEL ENDS ----------------------------*/}
+
+                                            {/* ---------------------- FOOD STARTS ----------------------------*/}
+
                                             <div className="cont-subtitle">
-                                                <div className="half-descrip-container left-side">
-                                                    <i className="fa fa-bed" style={{ fontSize: '36px'}}></i>
+                                                <div className="half-descrip-container left-right-side">
+                                                    <i className="fa fa-cutlery" style={{ fontSize: '36px'}}></i>
                                                 </div>
-                                                <div className="half-descrip-container right-side">
-                                                    <p> Accommodation </p>
+                                                <div className="half-descrip-container right-right-side">
+                                                    <p> Meals </p>
+                                                </div>
+                                                <div className="half-descrip-container right-left-side">
+                                                    <select className="dropdown-menu" id="menu"> 
+                                                        <option value="" disabled selected>Select option</option>
+                                                        <option value=""> No </option> 
+                                                        <option value=""> Breakfast Only </option> 
+                                                        <option value=""> Lunch Only </option> 
+                                                        <option value=""> Dinner Only </option> 
+                                                        <option value=""> Breakfast, Lunch, Dinner </option> 
+                                                    </select>
+
                                                 </div>
                                             </div>
+
+                                            {/* ---------------------- FOOD ENDS ----------------------------*/}
+
+                                            {/* ---------------------- TRIP INSURANCE STARTS ----------------------------*/}
+
                                             <div className="cont-subtitle">
-                                                <div className="half-descrip-container left-side">
-                                                    <i className="fa fa-coffee" style={{ fontSize: '36px'}}></i>
-                                                </div>
-                                                <div className="half-descrip-container right-side">
-                                                    <p> Breaskfast </p>
-                                                </div>
-                                            </div>
-                                           <div className="cont-subtitle">
-                                                <div className="half-descrip-container left-side">
+                                                <div className="half-descrip-container left-right-side">
                                                     <i className="fa fa-ambulance" style={{ fontSize: '36px'}}></i>
                                                 </div>
-                                                <div className="half-descrip-container right-side">
-                                                    <p> Health Insurance </p>
+                                                <div className="half-descrip-container right-right-side">
+                                                    <p> Trip Insurance </p>
+                                                </div>
+                                                <div className="half-descrip-container right-left-side">
+                                                    <select className="dropdown-menu" id="menu"> 
+                                                        <option value="" disabled selected>Select option</option>
+                                                        <option value=""> Yes </option> 
+                                                        <option value=""> No </option>  
+                                                    </select>
+
                                                 </div>
                                             </div>
-                                            <div className="cont-subtitle">
-                                                <div className="half-descrip-container left-side">
-                                                    <i className="fa fa-camera" style={{ fontSize: '36px'}}></i>
-                                                </div>
-                                                <div className="half-descrip-container right-side">
-                                                    <p> Photo session </p>
-                                                </div>
-                                            </div>
+
+                                            {/* ---------------------- HEALTH INSURANCE ENDS ----------------------------*/}
+
                                           </div>
                                         </div>                          
                                     </div>
@@ -106,15 +250,18 @@ export default function Tayrona() {
                           <div className="columns">
                             <ul className="price">
                               <li className="header">Parque Tayrona</li>
-                              <li className="grey">$ 600.000 COP </li>
-                              <li>Any weekend of the year</li>
-                              <li>Same price all year long</li>
-                              <li>Saturday to Sunday accomodation</li>
-                              <li>All the information is send via Whatsapp once purchased</li>
+                              <li className="grey">$ 0 COP </li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
                             </ul>
                           </div>
                           <ul className="price">
-                              <li className="blue"><a href="#" className="button">Buy now</a></li>
+                              <li className="blue"><a href="#" className="button">Download Report</a></li>
                             </ul>
                       </div>
                   </div> 
