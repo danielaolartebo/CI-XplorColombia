@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Tatacoa() {
     return (
       <main className="title_container">
@@ -16,8 +18,7 @@ export default function Tatacoa() {
                   <li><a href="/" className="white-link">Deals</a></li>
                   <li><a href="/" className="white-link">Most Popular</a></li>
                   <li><a href="/" className="white-link">Contact us</a></li>
-                  <button className="btn_btn_login"> Login/Register </button>
-                </div>
+                  <Link href='/'><button className="btn_btn_login"> Log out </button></Link>                </div>
               </div>
             </header>
             {/* HEADER ENDS */}

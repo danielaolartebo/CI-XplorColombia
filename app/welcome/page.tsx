@@ -15,7 +15,7 @@ export default function Welcome() {
                   <li><a href="#deals" className="white-link">Deals</a></li>
                   <li><a href="#mostpopular" className="white-link">Most Popular</a></li>
                   <li><a href="#contactus" className="white-link">Contact us</a></li>
-                  <button className="btn_btn_login"> <Link href='/'>Log out</Link></button>
+                  <Link href='/'><button className="btn_btn_login"> Log out </button></Link>
                 </div>
               </div>
             </header>

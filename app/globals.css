@@ -318,6 +318,7 @@ h2{
   border-radius: 6px;
   border: 2px solid #c2c6ce;
   font-weight: 500;
+  color: black;
   
 }
 
@@ -801,14 +802,32 @@ h1, h2 {
   width: 100%;
 }
 
-.form-control-register{
-  width: 100%;
+.register-half{
   display: flex;
-  border-radius: 0.4em;
+  flex-direction: column; /* Dividir verticalmente */
+}
+
+.register-right{
+  flex: 1;
+}
+
+.register-left{
+  flex: 1;
+}
+
+.form-control-register{
+  height: unset;
+  width: 100%;
+  padding-top: 0.2em;
+  padding-bottom: 10px;
+  border-radius: 6px;
+  border: 2px solid #c2c6ce;
+  font-weight: 500;
+  color: black;
 }
 
 .col-register{
-  padding-top: 0.8em;
+  padding-top: 1.8em;
   justify-content: right;
 }
 
@@ -993,6 +1012,7 @@ h1, h2 {
   border-radius: 6px;
   border: 2px solid #c2c6ce;
   font-weight: 500;
+  color: black;
 }
 
 .col-textbox-container{
@@ -1025,9 +1045,9 @@ th, td{
 
 .dropdown-addtrip {
   border: 1px solid black; /* Borde de 1px sólido gris */
-  background-color: rgba(128, 128, 128, 0.693); /* Fondo blanco */
+  background-color: rgb(128, 128, 128); /* Fondo blanco */
   border-radius: 0.5em;
-  color: #333; /* Color del texto */
+  color: black; /* Color del texto */
   padding: 0.5em; /* Espaciado interno relativo */
   width: 80%; /* Ancho del elemento al 100% del contenedor padre */
   max-width: 300px; /* Ancho máximo */

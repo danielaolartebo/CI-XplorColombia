@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function AddTripPage() {
 
@@ -16,6 +17,7 @@ export default function AddTripPage() {
                       <li><a href="/" className="white-link">Deals</a></li>
                       <li><a href="/" className="white-link">Most Popular</a></li>
                       <li><a href="/" className="white-link">Contact us</a></li>
+                      <Link href='/'><button className="btn_btn_login"> Log out </button></Link>
                     </div>
                 </div>
             </header>
