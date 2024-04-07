@@ -29,6 +29,19 @@ export default function EditTripPage() {
                 <div className="addtrip-container">
                     <h4>Edit a Trip</h4>
                     <div className="cont-addtrip">
+                        <div className='left-left-side-trip'>
+                          <select className="dropdown-addtrip" id="menu"> 
+                                <option value="" disabled selected> Select trip</option>
+                                <option value=""> Caño Cristales </option> 
+                                <option value=""> Parque Tayrona </option> 
+                                <option value=""> Ciudad Perdida </option> 
+                                <option value=""> Desierto de la Tatacoa </option> 
+                                <option value=""> Parque del Café </option> 
+                                <option value=""> Piedra del Peñol </option> 
+                                <option value=""> Nevado del Ruiz </option> 
+                                <option value=""> Valle del Cocora </option> 
+                          </select>
+                        </div>
                       <div className='left-right-side-trip'>
                           <select className="dropdown-addtrip" id="menu"> 
                                 <option value="" disabled selected> Select category</option>
@@ -62,15 +75,18 @@ export default function EditTripPage() {
 
                     {/* ADD TRIP STARTS */}
                     <div className="cont-addtrip">
-                      <div className='left-right-side-trip'>
+                        <div className='left-left-side-trip'>
                           
-                      </div>
-                      <div className='right-right-side-trip'>
-                            <div className="col-textbox-container"><input className="txtbox-trip" placeholder="New option" type="text" name="name" required/> </div>
-                      </div>
-                      <div className='right-left-side-trip'>
-                          <div className="button-delete-trip"><a href="#" className="button-add-trip"> Add </a></div>
-                      </div>
+                        </div>
+                        <div className='left-right-side-trip'>
+                            
+                        </div>
+                        <div className='right-right-side-trip'>
+                                <div className="col-textbox-container"><input className="txtbox-trip" placeholder="New option" type="text" name="name" required/> </div>
+                        </div>
+                        <div className='right-left-side-trip'>
+                            <div className="button-delete-trip"><a href="#" className="button-add-trip"> Add </a></div>
+                        </div>
                     </div>
                     {/* ADD TRIP ENDS */}
                     <div className='cont-table'>

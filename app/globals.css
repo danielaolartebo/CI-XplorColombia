@@ -968,23 +968,26 @@ h1, h2 {
 
 .left-left-side-trip{
   flex: 1;
+  display: flex;
+  justify-content: right;
 }
 
 .left-right-side-trip{
   flex:1;
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 
 .right-right-side-trip{
   flex:1;
+  display: flex;
+  justify-content: left;
 }
 
 .right-left-side-trip{
   flex:1;
   display: flex;
   justify-content: left; /* Alinea el contenido al centro horizontalmente */
-  align-items: left;
 }
 
 .button-delete-trip{
@@ -1012,17 +1015,19 @@ h1, h2 {
   width: 150px;
 }
 
-.txtbox-trip{
-  width: 80%;
+.txtbox-trip {
+  flex: 1; /* Hace que el cuadro de texto ocupe todo el espacio disponible */
+  width: 100%; /* Establece el ancho al 100% del contenedor padre */
   border-radius: 6px;
   border: 2px solid #c2c6ce;
   font-weight: 500;
   color: black;
+  margin-right: 1em; /* Añade un margen derecho para separar los elementos */
 }
 
 .col-textbox-container{
-  justify-content: center;
   display: flex;
+  width: 100%; /* Establece el ancho del contenedor padre */
   height: 100%;
 }
 
@@ -1095,9 +1100,9 @@ th, td{
   border: 1px solid black; /* Borde de 1px sólido gris */
   background-color: rgb(128, 128, 128); /* Fondo blanco */
   border-radius: 0.5em;
+  margin-right: 1em;
   color: black; /* Color del texto */
-  padding: 0.5em; /* Espaciado interno relativo */
-  width: 80%; /* Ancho del elemento al 100% del contenedor padre */
+  width: 100%; /* Ancho del elemento al 100% del contenedor padre */
   max-width: 300px; /* Ancho máximo */
   font-size: 16px; /* Tamaño de fuente */
   appearance: none; /* Eliminar estilos nativos del navegador */
