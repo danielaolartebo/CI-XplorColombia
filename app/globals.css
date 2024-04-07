@@ -1111,6 +1111,10 @@ th, td{
 
 /* CREATE TRIP PAGE */
 
+.right-right-side-create-trip{
+  flex:1;
+}
+
 .cont-createtrip{
   display: flex;
   flex-direction: column;

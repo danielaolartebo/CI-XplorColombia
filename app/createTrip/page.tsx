@@ -34,7 +34,7 @@ export default function CreateTripPage() {
                           <h5> Name</h5>
                       </div>
                       <div className='right-create'>
-                            <div className='right-right-side-trip'>
+                            <div className='right-right-side-create-trip'>
                                     <div className="col-create-textbox-container"><input className="txtbox-create" placeholder="" type="text" name="name" required/> </div>
                             </div>
                       </div>
@@ -47,7 +47,7 @@ export default function CreateTripPage() {
                           <h5> Description</h5>
                       </div>
                         <div className='right-create'>
-                            <div className='right-right-side-trip'>
+                            <div className='right-right-side-create-trip'>
                                 <div className="col-create-textbox-container">
                                     <textarea name="textarea"></textarea>
                             </div>
@@ -62,7 +62,7 @@ export default function CreateTripPage() {
                           <h5> Image </h5>
                       </div>
                       <div className='right-create'>
-                        <div className='right-right-side-trip'>
+                        <div className='right-right-side-create-trip'>
                                 <input className="custom-input" type="file" id="myFile" name="filename"/>
                                   
                         </div>                    
@@ -76,7 +76,7 @@ export default function CreateTripPage() {
                           <h5> Categories </h5>
                       </div>
                       <div className='right-create2'>
-                        <div className='right-right-side-trip'>
+                        <div className='right-right-side-create-trip'>
                             <div className='cont-categories'>
                                 <input type="checkbox" id="transportation" name="transportation" value="Transportation " />
                                     <label className="checkbox-categories"> Transportation </label>
@@ -102,7 +102,7 @@ export default function CreateTripPage() {
                       <div className='left-create'>
                       </div>
                       <div className='right-create'>
-                        <div className='right-right-side-trip'>
+                        <div className='right-right-side-create-trip'>
                             <ul className="create-cont-button">
                                 <li className="button-report1"><a href="#" className="button">Create</a></li>
                             </ul>
