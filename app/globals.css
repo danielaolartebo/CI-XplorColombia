@@ -836,7 +836,6 @@ h1, h2 {
     text-align: center;
     text-decoration: none;
     font-size: 18px;
-    width: 10em;
 }
 
 /* Estilo para el elemento select */
@@ -920,3 +919,120 @@ h1, h2 {
   border: 2px solid #c2c6ce;
   font-weight: 500;
 }
+
+
+/* ADD TRIP PAGE */
+
+.addtrip-container{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  max-width: 65%;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.707);
+  color: white;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.cont-addtrip{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding-top: 1em;
+  flex-direction: row; /* Cambiamos a dirección horizontal */
+}
+
+.left-right-side-trip{
+  flex:1;
+  display: flex;
+  justify-content: right;
+}
+
+.right-right-side-trip{
+  flex:1;
+}
+
+.right-left-side-trip{
+  flex:1;
+  display: flex;
+  justify-content: left; /* Alinea el contenido al centro horizontalmente */
+  align-items: left;
+}
+
+.button-delete-trip{
+  border: 1px solid black !important;
+  color: white;
+  padding: 10px 25px;
+  font-size: 18px;
+}
+
+.button-trip {
+  background-color: #04AA6D;
+  border: 1px solid black !important;
+  color: white;
+  padding: 10px 25px;
+  font-size: 18px;
+  width: 150px;
+}
+
+.button-add-trip {
+  background-color: #04AA6D;
+  border: 1px solid black !important;
+  color: white;
+  padding: 10px 35px;
+  font-size: 18px;
+  width: 150px;
+}
+
+.txtbox-trip{
+  width: 80%;
+  border-radius: 6px;
+  border: 2px solid #c2c6ce;
+  font-weight: 500;
+}
+
+.col-textbox-container{
+  justify-content: center;
+  display: flex;
+  height: 100%;
+}
+
+/* TABLE */
+
+.cont-table{
+  margin-top: 2em;
+  width: 100%;
+  height: unset;
+  background-color: #0070C9;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  border: 1px solid black;
+  background-color: white;
+  border-collapse: collapse;
+}
+
+th, td{
+  color: #000;
+  border: 1px solid black;
+}
+
+.dropdown-addtrip {
+  border: 1px solid black; /* Borde de 1px sólido gris */
+  background-color: rgba(128, 128, 128, 0.693); /* Fondo blanco */
+  border-radius: 0.5em;
+  color: #333; /* Color del texto */
+  padding: 0.5em; /* Espaciado interno relativo */
+  width: 80%; /* Ancho del elemento al 100% del contenedor padre */
+  max-width: 300px; /* Ancho máximo */
+  font-size: 16px; /* Tamaño de fuente */
+  appearance: none; /* Eliminar estilos nativos del navegador */
+  height: 100%;
+}
+

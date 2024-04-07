@@ -133,7 +133,7 @@ export default function Home() {
               </div> 
             </div>
             <ul className="report1">
-                      <li className="button-report1"><a href="#" className="button">Add Trip</a></li>
+                      <li className="button-report1"><a href="/addTrip" className="button">Add/Edit Trip</a></li>
                 </ul>
             </div>
             {/* DEALS PAGE ENDS */}
@@ -164,7 +164,7 @@ export default function Home() {
                     </div>
                 </div>
                 <ul className="report1">
-                      <li className="button-report1"><a href="#" className="button">Download</a></li>
+                      <li className="button-report1"><a href="#" className="button">Download Report</a></li>
                 </ul>
               </div>
             {/* MOST POPULAR PAGE ENDS */}
