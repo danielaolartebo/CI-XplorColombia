@@ -1200,6 +1200,28 @@ input::file-selector-button {
   padding-left: 1em;
 }
 
+textarea{
+  justify-content: left;
+  color: black;
+  font: bold 11px arial;
+  width: 60%;
+}
+
+.createtrip-container{
+  position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    max-width: 65%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.707);
+    color: white;
+    text-align: center;
+    border: 1px solid black;
+    padding-top: 2em;
+}
+
 
 
 

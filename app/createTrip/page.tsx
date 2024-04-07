@@ -24,8 +24,8 @@ export default function CreateTripPage() {
 
             {/* CREATE TRIP STARTS */}
             <div className="login-first-container" id="home">
-                <img className="login-banner-img" src="../images/cartagena.png" />
-                <div className="addtrip-container">
+                <img className="login-banner-img" src="../images/ruiz.jpeg" />
+                <div className="createtrip-container">
                     <h4>Create a Trip</h4>
 
                     {/* NAME STARTS */}
@@ -46,10 +46,12 @@ export default function CreateTripPage() {
                       <div className='left-create'>
                           <h5> Description</h5>
                       </div>
-                      <div className='right-create'>
+                        <div className='right-create'>
                             <div className='right-right-side-trip'>
-                                    <div className="col-create-textbox-container"><input className="txtbox-create" placeholder="" type="text" name="name" required/> </div>
+                                <div className="col-create-textbox-container">
+                                    <textarea name="textarea"></textarea>
                             </div>
+                        </div>
                       </div>
                     </div>
                     {/* DESCRIPTION ENDS */}
