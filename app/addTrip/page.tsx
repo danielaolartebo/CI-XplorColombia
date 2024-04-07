@@ -23,7 +23,7 @@ export default function AddTripPage() {
 
             {/* DELETE TRIP STARTS */}
             <div className="login-first-container" id="home">
-                <img className="login-banner-img" src="../images/cartagena.jpeg" />
+                <img className="login-banner-img" src="../images/cartagena.png" />
                 <div className="addtrip-container">
                     <h4>Create/Edit a Trip</h4>
                     <div className="cont-addtrip">
