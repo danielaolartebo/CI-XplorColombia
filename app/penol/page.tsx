@@ -13,11 +13,11 @@ export default function Penol() {
             <header className="main-header"> 
               <div className="container">
                 <div className="nav-header">
-                  <li><a href="/" className="white-link">Home</a></li>
-                  <li><a href="/" className="white-link">About us</a></li>
-                  <li><a href="/" className="white-link">Deals</a></li>
-                  <li><a href="/" className="white-link">Most Popular</a></li>
-                  <li><a href="/" className="white-link">Contact us</a></li>
+                  <li><a href="/welcome" className="white-link">Home</a></li>
+                  <li><a href="/welcome" className="white-link">About us</a></li>
+                  <li><a href="/welcome" className="white-link">Deals</a></li>
+                  <li><a href="/welcome" className="white-link">Most Popular</a></li>
+                  <li><a href="/welcome" className="white-link">Contact us</a></li>
                   <Link href='/'><button className="btn_btn_login"> Log out </button></Link>                </div>
               </div>
             </header>

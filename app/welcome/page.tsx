@@ -131,9 +131,14 @@ export default function Welcome() {
                       </div>
                 </div> 
               </div>
-              <ul className="report1">
-                        <li className="button-report1"><a href="/addTrip" className="button">Add/Edit Trip</a></li>
-                  </ul>
+              <ul className="container-options">
+                <div className="half-edit-container">
+                    <li className="button-edit"><a href="/editTrip" className="button">Edit Trip</a></li>
+                </div>
+                <div className="half-create-container">
+                    <li className="button-create"><a href="/createTrip" className="button">Create Trip</a></li>
+                </div>        
+              </ul>
               </div>
               {/* DEALS PAGE ENDS */}
   
@@ -182,7 +187,9 @@ export default function Welcome() {
                         <div className="col-12"><input className="form-control" placeholder="Name" type="text" name="name" required/> </div>
                         <div className="col-12"><input className="form-control" placeholder="Email Address" type="email" name="email" required/></div>
                         <div className="col-12"><textarea className="form-control" placeholder="Message" typeof="text" name="message" required></textarea></div>
-                        <div className="button-contact"><button type="submit" className="btn_btn-theme">Send Message</button></div>
+                        <ul className="report1">
+                          <li className="button-report1"><a href="#" className="button">Submit</a></li>
+                        </ul>
                     </div>
                   </form>
                   </div>

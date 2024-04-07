@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-export default function AddTripPage() {
+export default function EditTripPage() {
 
     return (
         <main className="title_container">
@@ -12,11 +12,11 @@ export default function AddTripPage() {
             <header className="main-header">
                 <div className="container">
                     <div className="nav-header">
-                      <li><a href="/" className="white-link">Home</a></li>
-                      <li><a href="/" className="white-link">About us</a></li>
-                      <li><a href="/" className="white-link">Deals</a></li>
-                      <li><a href="/" className="white-link">Most Popular</a></li>
-                      <li><a href="/" className="white-link">Contact us</a></li>
+                      <li><a href="/welcome" className="white-link">Home</a></li>
+                      <li><a href="/welcome" className="white-link">About us</a></li>
+                      <li><a href="/welcome" className="white-link">Deals</a></li>
+                      <li><a href="/welcome" className="white-link">Most Popular</a></li>
+                      <li><a href="/welcome" className="white-link">Contact us</a></li>
                       <Link href='/'><button className="btn_btn_login"> Log out </button></Link>
                     </div>
                 </div>
@@ -27,11 +27,11 @@ export default function AddTripPage() {
             <div className="login-first-container" id="home">
                 <img className="login-banner-img" src="../images/cartagena.png" />
                 <div className="addtrip-container">
-                    <h4>Create/Edit a Trip</h4>
+                    <h4>Edit a Trip</h4>
                     <div className="cont-addtrip">
                       <div className='left-right-side-trip'>
                           <select className="dropdown-addtrip" id="menu"> 
-                                <option value="" disabled selected> Select option</option>
+                                <option value="" disabled selected> Select category</option>
                                 <option value=""> Number of people </option> 
                                 <option value=""> Transportation </option> 
                                 <option value=""> Hotel </option> 
