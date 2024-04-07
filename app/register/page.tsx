@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Register() {
     return (
         <main className="title_container">
@@ -27,7 +29,7 @@ export default function Register() {
                                         <div className="col2-register"><input className="form-control-register" type="text" name="last_name" required/></div>
                                         <div className="col2-register"><input className="form-control-register" type="email" name="email" required/></div>
                                         <div className="col2-register"><input className="form-control-register" type="phone" name="phone" required/></div>
-                                        <div className="register-button-contact"><button type="submit" className="register-btn-theme">Sign up</button></div>
+                                        <Link href='/'><div className="register-button-contact"><button type="submit" className="register-btn-theme">Sign up</button></div></Link>
                                         <h6>Have an account already? <a href="/" style={{color: 'lightblue'}}> Sign in! </a></h6>
                                     </div>
                                 </div>
