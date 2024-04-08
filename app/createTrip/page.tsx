@@ -71,31 +71,7 @@ export default function CreateTripPage() {
                     {/* IMAGE ENDS */}
 
                     {/* CATEGORIES STARTS */}
-                    <div className="cont-createtrip">
-                      <div className='left-create'>
-                          <h5> Categories </h5>
-                      </div>
-                      <div className='right-create2'>
-                        <div className='right-right-side-create-trip'>
-                            <div className='cont-categories'>
-                                <input type="checkbox" id="transportation" name="transportation" value="Transportation " />
-                                    <label className="checkbox-categories"> Transportation </label>
-                            </div>
-                            <div className='cont-categories'>
-                                <input type="checkbox" id="hotel" name="hotel" value="Hotel" />
-                                    <label className="checkbox-categories"> Hotel </label>
-                            </div>
-                            <div className='cont-categories'>
-                                <input type="checkbox" id="meals" name="meals" value="Meals" />
-                                    <label className="checkbox-categories"> Meals </label>
-                            </div>
-                            <div className='cont-categories'>
-                                <input type="checkbox" id="insurance" name="insurance" value="Insurance" />
-                                    <label className="checkbox-categories"> Health Insurance </label>
-                            </div>
-                        </div>                    
-                        </div>
-                    </div>
+                    
                     {/* CATEGORIES ENDS */}
 
                     <div className="cont-createtrip">
