@@ -1156,11 +1156,17 @@ th, td{
   height: 100%;
 }
 
+/* DELETE TRIP PAGE */
+
+.right-right-side-delete-trip{
+  flex:1;
+  display: flex;
+}
+
 /* CREATE TRIP PAGE */
 
 .right-right-side-create-trip{
   flex:1;
-  display: flex;
 }
 
 .cont-createtrip{

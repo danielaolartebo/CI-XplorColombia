@@ -31,6 +31,7 @@ export default function DeleteTripPage() {
             </header>
             {/* HEADER ENDS */}
 
+
                 <img className="login-banner-img" src="../images/ruiz.jpeg" />
                 <div className="createtrip-container">
                     <h4>Delete a Trip</h4>
@@ -41,7 +42,7 @@ export default function DeleteTripPage() {
                           <h5> Name</h5>
                       </div>
                       <div className='right-create'>
-                            <div className='right-right-side-create-trip'>
+                            <div className='right-right-side-delete-trip'>
                                 <select className="dropdown-deletetrip" id="menu"> 
                                     <option value="" disabled selected> Select trip</option>
                                     <option value=""> Caño Cristales </option> 
@@ -62,7 +63,7 @@ export default function DeleteTripPage() {
                       <div className='left-create'>
                       </div>
                       <div className='right-create'>
-                        <div className='right-right-side-create-trip'>
+                        <div className='right-right-side-delete-trip'>
                             <ul className="create-cont-button">
                                 <li className="button-report1"><a href="#" className="button">Delete</a></li>
                             </ul>
