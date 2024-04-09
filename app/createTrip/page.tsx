@@ -7,22 +7,30 @@ export default function CreateTripPage() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
+            {/* CREATE TRIP STARTS */}
+            <div className="login-first-container" id="home">
+
             {/* HEADER STARTS */}
-            <header className="main-header">
-                <div className="container">
-                    <div className="nav-header">
-                      <li><a href="/welcome" className="white-link">Home</a></li>
-                      <li><a href="/welcome" className="white-link">About us</a></li>
-                      <li><a href="/welcome" className="white-link">Deals</a></li>
-                      <li><a href="/welcome" className="white-link">Most Popular</a></li>
-                      <Link href='/'><button className="btn_btn_login"> Log out </button></Link>
-                    </div>
+            <header className="main-header"> 
+              <div className="container">
+                <div className="nav-header">
+                  <li><a href="/welcome" className="white-link">Home</a></li>
+                  <li><a href="/welcome" className="white-link">Create trip</a></li>
+                  <li><a href="/welcome" className="white-link">Deals</a></li>
+                  <li><a href="/welcome" className="white-link">Most Popular</a></li>
+                  <li><a className="white-link">Destionation options</a>
+                      <ul className="submenu">
+                          <li><a href="/createTrip" className="white-link">Create destination</a></li>
+                          <li><a href="/editTrip" className="white-link">Edit destination</a></li>
+                          <li><a href="/deleteTrip" className="white-link">Delete destination</a></li>
+                      </ul>
+                  </li>
+                  <Link href='/'><button className="btn_btn_login"> Log out </button></Link>
                 </div>
+              </div>
             </header>
             {/* HEADER ENDS */}
 
-            {/* CREATE TRIP STARTS */}
-            <div className="login-first-container" id="home">
                 <img className="login-banner-img" src="../images/ruiz.jpeg" />
                 <div className="createtrip-container">
                     <h4>Create a Trip</h4>

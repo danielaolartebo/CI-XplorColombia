@@ -130,6 +130,32 @@ li{
   touch-action: manipulation;  
 }
 
+.submenu {
+  display: none; /* Por defecto, oculta el submenú */
+  position: absolute;
+  background-color: black; /* Color de fondo del submenú */
+  min-width: 200px;
+}
+
+.nav-header li:hover .submenu {
+  display: block; /* Muestra el submenú cuando el usuario pasa el mouse sobre el elemento padre */
+}
+
+.submenu li {
+  margin: 5px 0;
+}
+
+.submenu li:hover {
+  background-color: #55555576; /* Cambia el color de fondo al pasar el mouse sobre los elementos del submenú */
+}
+
+.submenu a {
+  color: white; /* Color del texto */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  padding: 10px;
+  display: block;
+}
+
 
 /* --------------- BANNER  --------------- */
 
@@ -1134,6 +1160,7 @@ th, td{
 
 .right-right-side-create-trip{
   flex:1;
+  display: flex;
 }
 
 .cont-createtrip{

@@ -10,16 +10,23 @@ export default function Tatacoa() {
           
 
             {/* HEADER BEGINS */}
-            <header className="main-header">
-                <div className="container">
-                    <div className="nav-header">
-                      <li><a href="/welcome" className="white-link">Home</a></li>
-                      <li><a href="/welcome" className="white-link">About us</a></li>
-                      <li><a href="/welcome" className="white-link">Deals</a></li>
-                      <li><a href="/welcome" className="white-link">Most Popular</a></li>
-                      <Link href='/'><button className="btn_btn_login"> Log out </button></Link>
-                    </div>
+            <header className="main-header"> 
+              <div className="container">
+                <div className="nav-header">
+                  <li><a href="/welcome" className="white-link">Home</a></li>
+                  <li><a href="/welcome" className="white-link">Create trip</a></li>
+                  <li><a href="/welcome" className="white-link">Deals</a></li>
+                  <li><a href="/welcome" className="white-link">Most Popular</a></li>
+                  <li><a className="white-link">Destionation options</a>
+                      <ul className="submenu">
+                          <li><a href="/createTrip" className="white-link">Create destination</a></li>
+                          <li><a href="/editTrip" className="white-link">Edit destination</a></li>
+                          <li><a href="/deleteTrip" className="white-link">Delete destination</a></li>
+                      </ul>
+                  </li>
+                  <Link href='/'><button className="btn_btn_login"> Log out </button></Link>
                 </div>
+              </div>
             </header>
             {/* HEADER ENDS */}
 
@@ -31,6 +38,7 @@ export default function Tatacoa() {
                             <div className="col-sm-7 py-5 pl-md-0 pl-4">
                                 <div className="heading-section pl-lg-5 ml-md-5">
                                     <h2>
+                                        <br></br><br></br>
                                         Desierto de la Tatacoa
                                     </h2>
                                 </div>

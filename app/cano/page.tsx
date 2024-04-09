@@ -8,16 +8,22 @@ export default function Cano() {
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
           <link rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.js"></link>
           
-
-            {/* HEADER BEGINS */}
-            <header className="main-header"> 
+          {/* HEADER BEGINS */}
+          <header className="main-header"> 
               <div className="container">
                 <div className="nav-header">
                   <li><a href="/welcome" className="white-link">Home</a></li>
-                  <li><a href="/welcome" className="white-link">About us</a></li>
+                  <li><a href="/welcome" className="white-link">Create trip</a></li>
                   <li><a href="/welcome" className="white-link">Deals</a></li>
                   <li><a href="/welcome" className="white-link">Most Popular</a></li>
-                  <Link href='/'><button className="btn_btn_login"> Log out </button></Link>              
+                  <li><a className="white-link">Destionation options</a>
+                      <ul className="submenu">
+                          <li><a href="/createTrip" className="white-link">Create destination</a></li>
+                          <li><a href="/editTrip" className="white-link">Edit destination</a></li>
+                          <li><a href="/deleteTrip" className="white-link">Delete destination</a></li>
+                      </ul>
+                  </li>
+                  <Link href='/'><button className="btn_btn_login"> Log out </button></Link>
                 </div>
               </div>
             </header>
@@ -31,6 +37,7 @@ export default function Cano() {
                             <div className="col-sm-7 py-5 pl-md-0 pl-4">
                                 <div className="heading-section pl-lg-5 ml-md-5">
                                     <h2>
+                                        <br></br><br></br>
                                         Caño Cristales
                                     </h2>
                                 </div>

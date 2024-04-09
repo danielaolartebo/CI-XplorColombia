@@ -11,9 +11,16 @@ export default function Welcome() {
               <div className="container">
                 <div className="nav-header">
                   <li><a href="#home" className="white-link">Home</a></li>
-                  <li><a href="#aboutus" className="white-link">Create trip</a></li>
-                  <li><a href="#deals" className="white-link">Edit destinations</a></li>
+                  <li><a href="#create" className="white-link">Create trip</a></li>
+                  <li><a href="#deals" className="white-link">Deals</a></li>
                   <li><a href="#mostpopular" className="white-link">Most Popular</a></li>
+                  <li><a className="white-link">Destionation options</a>
+                      <ul className="submenu">
+                          <li><a href="/createTrip" className="white-link">Create destination</a></li>
+                          <li><a href="/editTrip" className="white-link">Edit destination</a></li>
+                          <li><a href="/deleteTrip" className="white-link">Delete destination</a></li>
+                      </ul>
+                  </li>
                   <Link href='/'><button className="btn_btn_login"> Log out </button></Link>
                 </div>
               </div>
@@ -29,10 +36,10 @@ export default function Welcome() {
             {/* HOME PAGE ENDS */}
   
   
-            {/* ABOUT US PAGE STARTS */}
+            {/* CREATE TRIP PAGE STARTS */}
             <div className="aboutus-container">
-              <div className="deals-subtitle" id="aboutus">
-                    About us
+              <div className="deals-subtitle" id="create">
+                    Create trip
               </div>
               <div className="text-container">
                   <div className="text-aboutus">
@@ -41,7 +48,7 @@ export default function Welcome() {
                   </div>
               </div>
             </div>
-             {/* ABOUT US PAGE ENDS */}
+             {/* CREATE TRIP PAGE ENDS */}
   
   
             {/* DEALS PAGE STARTS */}
@@ -129,17 +136,6 @@ export default function Welcome() {
                       </div>
                 </div> 
               </div>
-              <ul className="container-options">
-                <div className="half-edit-container">
-                    <li className="button-edit"><a href="/editTrip" className="button">Edit Trip</a></li>
-                </div>
-                <div className="half-create-container">
-                    <li className="button-create"><a href="/createTrip" className="button">Create Trip</a></li>
-                </div>
-                <div className="half-delete-container">
-                    <li className="button-delete"><a href="/deleteTrip" className="button">Delete Trip</a></li>
-                </div>         
-              </ul>
               </div>
               {/* DEALS PAGE ENDS */}
   
