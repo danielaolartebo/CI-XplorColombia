@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function CreateTripPage() {
+export default function DeleteTripPage() {
 
     return (
         <main className="title_container">
@@ -25,7 +25,7 @@ export default function CreateTripPage() {
             <div className="login-first-container" id="home">
                 <img className="login-banner-img" src="../images/ruiz.jpeg" />
                 <div className="createtrip-container">
-                    <h4>Create a Trip</h4>
+                    <h4>Delete a Trip</h4>
 
                     {/* NAME STARTS */}
                     <div className="cont-createtrip">
@@ -34,44 +34,21 @@ export default function CreateTripPage() {
                       </div>
                       <div className='right-create'>
                             <div className='right-right-side-create-trip'>
-                                    <div className="col-create-textbox-container"><input className="txtbox-create" placeholder="" type="text" name="name" required/> </div>
+                                <select className="dropdown-deletetrip" id="menu"> 
+                                    <option value="" disabled selected> Select trip</option>
+                                    <option value=""> Caño Cristales </option> 
+                                    <option value=""> Parque Tayrona </option> 
+                                    <option value=""> Ciudad Perdida </option> 
+                                    <option value=""> Desierto de la Tatacoa </option> 
+                                    <option value=""> Parque del Café </option> 
+                                    <option value=""> Piedra del Peñol </option> 
+                                    <option value=""> Nevado del Ruiz </option> 
+                                    <option value=""> Valle del Cocora </option> 
+                            </select>
                             </div>
                       </div>
                     </div>
                     {/* NAME ENDS */}
-
-                    {/* DESCRIPTION STARTS */}
-                    <div className="cont-createtrip">
-                      <div className='left-create'>
-                          <h5> Description</h5>
-                      </div>
-                        <div className='right-create'>
-                            <div className='right-right-side-create-trip'>
-                                <div className="col-create-textbox-container">
-                                    <textarea name="textarea"></textarea>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* DESCRIPTION ENDS */}
-
-                    {/* IMAGE STARTS */}
-                    <div className="cont-createtrip">
-                      <div className='left-create'>
-                          <h5> Image </h5>
-                      </div>
-                      <div className='right-create'>
-                        <div className='right-right-side-create-trip'>
-                                <input className="custom-input" type="file" id="myFile" name="filename"/>
-                                  
-                        </div>                    
-                    </div>
-                    </div>
-                    {/* IMAGE ENDS */}
-
-                    {/* CATEGORIES STARTS */}
-                    
-                    {/* CATEGORIES ENDS */}
 
                     <div className="cont-createtrip">
                       <div className='left-create'>
@@ -79,7 +56,7 @@ export default function CreateTripPage() {
                       <div className='right-create'>
                         <div className='right-right-side-create-trip'>
                             <ul className="create-cont-button">
-                                <li className="button-report1"><a href="#" className="button">Create</a></li>
+                                <li className="button-report1"><a href="#" className="button">Delete</a></li>
                             </ul>
                         </div>                    
                     </div>

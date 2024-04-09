@@ -46,18 +46,6 @@ body {
   margin-right: auto;
 }
 
-.main-header {
-	display: flex;
-	flex: 1;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	padding-top: .2em;
-	padding-bottom: .2em;
-  background-color: black !important;
-  margin: 0;
-  
-}
-
 .container {
   max-width: auto;
   margin: 0 auto; 
@@ -73,6 +61,22 @@ a{
 }
 
 /* --------------- HEADER NAVIGATION --------------- */
+
+.main-header {
+	display: flex;
+	flex: 1;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding-top: .2em;
+	padding-bottom: .2em;
+  background-color: black !important;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
+}
 
 .nav-header {
 	display: flex;
@@ -93,6 +97,14 @@ li{
 	padding-bottom: 1.375em;
   align-items: center;
   justify-content: center;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .btn_btn_login{
@@ -1032,26 +1044,33 @@ h1, h2 {
 }
 
 .container-options {
-  list-style-type: none;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
   display: flex;
-  margin-top: 1em;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: space-between;
 }
 
 .half-edit-container {
   flex: 1;
   padding: 5px;
   display: flex; /* Utiliza flexbox para alinear elementos internos */
-  justify-content: flex-end; /* Alinea el botón hacia la derecha */
+  justify-content: right; /* Alinea el botón hacia la derecha */
 }
 
 .half-create-container {
+  flex: 0.4;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.half-delete-container {
   flex: 1;
   padding: 5px;
+  display: flex; 
+  justify-content: left; /* Utiliza flexbox para alinear elementos internos */
 }
 
-.button-edit {
+.button-edit, .button-create, .button-delete {
   background-color: #04AA6D;
   border: none;
   color: white;
@@ -1059,18 +1078,8 @@ h1, h2 {
   text-align: center;
   text-decoration: none;
   font-size: 18px;
-  width: 200px;
-}
-
-.button-create {
-  background-color: #04AA6D;
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-  width: 200px;
+  width: 100%; /* Set the width to 100% for responsiveness */
+  max-width: 200px; /* Limit the maximum width of the button */
 }
 
 
@@ -1101,6 +1110,18 @@ th, td{
   background-color: rgb(128, 128, 128); /* Fondo blanco */
   border-radius: 0.5em;
   margin-right: 1em;
+  color: black; /* Color del texto */
+  width: 100%; /* Ancho del elemento al 100% del contenedor padre */
+  max-width: 300px; /* Ancho máximo */
+  font-size: 16px; /* Tamaño de fuente */
+  appearance: none; /* Eliminar estilos nativos del navegador */
+  height: 100%;
+}
+
+.dropdown-deletetrip {
+  border: 1px solid black; /* Borde de 1px sólido gris */
+  background-color: rgb(128, 128, 128); /* Fondo blanco */
+  border-radius: 0.5em;
   color: black; /* Color del texto */
   width: 100%; /* Ancho del elemento al 100% del contenedor padre */
   max-width: 300px; /* Ancho máximo */

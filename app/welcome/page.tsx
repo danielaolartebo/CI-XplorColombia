@@ -11,10 +11,9 @@ export default function Welcome() {
               <div className="container">
                 <div className="nav-header">
                   <li><a href="#home" className="white-link">Home</a></li>
-                  <li><a href="#aboutus" className="white-link">About us</a></li>
-                  <li><a href="#deals" className="white-link">Deals</a></li>
+                  <li><a href="#aboutus" className="white-link">Create trip</a></li>
+                  <li><a href="#deals" className="white-link">Edit destinations</a></li>
                   <li><a href="#mostpopular" className="white-link">Most Popular</a></li>
-                  <li><a href="#contactus" className="white-link">Contact us</a></li>
                   <Link href='/'><button className="btn_btn_login"> Log out </button></Link>
                 </div>
               </div>
@@ -37,9 +36,8 @@ export default function Welcome() {
               </div>
               <div className="text-container">
                   <div className="text-aboutus">
-                      We are passionately dedicated to showcasing the beauty and diversity of our beloved country through exciting tours and unforgettable experiences. We are proud to be your gateway to the fascinating world of tourism in Colombia.<br/><br/>
-                      Immerse yourself in the magic of our land as you explore emblematic destinations such as Caño Cristales, nature's multicolored treasure that captivates with its crystalline waters and vibrantly colored algae. Feel the adrenaline at the Coffee Park, where coffee culture comes to life in an environment of fun and learning. Embark on a unique adventure to the heights of Nevado del Ruiz, where you will witness the majesty of the Andean landscapes and the wildlife that inhabits them. Admire the stunning landscape of the Cocora Valley, home to the iconic wax palms, the tallest in the world. Discover the magical Lost City, an ancient archaeological wonder hidden in the jungles of the Sierra Nevada de Santa Marta. Explore the paradisiacal beaches and lush jungle of Tayrona Park, where nature welcomes you with open arms. Contemplate the imposing Piedra del Peñol and marvel at the panoramic views it offers from its summit. Immerse yourself in the red and arid desert of Tatacoa, a lunar landscape that will leave you breathless with its unique beauty.<br/><br/>
-                      At Xplor Colombia, we are committed to providing you with authentic, safe and memorable experiences that will allow you to discover the true essence of Colombia. Join us and let your adventure begin. Explore Colombia with us and create memories to last a lifetime! Join us on this exciting adventure and let us show you the true heart of Colombia. Your dream trip starts here with Xplor Colombia!
+                      <br/><br/>
+                      <br/><br/>
                   </div>
               </div>
             </div>
@@ -137,7 +135,10 @@ export default function Welcome() {
                 </div>
                 <div className="half-create-container">
                     <li className="button-create"><a href="/createTrip" className="button">Create Trip</a></li>
-                </div>        
+                </div>
+                <div className="half-delete-container">
+                    <li className="button-delete"><a href="/deleteTrip" className="button">Delete Trip</a></li>
+                </div>         
               </ul>
               </div>
               {/* DEALS PAGE ENDS */}
@@ -172,30 +173,6 @@ export default function Welcome() {
                   </ul>
                 </div>
               {/* MOST POPULAR PAGE ENDS */}
-  
-  
-              {/* CONTACT US PAGE STARTS */}
-              <div className="contactus-container">
-                  <img className="contact-img" src="../images/desierto.jpeg"></img>
-                  <div className="contact-container">
-                  <div className="half-container ">
-                    <div className="contactus-subtitle" id="contactus">
-                      Contact us
-                    </div>
-                  <form action="https://formspree.io/f/mknlrooy" method="POST">
-                    <div className="form-row">
-                        <div className="col-12"><input className="form-control" placeholder="Name" type="text" name="name" required/> </div>
-                        <div className="col-12"><input className="form-control" placeholder="Email Address" type="email" name="email" required/></div>
-                        <div className="col-12"><textarea className="form-control" placeholder="Message" typeof="text" name="message" required></textarea></div>
-                        <ul className="report1">
-                          <li className="button-report1"><a href="#" className="button">Submit</a></li>
-                        </ul>
-                    </div>
-                  </form>
-                  </div>
-                  </div>
-              </div>
-              {/* CONTACT US PAGE ENDS */}
   
       </main>
     );

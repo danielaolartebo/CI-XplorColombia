@@ -16,7 +16,6 @@ export default function EditTripPage() {
                       <li><a href="/welcome" className="white-link">About us</a></li>
                       <li><a href="/welcome" className="white-link">Deals</a></li>
                       <li><a href="/welcome" className="white-link">Most Popular</a></li>
-                      <li><a href="/welcome" className="white-link">Contact us</a></li>
                       <Link href='/'><button className="btn_btn_login"> Log out </button></Link>
                     </div>
                 </div>
