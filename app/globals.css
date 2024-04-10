@@ -267,7 +267,7 @@ h2{
   width: 100%;
   height: auto; /* Change height to auto for responsiveness */
   padding: 50px 20px; /* Add padding for better spacing */
-  margin-top: 23%;
+  margin-top: 27%;
 }
 
 .text-aboutus {
@@ -647,6 +647,11 @@ h1, h2 {
   text-align: center;
 }
 
+.price2 li {
+  padding: 20px;
+  text-align: center;
+}
+
 .price .grey {
   background-color: white;
   font-size: 20px;
@@ -698,6 +703,14 @@ h1, h2 {
   margin: 10px 0;
   color: black;
   font-size: 1em;
+}
+
+/* PRINCIPING WELCOME PAGE */
+
+.cont-pricing2{
+  padding-top: 4em;
+  padding-left: 30%;
+  padding-right: 30%;
 }
 
 /* LOGIN PAGE */
@@ -903,7 +916,7 @@ h1, h2 {
   border-radius: 0.5em;
   color: #333; /* Color del texto */
   padding: 8px; /* Espaciado interno */
-  width: 200px; /* Ancho del elemento */
+  width: 250px; /* Ancho del elemento */
   font-size: 16px; /* Tamaño de fuente */
   appearance: none; /* Eliminar estilos nativos del navegador */
 }
@@ -945,7 +958,7 @@ h1, h2 {
   border-radius: 0.5em;
   color: #333;
   padding: 8px;
-  width: 200px;
+  width: 250px;
   font-size: 16px;
 }
 
@@ -970,7 +983,7 @@ h1, h2 {
 
 .form-user2{
   height: unset;
-  width: 200px;
+  width: 250px;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 6px;
@@ -1283,6 +1296,164 @@ textarea{
     text-align: center;
     border: 1px solid black;
     padding-top: 2em;
+}
+
+.container-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Esto es opcional, depende de cómo desees alinear el contenido verticalmente */
+  height: 100%; /* Opcional: ajusta la altura según sea necesario */
+
+}
+
+.items-container {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Esto es opcional, depende de cómo desees alinear el contenido verticalmente */
+  height: 100%; /* Opcional: ajusta la altura según sea necesario */
+}
+
+.items-half1{
+  flex:1;
+  flex-direction: row;
+  display: flex;
+  justify-content: right;
+}
+
+.items-half2{
+  flex:1;
+  flex-direction: row;
+  display: flex;
+  justify-content: left;
+}
+
+/* DESTIONATION 1 */
+
+.itemshalf1{
+  flex:2.1;
+  flex-direction: row;
+  display: flex;
+  justify-content: right;
+}
+
+.itemshalf2{
+  flex:1;
+  flex-direction: row;
+  display: flex;
+  justify-content: left;
+}
+
+.itemshalf3{
+  flex:1;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+
+.form-items1{
+    height: unset;
+    width: 140px;
+    margin-right: 1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 6px;
+    border: 2px solid #c2c6ce;
+    font-weight: 500;
+}
+
+.form-items2{
+    height: 100%;
+    width: 250px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 6px;
+    border: 2px solid #c2c6ce;
+    font-weight: 500;
+}
+
+.button-items {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  width: 250px;
+}
+
+.button-14 {
+  background-image: #04AA6D;
+  background-color: #04AA6D;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  box-shadow: #04AA6D;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember",Arial,sans-serif;
+  font-size: 14px;
+  height: 29px;
+  font-size: 13px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 11px;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  width: 125px;
+}
+
+.button-14:active {
+  border-bottom-color: #a2a6ac;
+}
+
+.button-14:active:hover {
+  border-bottom-color: #a2a6ac;
+}
+
+.button-14:hover {
+  border-color: #a2a6ac #979aa1 #82858a;
+}
+
+.button-14:focus {
+  border-color: #e77600;
+  box-shadow: rgba(228, 121, 17, .5) 0 0 3px 2px;
+  outline: 0;
+}
+
+.text-items{
+  margin-right: 1em;
+  justify-content: right;
+  align-content: center;
+}
+
+.text-design{
+  font-family: "SF Pro Text","SF Pro Icons","AOS Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  text-align: right;
+  width: 140px;
+}
+
+.dropdown-items {
+  border: 1px solid black; /* Borde de 1px sólido gris */
+  background-color: rgba(128, 128, 128, 0.693); /* Fondo blanco */
+  border-radius: 0.5em;
+  color: #333; /* Color del texto */
+  padding: 8px; /* Espaciado interno */
+  width: 250px; /* Ancho del elemento */
+  font-size: 16px; /* Tamaño de fuente */
+  appearance: none; /* Eliminar estilos nativos del navegador */
 }
 
 
