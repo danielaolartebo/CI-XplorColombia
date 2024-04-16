@@ -15,6 +15,7 @@ export default function EditTripPage() {
             <header className="main-header"> 
               <div className="container">
                 <div className="nav-header">
+                  <Link href='/welcome'><button className="btn_btn_login"> Go back </button></Link>
                   <li><a href="/welcome" className="white-link">Home</a></li>
                   <li><a href="/welcome" className="white-link">Create trip</a></li>
                   <li><a href="/welcome" className="white-link">Deals</a></li>

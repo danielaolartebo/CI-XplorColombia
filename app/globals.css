@@ -545,7 +545,8 @@ h1, h2 {
   border-radius: 3px;
   margin-bottom: 10px;
   box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease; 
+}
 
 
 .heading-section {
@@ -1454,6 +1455,35 @@ textarea{
   width: 250px; /* Ancho del elemento */
   font-size: 16px; /* Tamaño de fuente */
   appearance: none; /* Eliminar estilos nativos del navegador */
+}
+
+.button-trips {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  width: 240px;
+}
+
+.trips-button li {
+  padding: 8px;
+  display: flex;
+  justify-content: left;
+}
+
+.package-menu img {
+  height: auto;
+  border: 1px solid black;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 2em;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease; 
 }
 
 

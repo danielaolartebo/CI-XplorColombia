@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function Ruiz() {
+export default function Explore() {
     return (
       <main className="title_container">
           <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,9 +8,8 @@ export default function Ruiz() {
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
           <link rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.js"></link>
           
-
-            {/* HEADER BEGINS */}
-            <header className="main-header"> 
+          {/* HEADER BEGINS */}
+          <header className="main-header"> 
               <div className="container">
                 <div className="nav-header">
                   <Link href='/welcome'><button className="btn_btn_login"> Go back </button></Link>
@@ -40,16 +39,16 @@ export default function Ruiz() {
                                 <div className="heading-section pl-lg-5 ml-md-5">
                                     <h2>
                                         <br></br><br></br>
-                                        Nevado del Ruiz
+                                         Explore Package
                                     </h2>
                                 </div>
                                 <div className="pl-lg-5 ml-md-5">
-                                    <p>The Nevado del Ruiz, towering as the highest volcano in the Colombian Andes, is a majestic natural wonder that commands attention with its snow-capped peak and rugged beauty. Located within Los Nevados National Natural Park in the Cordillera Central range, this stratovolcano is renowned for its imposing presence and geological significance. Despite its breathtaking vistas and picturesque glaciers, the Nevado del Ruiz holds a tumultuous history, as it remains an active volcano with occasional eruptions. The most devastating eruption in recent history occurred in 1985, resulting in significant loss of life and extensive damage to surrounding areas. Today, visitors can explore the park's diverse ecosystems, which range from paramo grasslands to cloud forests, and witness the awe-inspiring spectacle of the Nevado del Ruiz from various vantage points. While its volatile nature demands caution, the Nevado del Ruiz continues to captivate adventurers and nature enthusiasts alike, offering a glimpse into the powerful forces that shape our planet.</p>
+                                    <p>Experience the essence of Colombia with our 'Colombian Odyssey' travel package! Climb the iconic Piedra del Peñol for panoramic views, delight in the charm of Parque del Café, and wander through the surreal landscapes of the Tatacoa Desert. With handpicked accommodations, seamless transportation, and knowledgeable guides, this journey ensures an immersive exploration of Colombia's rich diversity. Embark on an unforgettable adventure through some of the country's most captivating destinations!</p>
                                     <div className="row">
                                         <div className="trips-container">
                                           <div className="half-trips-container">
-                                              <a href="#" className="thumb-menu">
-                                                  <img className="img-fluid img-cover" src="../images/ruiz1.webp" />
+                                              <a href="#" className="package-menu">
+                                                  <img className="img-fluid img-cover" src="../images/paquete2.png" />
                                               </a>
                                           </div>
                                           <div className="half-trips-container">
@@ -101,7 +100,7 @@ export default function Ruiz() {
                                             </div>
                                             {/* ---------------------- # PEOPLE ENDS ----------------------------*/}
 
-                                             {/* ---------------------- # DAYS ENDS ----------------------------*/}
+                                             {/* ---------------------- # DAYS STARTS ----------------------------*/}
 
 
                                              <div className="cont-subtitle">
@@ -109,7 +108,7 @@ export default function Ruiz() {
                                                     <i className="fa fa-calendar-plus-o" style={{ fontSize: '36px'}}></i>
                                                 </div>
                                                 <div className="half-descrip-container right-right-side">
-                                                    <p> Start of trip </p>
+                                                    <p> Start of Piedra Peñol</p>
                                                 </div>
                                                 <div className="half-descrip-container right-left-side">
                                                 <div className="date-range-container">
@@ -123,7 +122,63 @@ export default function Ruiz() {
                                                     <i className="fa fa-calendar-minus-o" style={{ fontSize: '36px'}}></i>
                                                 </div>
                                                 <div className="half-descrip-container right-right-side">
-                                                    <p> End of trip </p>
+                                                    <p> End of Piedra Peñol </p>
+                                                </div>
+                                                <div className="half-descrip-container right-left-side">
+                                                <div className="date-range-container">
+                                                    <input type="date" id="end-date" name="end-date"></input>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="cont-subtitle">
+                                                <div className="half-descrip-container left-right-side">
+                                                    <i className="fa fa-calendar-plus-o" style={{ fontSize: '36px'}}></i>
+                                                </div>
+                                                <div className="half-descrip-container right-right-side">
+                                                    <p> Start of Parque Café </p>
+                                                </div>
+                                                <div className="half-descrip-container right-left-side">
+                                                <div className="date-range-container">
+                                                    <input type="date" id="start-date" name="start-date"></input>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="cont-subtitle">
+                                                <div className="half-descrip-container left-right-side">
+                                                    <i className="fa fa-calendar-minus-o" style={{ fontSize: '36px'}}></i>
+                                                </div>
+                                                <div className="half-descrip-container right-right-side">
+                                                    <p> End of Parque Café </p>
+                                                </div>
+                                                <div className="half-descrip-container right-left-side">
+                                                <div className="date-range-container">
+                                                    <input type="date" id="end-date" name="end-date"></input>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="cont-subtitle">
+                                                <div className="half-descrip-container left-right-side">
+                                                    <i className="fa fa-calendar-plus-o" style={{ fontSize: '36px'}}></i>
+                                                </div>
+                                                <div className="half-descrip-container right-right-side">
+                                                    <p> Start of Tatacoa </p>
+                                                </div>
+                                                <div className="half-descrip-container right-left-side">
+                                                <div className="date-range-container">
+                                                    <input type="date" id="start-date" name="start-date"></input>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="cont-subtitle">
+                                                <div className="half-descrip-container left-right-side">
+                                                    <i className="fa fa-calendar-minus-o" style={{ fontSize: '36px'}}></i>
+                                                </div>
+                                                <div className="half-descrip-container right-right-side">
+                                                    <p> End of Tatacoa </p>
                                                 </div>
                                                 <div className="half-descrip-container right-left-side">
                                                 <div className="date-range-container">
@@ -133,113 +188,6 @@ export default function Ruiz() {
                                             </div>
 
                                              {/* ---------------------- # DAYS ENDS ----------------------------*/}
-
-                                            {/* ---------------------- TRANSPORTATION STARTS ----------------------------*/}
-
-                                            <div className="cont-subtitle">
-                                                <div className="half-descrip-container left-right-side">
-                                                    <i className="fa fa-bus" style={{ fontSize: '36px'}}></i>
-                                                </div>
-                                                <div className="half-descrip-container right-right-side">
-                                                    <p> Transportation</p>
-                                                </div>
-                                                <div className="half-descrip-container right-left-side">
-                                                    <select className="dropdown-menu" id="menu"> 
-                                                        <option value="" disabled selected>Select option</option>
-                                                        <option value=""> No </option> 
-                                                        <option value=""> From/To Bogotá </option> 
-                                                        <option value=""> From/To Medellín </option> 
-                                                        <option value=""> From/To Cali </option> 
-                                                        <option value=""> From/To Pereira </option> 
-                                                        <option value=""> From/To Bucaramanga </option> 
-                                                        <option value=""> From/To Cucuta </option> 
-                                                        <option value=""> From/To Barranquilla </option> 
-                                                        <option value=""> From/To Santa Marta </option> 
-                                                        <option value=""> From/To Manizales </option> 
-                                                        <option value=""> From/To Villavicencio </option> 
-                                                        <option value=""> From/To Neiva </option> 
-                                                        <option value=""> From/To Montería </option> 
-                                                        <option value=""> From/To Pasto </option> 
-                                                        <option value=""> From/To Popayan </option> 
-                                                        <option value=""> From/To Pasto </option>
-                                                        <option value=""> Other </option>
-                                                    </select>
-
-                                                </div>
-                                            </div>
-
-                                            {/* ---------------------- TRANSPORTATION ENDS ----------------------------*/}
-
-                                             {/* ---------------------- HOTEL STARTS ----------------------------*/}
-
-                                             <div className="cont-subtitle">
-                                                <div className="half-descrip-container left-right-side">
-                                                    <i className="fa fa-building" style={{ fontSize: '36px'}}></i>
-                                                </div>
-                                                <div className="half-descrip-container right-right-side">
-                                                    <p> Hotel </p>
-                                                </div>
-                                                <div className="half-descrip-container right-left-side">
-                                                    <select className="dropdown-menu" id="menu"> 
-                                                        <option value="" disabled selected>Select option</option>
-                                                        <option value=""> No </option> 
-                                                        <option value=""> Hotel Estelar El Cable </option> 
-                                                        <option value=""> Hotel Varuna </option> 
-                                                        <option value=""> Hostal Kaleidoscopio </option> 
-                                                        <option value=""> Pensión Santander </option> 
-                                                        <option value=""> Hostal El Cofre </option>  
-                                                        <option value=""> Hacienda Venecia </option> 
-                                                        <option value=""> Finca Hotel El Cielo </option> 
-                                                    </select>
-
-                                                </div>
-                                            </div>
-
-                                            {/* ---------------------- HOTEL ENDS ----------------------------*/}
-
-                                            {/* ---------------------- FOOD STARTS ----------------------------*/}
-
-                                            <div className="cont-subtitle">
-                                                <div className="half-descrip-container left-right-side">
-                                                    <i className="fa fa-cutlery" style={{ fontSize: '36px'}}></i>
-                                                </div>
-                                                <div className="half-descrip-container right-right-side">
-                                                    <p> Meals </p>
-                                                </div>
-                                                <div className="half-descrip-container right-left-side">
-                                                    <select className="dropdown-menu" id="menu"> 
-                                                        <option value="" disabled selected>Select option</option>
-                                                        <option value=""> No </option> 
-                                                        <option value=""> Breakfast Only </option> 
-                                                        <option value=""> Lunch Only </option> 
-                                                        <option value=""> Dinner Only </option> 
-                                                        <option value=""> Breakfast, Lunch, Dinner </option> 
-                                                    </select>
-
-                                                </div>
-                                            </div>
-
-                                            {/* ---------------------- FOOD ENDS ----------------------------*/}
-
-                                            {/* ---------------------- TRIP INSURANCE STARTS ----------------------------*/}
-
-                                            <div className="cont-subtitle">
-                                                <div className="half-descrip-container left-right-side">
-                                                    <i className="fa fa-ambulance" style={{ fontSize: '36px'}}></i>
-                                                </div>
-                                                <div className="half-descrip-container right-right-side">
-                                                    <p> Trip Insurance </p>
-                                                </div>
-                                                <div className="half-descrip-container right-left-side">
-                                                    <select className="dropdown-menu" id="menu"> 
-                                                        <option value="" disabled selected>Select option</option>
-                                                        <option value=""> Yes </option> 
-                                                        <option value=""> No </option>  
-                                                    </select>
-
-                                                </div>
-                                            </div>
-                                            {/* ---------------------- HEALTH INSURANCE ENDS ----------------------------*/}
                                             {/* ---------------------- BUTTON ADD STARTS ----------------------------*/}
                                             <div className="cont-subtitle">
                                                 <div className="half-descrip-container left-right-side">
@@ -250,7 +198,7 @@ export default function Ruiz() {
                                                 </div>
                                                 <div className="half-descrip-container right-left-side">
                                                     <ul className="trips-button">
-                                                        <li><a href="/welcome" className="button-trips">Add</a></li>
+                                                        <li><a href="" className="button-trips">Add</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -265,6 +213,33 @@ export default function Ruiz() {
                 </div>
             </section>
             {/* TRIP DESCRIPTION ENDS */}
+            
+            {/* PRINCING STARTS */}
+                <section>
+                <div className="cont-pricing"> 
+                    <div className="sub-cont-pricing">
+                        <div className="title-price" style={{textAlign:'center'}}>Princing & Details</div>
+                        <div className="sub-title-price" style={{textAlign:'center'}}>Let's start a new adventure!</div>
+                          <div className="columns">
+                            <ul className="price">
+                              <li className="header">Explore Package</li>
+                              <li className="grey">$ 0 COP </li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                            </ul>
+                          </div>
+                          <ul className="price">
+                              <li className="blue"><a href="#" className="button">Download Report</a></li>
+                            </ul>
+                      </div>
+                  </div> 
+                </section>
+              {/* PRINCING ENDS */}
         </main>
     )
 }

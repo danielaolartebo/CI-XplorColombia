@@ -13,6 +13,7 @@ export default function Tayrona() {
             <header className="main-header"> 
               <div className="container">
                 <div className="nav-header">
+                  <Link href='/welcome'><button className="btn_btn_login"> Go back </button></Link>
                   <li><a href="/welcome" className="white-link">Home</a></li>
                   <li><a href="/welcome" className="white-link">Create trip</a></li>
                   <li><a href="/welcome" className="white-link">Deals</a></li>
@@ -238,7 +239,21 @@ export default function Tayrona() {
                                             </div>
 
                                             {/* ---------------------- HEALTH INSURANCE ENDS ----------------------------*/}
-
+                                            {/* ---------------------- BUTTON ADD STARTS ----------------------------*/}
+                                            <div className="cont-subtitle">
+                                                <div className="half-descrip-container left-right-side">
+                                                    
+                                                </div>
+                                                <div className="half-descrip-container right-right-side">
+                                                   
+                                                </div>
+                                                <div className="half-descrip-container right-left-side">
+                                                    <ul className="trips-button">
+                                                        <li><a href="/welcome" className="button-trips">Add</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            {/* ---------------------- BUTTON ADD ENDS ----------------------------*/}
                                           </div>
                                         </div>                          
                                     </div>
@@ -249,33 +264,6 @@ export default function Tayrona() {
                 </div>
             </section>
             {/* TRIP DESCRIPTION ENDS */}
-            
-            {/* PRINCING STARTS */}
-                <section>
-                <div className="cont-pricing"> 
-                    <div className="sub-cont-pricing">
-                        <div className="title-price" style={{textAlign:'center'}}>Princing & Details</div>
-                        <div className="sub-title-price" style={{textAlign:'center'}}>Let's start a new adventure!</div>
-                          <div className="columns">
-                            <ul className="price">
-                              <li className="header">Parque Tayrona</li>
-                              <li className="grey">$ 0 COP </li>
-                              <li></li>
-                              <li></li>
-                              <li></li>
-                              <li></li>
-                              <li></li>
-                              <li></li>
-                              <li></li>
-                            </ul>
-                          </div>
-                          <ul className="price">
-                              <li className="blue"><a href="#" className="button">Download Report</a></li>
-                            </ul>
-                      </div>
-                  </div> 
-                </section>
-              {/* PRINCING ENDS */}
         </main>
     )
 }

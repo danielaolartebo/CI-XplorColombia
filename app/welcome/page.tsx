@@ -149,81 +149,42 @@ export default function Welcome() {
               <div className="grid">
               {/* 1 box */}
                 <div className="grid-container">
-                      <img className="grid-img" src="../images/cano.jpeg" />
+                      <img className="grid-img" src="../images/paquete1.png" />
                       <div className="button-container">
-                        <Link href='/cano'>
-                          <button className="btn_btn" > Caño Cristales </button>
+                        <Link href='/package-nature'>
+                          <button className="btn_btn" > Deal Nature </button>
                         </Link>
                       </div>
                 </div> 
                 {/* 2 box */}
                 <div className="grid-container">
-                      <img className="grid-img" src="../images/tayrona.jpg" />
+                      <img className="grid-img" src="../images/paquete2.png" />
                       <div className="button-container">
-                        <Link href='/tayrona'>
-                          <button className="btn_btn"> Parque Tayrona </button>
+                        <Link href='/package-explore'>
+                          <button className="btn_btn"> Deal Explore </button>
                         </Link>
                       </div>
                         
                 </div> 
                 {/* 3 box */}
                 <div className="grid-container">
-                      <img className="grid-img" src="../images/ciudad-perdida.webp" />
+                      <img className="grid-img" src="../images/paquete3.png" />
                       <div className="button-container">
-                        <Link href='/perdida'>
-                          <button className="btn_btn"> Ciudad Perdida </button>
+                        <Link href='/package-discover'>
+                          <button className="btn_btn"> Deal Discover </button>
                         </Link>
                       </div>
                         
                 </div> 
                 {/* 4 box */}
                 <div className="grid-container">
-                      <img className="grid-img" src="../images/tatacoa.webp" />
+                      <img className="grid-img" src="../images/paquete4.png" />
                       <div className="button-container">
-                      <Link href='/tatacoa'>
-                          <button className="btn_btn"> Desierto de la Tatacoa </button>
+                      <Link href='/package-wander'>
+                          <button className="btn_btn"> Deal Wander </button>
                       </Link>
                       </div>
                         
-                </div> 
-                {/* 5 box */}
-                <div className="grid-container">
-                      <img className="grid-img" src="../images/cafe.webp" />
-                      <div className="button-container">
-                      <Link href='/cafe'>
-                        <button className="btn_btn"> Parque del Café </button>
-                      </Link>
-                      </div>
-                        
-                </div> 
-                {/* 6 box */}
-                <div className="grid-container">
-                      <img className="grid-img" src="../images/penol.jpeg" />
-                      <div className="button-container">
-                        <Link href='/penol'>
-                          <button className="btn_btn"> Piedra del Peñol </button>
-                        </Link>
-                      </div>
-                        
-                </div> 
-                {/* 7 box */}
-                <div className="grid-container">
-                      <img className="grid-img" src="../images/nevado.jpeg" />
-                      <div className="button-container">
-                        <Link href='/ruiz'>
-                          <button className="btn_btn"> Nevado del Ruiz </button>
-                        </Link>
-                      </div>
-                        
-                </div> 
-                {/* 8 box */}
-                <div className="grid-container">
-                      <img className="grid-img" src="../images/cocora.jpeg" />
-                      <div className="button-container">
-                        <Link href='/cocora'>
-                          <button className="btn_btn"> Valle del Cocora </button>
-                        </Link>
-                      </div>
                 </div> 
               </div>
               </div>
