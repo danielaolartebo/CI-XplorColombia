@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6ab76f6-c3ae-4353-acf1-26921f105d7f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/xplor-colombia/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/XplorColombiaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/XplorColombiaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/test/java/com/xplorcolombia/xplorcolombia/XplorColombiaApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/test/java/com/xplorcolombia/xplorcolombia/XplorColombiaApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,21 +35,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "dev",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/sebas/OneDrive/Documentos/Comp_Internet_II/CI-XplorColombia/backend/xplor-colombia",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sebas/OneDrive/Documentos/Comp_Internet_II/CI-XplorColombia/backend/xplor-colombia&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\sebas\OneDrive\Documentos\Comp_Internet_II\CI-XplorColombia\backend\xplor-colombia" />
@@ -65,6 +73,7 @@
       <updated>1713901998389</updated>
       <workItem from="1713901999924" duration="2136000" />
       <workItem from="1713990069567" duration="1411000" />
+      <workItem from="1714066581208" duration="310000" />
     </task>
     <servers />
   </component>
