@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings
+        xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+        http://xmlns.jcp.org/xml/ns/persistence/orm_2_2.xsd"
+        version="2.2">
+
+    <entity class="com.xplorcolombia.xplorcolombia.domain.Destination">
+
+        <named-native-query name="Destination.seeDestinations" result-set-mapping="seeDestinations">
+            <query>
+                select name nameD
+                from destination
+            </query>
+        </named-native-query>
+
+
+    </entity>
+
+    <entity class="com.xplorcolombia.xplorcolombia.domain.Transportation">
+        <named-native-query name="Transportation.seeTranportationbyDestination" result-set-mapping="seeTranportationbyDestination">
+            <query>
+                select type typeTp
+                from transportation
+                where destination_id = :pidDest
+            </query>
+        </named-native-query>
+    </entity>
+
+    <entity class="com.xplorcolombia.xplorcolombia.domain.Lodging">
+        <named-native-query name="Lodging.seeHotels" result-set-mapping="seeHotels">
+            <query>
+                select name
+                from lodging
+                where destination_id = :pidDest
+            </query>
+        </named-native-query>
+    </entity>
+
+    <entity class="com.xplorcolombia.xplorcolombia.domain.Meal">
+        <named-native-query name="Lodging.seeMeals" result-set-mapping="seeMeals">
+            <query>
+                select type
+                from meal
+                where destination_id = :pidDest
+            </query>
+        </named-native-query>
+    </entity>
+
+
+
+
+</entity-mappings>

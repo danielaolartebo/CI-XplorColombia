@@ -28,12 +28,5 @@ public class Lodging implements Serializable {
 
     @Column(name = "state", columnDefinition = "char(1)")
     private String state;
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
-    }
 
 }

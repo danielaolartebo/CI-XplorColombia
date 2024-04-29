@@ -55,12 +55,5 @@ public class Reservation implements Serializable {
 
     @Column(name = "state", columnDefinition = "varchar(1)")
     private String state;
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
-    }
 
 }
