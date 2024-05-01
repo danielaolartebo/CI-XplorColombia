@@ -1,6 +1,9 @@
 package com.xplorcolombia.xplorcolombia.service;
 
 import com.xplorcolombia.xplorcolombia.domain.UserAG;
+import com.xplorcolombia.xplorcolombia.dto.UserAGDTO;
+import com.xplorcolombia.xplorcolombia.repository.UserAGRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +14,17 @@ import java.util.Optional;
 @Scope("singleton")
 @Service
 public class UserAGServiceImpl implements UserAGService {
+
+    @Autowired
+    private UserAGRepository userAGRepository;
+
+    public UserAGDTO loadUserByUsername(String email) {
+        UserAG userAG = userAGRepository.findByEmail(email);
+        if (userAG == null) {
+            return null;
+        }
+        return new UserAGDTO(userAG.getId(), userAG.getName(), userAG.getEmail(),userAG.getPassword(),userAG.getState());
+    }
     @Override
     public List<UserAG> findAll() {
         return null;

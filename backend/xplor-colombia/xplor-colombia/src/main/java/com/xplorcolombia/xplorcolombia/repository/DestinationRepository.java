@@ -11,6 +11,6 @@ public interface DestinationRepository extends JpaRepository<Destination,Integer
 
     public DestinationDTO findByName(String name);
 
-    @Query(nativeQuery = true)
-    public List<DestinationDTO> seeDestinations();
+   // @Query(nativeQuery = true)
+    //public List<DestinationDTO> seeDestinations();
 }
