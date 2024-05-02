@@ -1,4 +1,4 @@
-package com.xplorcolombia.xplorcolombia.service;
+package com.xplorcolombia.xplorcolombia.security;
 
 import com.xplorcolombia.xplorcolombia.domain.UserAG;
 import io.jsonwebtoken.Claims;
@@ -13,9 +13,9 @@ import java.util.Date;
 @Service
 public class JwtTokenProvider {
 
-    private static final String SECRET_KEY = "claveSecretaParaTokenJWT";
+    private static final String SECRET_KEY = "claveSecretaJWT";
 
-    private static final long EXPIRATION_TIME = 3600000; // 1 hora en milisegundos
+    private static final long EXPIRATION_TIME = 3600000;
 
     public static String generateToken(String username) {
         Date now = new Date();

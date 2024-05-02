@@ -19,11 +19,12 @@ public class UserAGServiceImpl implements UserAGService {
     private UserAGRepository userAGRepository;
 
     public UserAGDTO loadUserByUsername(String email) {
-        UserAG userAG = userAGRepository.findByEmail(email);
-        if (userAG == null) {
-            return null;
+        Optional<UserAG> oUserAG = userAGRepository.findByEmail(email);
+        if (oUserAG.isPresent()) {
+            UserAG foundUser = oUserAG.get();
+            return new UserAGDTO(foundUser.getId(), foundUser.getName(), foundUser.getEmail(), foundUser.getPassword(), foundUser.getState());
         }
-        return new UserAGDTO(userAG.getId(), userAG.getName(), userAG.getEmail(),userAG.getPassword(),userAG.getState());
+        return null;
     }
     @Override
     public List<UserAG> findAll() {
