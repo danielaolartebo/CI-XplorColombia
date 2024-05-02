@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -45,7 +47,13 @@ public class AuthController {
             UserAG foundUserAG = oUserAG.get();
             if(Objects.equals(foundUserAG.getPassword(), userAGPassword)){
                 System.out.println(foundUserAG.getName());
-                return ResponseEntity.status(200).body(foundUserAG);
+                AuthResponse loginResponse = authService.login(request);
+                Map<String, Object> response = new HashMap<>();
+                response.put("loginResponse", loginResponse);
+                response.put("foundUserAG", foundUserAG);
+                return ResponseEntity.ok(response);
+                //return ResponseEntity.ok(authService.login(request));
+                //return ResponseEntity.status(200).body(foundUserAG);
             }
             return ResponseEntity.status(401).body("Invalid password.");
         }
