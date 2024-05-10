@@ -33,7 +33,7 @@
             </query>
         </named-native-query>
     </entity>
-
+    <!-- -->
     <entity class="com.xplorcolombia.xplorcolombia.domain.Transportation">
         <named-native-query name="Transportation.seeTranportationbyDestination" result-set-mapping="seeTranportationbyDestination">
             <query>
