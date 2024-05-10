@@ -11,11 +11,13 @@ public class ReservationDTO {
     private Integer numberOfDays;
     private String medicalInsurance;
     private Client user;
-    private Destination destination;
-    private Accommodation accommodation;
-    private Lodging lodging;
-    private Transportation transportation;
     private Integer price;
-    private Meal meal;
     private String state;
+
+    public ReservationDTO(Integer numberOfPeople, Integer numberOfDays, String medicalInsurance, Integer price){
+        this.numberOfDays = numberOfDays;
+        this.numberOfPeople = numberOfPeople;
+        this.medicalInsurance = medicalInsurance;
+        this.price = price;
+    }
 }

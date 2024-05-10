@@ -14,4 +14,8 @@ public class MealDTO implements Serializable {
     private Integer price;
 
     private String state;
+
+    public MealDTO(String type){
+        this.type = type;
+    }
 }

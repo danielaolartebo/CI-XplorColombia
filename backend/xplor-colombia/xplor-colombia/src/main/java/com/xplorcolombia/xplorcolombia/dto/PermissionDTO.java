@@ -17,4 +17,6 @@ public class PermissionDTO implements Serializable {
     private Role role;
 
     private String state;
+
+
 }

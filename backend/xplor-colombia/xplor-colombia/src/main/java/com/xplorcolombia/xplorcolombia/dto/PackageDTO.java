@@ -8,4 +8,8 @@ public class PackageDTO implements Serializable {
     private Integer id;
     private String name;
     private String state;
+
+    public PackageDTO(String name){
+        this.name = name;
+    }
 }

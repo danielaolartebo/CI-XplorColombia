@@ -14,4 +14,8 @@ public class TransportationDTO implements Serializable {
     private Destination destination;
     private Integer price;
     private String state;
+
+    public TransportationDTO(String type){
+        this.type = type;
+    }
 }

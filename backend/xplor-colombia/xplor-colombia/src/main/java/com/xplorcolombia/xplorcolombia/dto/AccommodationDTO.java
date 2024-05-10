@@ -10,4 +10,9 @@ public class AccommodationDTO implements Serializable {
     private Integer destinationId;
     private Integer price;
     private String state;
+
+    public AccommodationDTO(String name){
+        this.name = name;
+    }
 }
+

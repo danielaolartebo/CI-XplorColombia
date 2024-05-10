@@ -30,28 +30,8 @@ public class Reservation implements Serializable {
     @JoinColumn(name = "user_id", nullable = false)
     private Client user;
 
-    @ManyToOne
-    @JoinColumn(name = "destination_id", nullable = false)
-    private Destination destination;
-
-    @ManyToOne
-    @JoinColumn(name = "accommodation_id")
-    private Accommodation accommodation;
-
-    @ManyToOne
-    @JoinColumn(name = "lodging_id")
-    private Lodging lodging;
-
-    @ManyToOne
-    @JoinColumn(name = "transportation_id")
-    private Transportation transportation;
-
     @Column(name = "price", nullable = false)
     private Integer price;
-
-    @ManyToOne
-    @JoinColumn(name = "meal_id")
-    private Meal meal;
 
     @Column(name = "state", columnDefinition = "varchar(1)")
     private String state;
