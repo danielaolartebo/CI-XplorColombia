@@ -11,5 +11,5 @@ import java.util.List;
 
 public interface ReservationDestinationRepository extends JpaRepository<ReservationDestination,ReservationDestination.CompusedId> {
 
-    public List<ReservationDestinationDTO> destinationForReservation(@Param(":pClientId") Integer clientId);
+    public List<ReservationDestinationDTO> destinationForReservation(@Param("pClientId") Integer clientId);
 }

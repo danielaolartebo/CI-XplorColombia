@@ -20,7 +20,8 @@ import java.util.Optional;
 @CrossOrigin(maxAge = 3600)
 @RequestMapping("/auth")
 @RequiredArgsConstructor
-public class AuthController {
+public class
+AuthController {
     private final AuthService authService;
 
     @Autowired

@@ -10,6 +10,5 @@ import java.util.List;
 import java.util.Optional;
 
 public interface UserAGRepository extends JpaRepository<UserAG,Integer> {
-    @Query(nativeQuery = true)
-    Optional<UserAG> findByEmail(@Param("email") String email);
+    public Optional<UserAG> findByEmail( String email);
 }

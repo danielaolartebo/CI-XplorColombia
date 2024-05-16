@@ -1,6 +1,9 @@
 package com.xplorcolombia.xplorcolombia.service;
 
 import com.xplorcolombia.xplorcolombia.domain.Role;
+import com.xplorcolombia.xplorcolombia.repository.ReservationRepository;
+import com.xplorcolombia.xplorcolombia.repository.RoleRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
@@ -11,34 +14,37 @@ import java.util.Optional;
 @Service
 public class RoleServiceImpl implements RoleService {
 
+    @Autowired
+    RoleRepository roleRepository;
+
     @Override
     public List<Role> findAll() {
-        return null;
+        return roleRepository.findAll();
     }
 
     @Override
     public Optional<Role> findById(Integer integer) {
-        return Optional.empty();
+        return roleRepository.findById(integer);
     }
 
     @Override
     public Role save(Role entity) throws Exception {
-        return null;
+        return roleRepository.save(entity);
     }
 
     @Override
     public Role update(Role entity) throws Exception {
-        return null;
+        return roleRepository.save(entity);
     }
 
     @Override
     public void delete(Role entity) throws Exception {
-
+        roleRepository.delete(entity);
     }
 
     @Override
     public void deleteById(Integer integer) throws Exception {
-
+        roleRepository.deleteById(integer);
     }
 
     @Override
@@ -48,6 +54,6 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public Long count() {
-        return null;
+        return roleRepository.count();
     }
 }

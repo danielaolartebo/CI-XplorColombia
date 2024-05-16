@@ -10,6 +10,6 @@ import java.util.List;
 
 public interface TransportationRepository extends JpaRepository<Transportation,Integer> {
 
-    //@Query(nativeQuery = true)
-    //public List<TransportationDTO> seeTranportationbyDestination(@Param("pidDest") Integer id);
+    @Query(nativeQuery = true)
+    public List<TransportationDTO> seeTranportationbyDestination(@Param("pDest") String destination);
 }

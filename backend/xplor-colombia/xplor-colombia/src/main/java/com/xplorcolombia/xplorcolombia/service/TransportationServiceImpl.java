@@ -1,5 +1,9 @@
 package com.xplorcolombia.xplorcolombia.service;
 
+import com.xplorcolombia.xplorcolombia.domain.Transportation;
+import com.xplorcolombia.xplorcolombia.dto.TransportationDTO;
+import com.xplorcolombia.xplorcolombia.repository.TransportationRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
@@ -9,43 +13,51 @@ import java.util.Optional;
 @Scope("singleton")
 @Service
 public class TransportationServiceImpl implements TransportationService {
+    @Autowired
+    private TransportationRepository transportationRepository;
+
     @Override
-    public List<TransportationService> findAll() {
-        return null;
+    public List<Transportation> findAll() {
+        return transportationRepository.findAll();
     }
 
     @Override
-    public Optional<TransportationService> findById(Integer integer) {
-        return Optional.empty();
+    public Optional<Transportation> findById(Integer integer) {
+        return transportationRepository.findById(integer);
     }
 
     @Override
-    public TransportationService save(TransportationService entity) throws Exception {
-        return null;
+    public Transportation save(Transportation entity) throws Exception {
+        return transportationRepository.save(entity);
     }
 
     @Override
-    public TransportationService update(TransportationService entity) throws Exception {
-        return null;
+    public Transportation update(Transportation entity) throws Exception {
+        return transportationRepository.save(entity);
     }
 
     @Override
-    public void delete(TransportationService entity) throws Exception {
-
+    public void delete(Transportation entity) throws Exception {
+        transportationRepository.delete(entity);
     }
 
     @Override
     public void deleteById(Integer integer) throws Exception {
-
+        transportationRepository.deleteById(integer);
     }
 
     @Override
-    public void validate(TransportationService entity) throws Exception {
+    public void validate(Transportation entity) throws Exception {
 
     }
 
     @Override
     public Long count() {
-        return null;
+        return transportationRepository.count();
+    }
+
+    @Override
+    public List<TransportationDTO> seeTranportationbyDestination(String destination) {
+        return transportationRepository.seeTranportationbyDestination(destination);
     }
 }

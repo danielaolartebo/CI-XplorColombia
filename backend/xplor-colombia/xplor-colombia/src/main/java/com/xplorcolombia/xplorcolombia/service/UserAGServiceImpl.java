@@ -28,7 +28,7 @@ public class UserAGServiceImpl implements UserAGService {
     }
     @Override
     public List<UserAG> findAll() {
-        return null;
+        return userAGRepository.findAll();
     }
 
     @Override
@@ -38,22 +38,22 @@ public class UserAGServiceImpl implements UserAGService {
 
     @Override
     public UserAG save(UserAG entity) throws Exception {
-        return null;
+        return userAGRepository.save(entity);
     }
 
     @Override
     public UserAG update(UserAG entity) throws Exception {
-        return null;
+        return userAGRepository.save(entity);
     }
 
     @Override
     public void delete(UserAG entity) throws Exception {
-
+        userAGRepository.delete(entity);
     }
 
     @Override
     public void deleteById(Integer integer) throws Exception {
-
+        userAGRepository.deleteById(integer);
     }
 
     @Override
@@ -63,6 +63,11 @@ public class UserAGServiceImpl implements UserAGService {
 
     @Override
     public Long count() {
-        return null;
+        return userAGRepository.count();
+    }
+
+    @Override
+    public Optional<UserAG> findByEmail(String email) {
+        return userAGRepository.findByEmail(email);
     }
 }
