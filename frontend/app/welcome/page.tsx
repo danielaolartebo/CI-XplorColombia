@@ -31,7 +31,7 @@ export default function Welcome() {
             <div className="banner" id="home"> 
                 <img className="banner-img" src="../images/ima6.png" />
                  <h1 className="title_style">Welcome to Xplor Colombia!</h1>
-                <h2 className="description">Let's find your dream vacation</h2>
+                <h2 className="description">Lets find your dream vacation</h2>
             </div>
             {/* HOME PAGE ENDS */}
   

@@ -43,7 +43,7 @@ export default function Nature() {
                                     </h2>
                                 </div>
                                 <div className="pl-lg-5 ml-md-5">
-                                    <p>Embark on an adventure through Colombia's natural wonders with our 'Natural Treasure' travel package! Explore the majestic Nevado del Ruiz, relax in the breathtaking Parque Nacional Natural Tayrona, and marvel at the vibrant colors of Caño Cristales. With carefully curated accommodations, comfortable transportation, and expert guides, this journey promises an unforgettable experience in some of Colombia's most stunning destinations. Discover the true gem of South America!</p>
+                                    <p>Embark on an adventure through Colombias natural wonders with our Natural Treasure travel package! Explore the majestic Nevado del Ruiz, relax in the breathtaking Parque Nacional Natural Tayrona, and marvel at the vibrant colors of Caño Cristales. With carefully curated accommodations, comfortable transportation, and expert guides, this journey promises an unforgettable experience in some of Colombias most stunning destinations. Discover the true gem of South America!</p>
                                     <div className="row">
                                         <div className="trips-container">
                                           <div className="half-trips-container">
@@ -219,7 +219,7 @@ export default function Nature() {
                 <div className="cont-pricing"> 
                     <div className="sub-cont-pricing">
                         <div className="title-price" style={{textAlign:'center'}}>Princing & Details</div>
-                        <div className="sub-title-price" style={{textAlign:'center'}}>Let's start a new adventure!</div>
+                        <div className="sub-title-price" style={{textAlign:'center'}}>Lets start a new adventure!</div>
                           <div className="columns">
                             <ul className="price">
                               <li className="header">Nature Package</li>

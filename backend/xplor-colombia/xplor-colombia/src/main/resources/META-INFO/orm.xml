@@ -33,17 +33,6 @@
             </query>
         </named-native-query>
 
-        <named-native-query name="Destination.seeMealsForDestination" result-set-mapping="seeMealsForDestination">
-            <query>
-                select m.type
-                from meal m
-                join destination_meal dm on m.id = dm.meal_id
-                join destination d on d.id = dm.destination_id
-                where d.id = (select id
-                from destination where name = :pDest)
-            </query>
-        </named-native-query>
-
         <named-native-query name="Destination.destinationForReservation" result-set-mapping="destinationForReservation">
             <query>
                 select d.name
@@ -122,6 +111,17 @@
                 rm.destination_name = :pDest
             </query>
         </named-native-query>
+
+        <named-native-query name="Destination.seeMealsForDestination" result-set-mapping="seeMealsForDestination">
+            <query>
+                select m.type
+                from meal m
+                join destination_meal dm on m.id = dm.meal_id
+                join destination d on d.id = dm.destination_id
+                where d.id = (select id
+                from destination where name = :pDest)
+            </query>
+        </named-native-query>
     </entity>
 
     <entity class="com.xplorcolombia.xplorcolombia.domain.Accommodation">
@@ -146,7 +146,7 @@
             </query>
         </named-native-query>
     </entity>
-    
+
     <entity class="com.xplorcolombia.xplorcolombia.domain.Package">
         <named-native-query name="Package.seePackages" result-set-mapping="seePackages">
             <query>

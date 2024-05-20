@@ -43,7 +43,7 @@ export default function Explore() {
                                     </h2>
                                 </div>
                                 <div className="pl-lg-5 ml-md-5">
-                                    <p>Embark on an extraordinary Colombian expedition with our 'Hidden Gems of Colombia' travel package! Immerse yourself in the kaleidoscopic beauty of Caño Cristales, uncover the mysteries of the Lost City, and explore the otherworldly landscapes of the Tatacoa Desert. With thoughtfully curated accommodations, seamless transportation, and experienced guides, this journey promises an unforgettable exploration of Colombia's most captivating hidden treasures!</p>
+                                    <p>Embark on an extraordinary Colombian expedition with our Hidden Gems of Colombia travel package! Immerse yourself in the kaleidoscopic beauty of Caño Cristales, uncover the mysteries of the Lost City, and explore the otherworldly landscapes of the Tatacoa Desert. With thoughtfully curated accommodations, seamless transportation, and experienced guides, this journey promises an unforgettable exploration of Colombias most captivating hidden treasures!</p>
                                     <div className="row">
                                         <div className="trips-container">
                                           <div className="half-trips-container">
@@ -219,7 +219,7 @@ export default function Explore() {
                 <div className="cont-pricing"> 
                     <div className="sub-cont-pricing">
                         <div className="title-price" style={{textAlign:'center'}}>Princing & Details</div>
-                        <div className="sub-title-price" style={{textAlign:'center'}}>Let's start a new adventure!</div>
+                        <div className="sub-title-price" style={{textAlign:'center'}}>Lets start a new adventure!</div>
                           <div className="columns">
                             <ul className="price">
                               <li className="header">Wander Package</li>

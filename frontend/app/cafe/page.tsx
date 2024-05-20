@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from 'next/image'
 
 export default function ParqueCafe() {
     return (
@@ -50,7 +51,7 @@ export default function ParqueCafe() {
                                         <div className="trips-container">
                                           <div className="half-trips-container">
                                               <a href="#" className="thumb-menu">
-                                                  <img className="img-fluid img-cover" src="../images/cafe1.png" />
+                                                  <img className="img-fluid img-cover" src="../images/cafe1.png"/>
                                               </a>
                                           </div>
                                           <div className="half-trips-container">

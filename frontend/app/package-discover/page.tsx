@@ -43,7 +43,7 @@ export default function Discover() {
                                     </h2>
                                 </div>
                                 <div className="pl-lg-5 ml-md-5">
-                                    <p>Discover Colombia's treasures with our 'Enchanting Colombia' travel package! Trek to the ancient Ciudad Perdida, wander amidst the towering wax palms of Valle del Cocora, and savor the flavors of Colombia at Parque del Café. With carefully selected accommodations, convenient transportation, and expert guides, this adventure guarantees an unforgettable journey through some of Colombia's most enchanting destinations!</p>
+                                    <p>Discover Colombias treasures with our Enchanting Colombia travel package! Trek to the ancient Ciudad Perdida, wander amidst the towering wax palms of Valle del Cocora, and savor the flavors of Colombia at Parque del Café. With carefully selected accommodations, convenient transportation, and expert guides, this adventure guarantees an unforgettable journey through some of Colombias most enchanting destinations!</p>
                                     <div className="row">
                                         <div className="trips-container">
                                           <div className="half-trips-container">
@@ -219,7 +219,7 @@ export default function Discover() {
                 <div className="cont-pricing"> 
                     <div className="sub-cont-pricing">
                         <div className="title-price" style={{textAlign:'center'}}>Princing & Details</div>
-                        <div className="sub-title-price" style={{textAlign:'center'}}>Let's start a new adventure!</div>
+                        <div className="sub-title-price" style={{textAlign:'center'}}>Lets start a new adventure!</div>
                           <div className="columns">
                             <ul className="price">
                               <li className="header">Discover Package</li>

@@ -43,7 +43,7 @@ export default function Explore() {
                                     </h2>
                                 </div>
                                 <div className="pl-lg-5 ml-md-5">
-                                    <p>Experience the essence of Colombia with our 'Colombian Odyssey' travel package! Climb the iconic Piedra del Peñol for panoramic views, delight in the charm of Parque del Café, and wander through the surreal landscapes of the Tatacoa Desert. With handpicked accommodations, seamless transportation, and knowledgeable guides, this journey ensures an immersive exploration of Colombia's rich diversity. Embark on an unforgettable adventure through some of the country's most captivating destinations!</p>
+                                    <p>Experience the essence of Colombia with our Colombian Odyssey travel package! Climb the iconic Piedra del Peñol for panoramic views, delight in the charm of Parque del Café, and wander through the surreal landscapes of the Tatacoa Desert. With handpicked accommodations, seamless transportation, and knowledgeable guides, this journey ensures an immersive exploration of Colombias rich diversity. Embark on an unforgettable adventure through some of the countrys most captivating destinations!</p>
                                     <div className="row">
                                         <div className="trips-container">
                                           <div className="half-trips-container">
@@ -219,7 +219,7 @@ export default function Explore() {
                 <div className="cont-pricing"> 
                     <div className="sub-cont-pricing">
                         <div className="title-price" style={{textAlign:'center'}}>Princing & Details</div>
-                        <div className="sub-title-price" style={{textAlign:'center'}}>Let's start a new adventure!</div>
+                        <div className="sub-title-price" style={{textAlign:'center'}}>Lets start a new adventure!</div>
                           <div className="columns">
                             <ul className="price">
                               <li className="header">Explore Package</li>
