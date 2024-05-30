@@ -2,7 +2,9 @@ package com.xplorcolombia.xplorcolombia.service;
 
 import com.xplorcolombia.xplorcolombia.domain.Accommodation;
 import com.xplorcolombia.xplorcolombia.dto.AccommodationDTO;
+import com.xplorcolombia.xplorcolombia.dto.DestinationDTO;
 import com.xplorcolombia.xplorcolombia.repository.AccommodationRepository;
+import com.xplorcolombia.xplorcolombia.repository.DestinationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.data.repository.query.Param;

@@ -26,16 +26,15 @@ public class ReservationAccommodation {
 
     @ManyToOne
     @JoinColumn(name = "accommodation_id", nullable = false, insertable = false, updatable = false)
-    private Destination accommodation;
+    private Accommodation accommodation; // Cambio aquí de Destination a Accommodation
 
-    public static class CompusedId implements Serializable{
+    public static class CompusedId implements Serializable {
 
         @Column(name = "reservation_id")
         private Long reservationId;
 
         @Column(name = "accommodation_id")
         private Long accommodationId;
-
-
     }
 }
+

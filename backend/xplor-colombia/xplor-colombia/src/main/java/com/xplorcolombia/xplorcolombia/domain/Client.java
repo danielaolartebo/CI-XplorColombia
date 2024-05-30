@@ -5,6 +5,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+
 @Data
 @Entity
 @Table(name = "client")

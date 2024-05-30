@@ -10,6 +10,6 @@ import java.util.List;
 
 public interface ReservationMealRepository extends JpaRepository<ReservationMeal,ReservationMeal.CompusedId> {
 
-    @Query(nativeQuery = true)
-    public List<ReservationMealDTO> mealForReservation(@Param("pClientId") Integer clientId, @Param("pDest") String destination);
+    //@Query(nativeQuery = true)
+    //public List<ReservationMealDTO> mealForReservation(@Param("pClientId") Integer clientId, @Param("pDest") String destination);
 }

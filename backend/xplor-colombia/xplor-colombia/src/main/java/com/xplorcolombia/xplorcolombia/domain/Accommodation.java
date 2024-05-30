@@ -5,6 +5,22 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+@NamedNativeQueries({
+        @NamedNativeQuery(name="Accommodation.seeAccommodations", query="", resultSetMapping = "seeAccommodations"),
+        @NamedNativeQuery(name="Accommodation.accommodationForReservation", query="", resultSetMapping = "accommodationForReservation")
+})
+
+@SqlResultSetMappings({
+        @SqlResultSetMapping(name="seeAccommodations",
+                columns = {
+                        @ColumnResult(name = "nameAc", type = String.class)
+                }),
+        @SqlResultSetMapping(name="accommodationForReservation",
+                columns = {
+                        @ColumnResult(name = "name", type = String.class)
+                })
+})
+
 @Data
 @Entity
 @Table(name = "accommodation")
@@ -28,13 +44,5 @@ public class Accommodation implements Serializable {
 
     @Column(name = "state", nullable = false, columnDefinition = "char(1)")
     private String state;
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
-    }
 
 }

@@ -5,6 +5,20 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+@NamedNativeQueries({
+        @NamedNativeQuery(name="Package.seePackages",
+                query="",
+                resultSetMapping = "seePackages")
+})
+
+@SqlResultSetMappings({
+        @SqlResultSetMapping(name="seePackages",
+                columns = {
+                        @ColumnResult(name = "namePa", type = String.class),
+                        @ColumnResult(name = "imgP", type = String.class)
+                })
+})
+
 @Data
 @Entity
 @Table(name = "package")

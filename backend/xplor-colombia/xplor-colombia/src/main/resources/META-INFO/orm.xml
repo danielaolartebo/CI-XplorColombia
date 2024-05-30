@@ -125,7 +125,7 @@
     </entity>
 
     <entity class="com.xplorcolombia.xplorcolombia.domain.Accommodation">
-        <named-native-query name="Accommodation.seeAccommodations" result-set-mapping="seeMealsForDestination">
+        <named-native-query name="Accommodation.seeAccommodations" result-set-mapping="seeAccommodations">
             <query>
                 select name nameAc
                 from accommodation

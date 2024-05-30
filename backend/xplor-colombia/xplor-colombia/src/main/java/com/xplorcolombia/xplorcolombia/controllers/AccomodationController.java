@@ -21,7 +21,7 @@ public class AccomodationController {
 
     @PostMapping(value = "getAccommodation")
     public ResponseEntity<?> seeAccommodations(@RequestBody String destination){
-        lstAccommodation = accommodationRepository.seeAccommodations(destination);
+       lstAccommodation = accommodationRepository.seeAccommodations(destination);
         return ResponseEntity.ok().body(lstAccommodation);
     }
 }

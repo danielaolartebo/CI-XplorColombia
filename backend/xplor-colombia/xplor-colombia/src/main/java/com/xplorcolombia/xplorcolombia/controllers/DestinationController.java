@@ -43,6 +43,7 @@ public class DestinationController {
     @RequestMapping(value = "/createDestiantion", method = RequestMethod.POST)
     public ResponseEntity<?> registDestination(@RequestBody Destination destination){
         destination.getMeal().getType();
+        return ResponseEntity.status(400).body("NO ESTA TERMINADA ESTA PARTE");
     }
 
 

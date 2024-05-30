@@ -11,7 +11,8 @@ import java.util.List;
 
 
 public interface AccommodationRepository extends JpaRepository<Accommodation,Integer>{
+
+
     @Query(nativeQuery = true)
     public List<AccommodationDTO> seeAccommodations(@Param("pDest") String destination);
-
 }

@@ -5,6 +5,26 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+@NamedNativeQueries({
+        @NamedNativeQuery(name="Transportation.seeTranportationbyDestination",
+                query="",
+                resultSetMapping = "seeTranportationbyDestination"),
+        @NamedNativeQuery(name="Transportation.transportationForReservation",
+                query="",
+                resultSetMapping = "transportationForReservation")
+})
+
+@SqlResultSetMappings({
+        @SqlResultSetMapping(name="seeTranportationbyDestination",
+                columns = {
+                        @ColumnResult(name = "typeTp", type = String.class)
+                }),
+        @SqlResultSetMapping(name="transportationForReservation",
+                columns = {
+                        @ColumnResult(name = "type", type = String.class)
+                })
+})
+
 @Data
 @Entity
 @Table(name = "transportation")
