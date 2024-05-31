@@ -36,6 +36,10 @@ export default function Home() {
         const responseData = await response.json();
         // Manejar la respuesta del servidor aquí, por ejemplo, redireccionar al usuario a otra página
         console.log(responseData);
+        if (responseData.token) {
+          localStorage.setItem('token', responseData.token);
+          console.log('Token stored in local storage');
+      }
         // Redireccionar al usuario a la página de bienvenida
         window.location.href = '/welcome';
       } else {

@@ -1,30 +1,26 @@
 package com.xplorcolombia.xplorcolombia.domain;
 
+import com.xplorcolombia.xplorcolombia.dto.DestinationDTO;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
 
 import java.io.Serializable;
 
 @NamedNativeQueries({
-        @NamedNativeQuery(name="Destination.seeDestinations",
-                query="",
-                resultSetMapping = "seeDestinations"),
-        @NamedNativeQuery(name="Destination.seeDestinationId",
-                query="",
-                resultSetMapping = "seeDestinations"),
-        @NamedNativeQuery(name="Destination.seeDestinationsPerPackage",
-                query="",
-                resultSetMapping = "seeDestinationsPerPackage"),
-        @NamedNativeQuery(name="Destination.destinationForReservation",
-                query="",
-                resultSetMapping = "destinationForReservation")
+        @NamedNativeQuery(name="Destination.seeDestinations",query="",resultSetMapping = "seeDestinations"),
+        @NamedNativeQuery(name="Destination.seeDestinationId",query="",resultSetMapping = "seeDestinations"),
+        @NamedNativeQuery(name="Destination.seeDestinationsPerPackage",query="",resultSetMapping = "seeDestinationsPerPackage"),
+        @NamedNativeQuery(name="Destination.destinationForReservation",query="",resultSetMapping = "destinationForReservation")
 })
-
 @SqlResultSetMappings({
         @SqlResultSetMapping(name="seeDestinations",
-                columns = {
-                        @ColumnResult(name = "nameD", type = String.class),
-                        @ColumnResult(name = "idDest", type = Integer.class)
+                classes = {@ConstructorResult(targetClass = DestinationDTO.class,
+                                columns = {
+                                        @ColumnResult(name = "id", type = Integer.class),
+                                        @ColumnResult(name = "nameD", type = String.class)
+                                }
+                        )
                 }),
         @SqlResultSetMapping(name="seeDestinationsPerPackage",
                 columns = {
@@ -55,11 +51,17 @@ public class Destination implements Serializable {
     @JoinColumn(name = "package_id")
     private Package package_id;
 
-    @ManyToOne
-    @JoinColumn(name = "meal_id")
-    private Meal meal;
+    //@ManyToOne
+    //@JoinColumn(name = "meal_id")
+    //private Meal meal;
 
     @Column(name = "state", columnDefinition = "char(1)")
     private String state;
+
+    @Column(name = "price", nullable = false)
+    private double price;
+
+    //@Column(name = "description", columnDefinition = "char(500)")
+    //private String description;
 
 }

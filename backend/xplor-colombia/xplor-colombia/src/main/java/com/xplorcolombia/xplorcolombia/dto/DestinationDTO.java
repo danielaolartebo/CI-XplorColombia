@@ -6,11 +6,30 @@ import java.io.Serializable;
 
 public class DestinationDTO implements Serializable {
 
+    private String nameD;
     private Integer id;
-    private String name;
-    private String state;
 
-    public DestinationDTO(String name){
-        this.name=name;
+    public DestinationDTO() {
+    }
+
+    public DestinationDTO(String nameD, Integer id) {
+        this.nameD = nameD;
+        this.id = id;
+    }
+
+    public String getNameD() {
+        return nameD;
+    }
+
+    public void setNameD(String nameD) {
+        this.nameD = nameD;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }

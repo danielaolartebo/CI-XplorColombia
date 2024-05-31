@@ -1,7 +1,30 @@
-import { useState } from 'react';
+'use client';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function EditTripPage() {
+    useEffect(() => {
+        showDestinations();
+    }, []);
+    const [data, setData] = useState([]);
+
+    async function showDestinations(){
+        try {
+          const token = localStorage.getItem('token');
+          const response = await fetch('http://localhost:5433/destination/getAll', {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${token}`
+            }
+          });
+          const data = await response.json();
+          console.log("Lista de destinos:", data);
+          setData(data); // Almacena los datos en el estado local
+        } catch (error) {
+          console.error('Error al procesar la solicitud:', error);
+        }
+    };
 
     return (
         <main className="title_container">
@@ -38,17 +61,12 @@ export default function EditTripPage() {
                     <h4>Edit a Trip</h4>
                     <div className="cont-addtrip">
                         <div className='left-left-side-trip'>
-                          <select className="dropdown-addtrip" id="menu"> 
+                            <select className="dropdown-addtrip" id="menu"> 
                                 <option value="" disabled selected> Select trip</option>
-                                <option value=""> Caño Cristales </option> 
-                                <option value=""> Parque Tayrona </option> 
-                                <option value=""> Ciudad Perdida </option> 
-                                <option value=""> Desierto de la Tatacoa </option> 
-                                <option value=""> Parque del Café </option> 
-                                <option value=""> Piedra del Peñol </option> 
-                                <option value=""> Nevado del Ruiz </option> 
-                                <option value=""> Valle del Cocora </option> 
-                          </select>
+                                {data.map(destination => (
+                                    <option key={destination.id} value={destination.id}>{destination.nameD}</option>
+                                ))}
+                            </select>
                         </div>
                       <div className='left-right-side-trip'>
                           <select className="dropdown-addtrip" id="menu"> 

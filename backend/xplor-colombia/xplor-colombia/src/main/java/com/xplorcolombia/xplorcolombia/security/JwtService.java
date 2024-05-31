@@ -6,7 +6,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+import com.xplorcolombia.xplorcolombia.domain.UserAG;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import io.jsonwebtoken.Claims;
@@ -17,6 +20,7 @@ import io.jsonwebtoken.security.Keys;
 
 @Service
 public class JwtService {
+
 
     private static final String SECRET_KEY="586E3272357538782F413F4428472B4B6250655368566B597033733676397924";
 
@@ -41,6 +45,7 @@ public class JwtService {
     }
 
     public String getUsernameFromToken(String token) {
+        System.out.println(getClaim(token, Claims::getSubject));
         return getClaim(token, Claims::getSubject);
     }
 

@@ -3,12 +3,14 @@ package com.xplorcolombia.xplorcolombia.controllers;
 import com.xplorcolombia.xplorcolombia.domain.UserAG;
 import com.xplorcolombia.xplorcolombia.repository.UserAGRepository;
 import com.xplorcolombia.xplorcolombia.security.AuthResponse;
-import com.xplorcolombia.xplorcolombia.security.JwtTokenProvider;
+import com.xplorcolombia.xplorcolombia.security.JwtService;
 import com.xplorcolombia.xplorcolombia.security.LoginRequest;
+import com.xplorcolombia.xplorcolombia.security.RegisterRequest;
 import com.xplorcolombia.xplorcolombia.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -24,10 +26,12 @@ public class AuthController {
     private final AuthService authService;
 
     @Autowired
-    private JwtTokenProvider jwtTokenProvider;
+    private PasswordEncoder passwordEncoder;
 
     @Autowired
     private UserAGRepository userAGRepository;
+    @Autowired
+    private JwtService jwtService;
 
     @PostMapping(value = "login")
     public ResponseEntity<?> login(@RequestBody LoginRequest request) {
@@ -38,21 +42,25 @@ public class AuthController {
         System.out.println(userAGEmail);
         System.out.println(userAGPassword);
 
+
+        String encodedPassword = passwordEncoder.encode(userAGPassword);
+
         System.out.println("Estamos en el loginn");
-        authService.login(request);
+        System.out.println("Contraseña cifradan"+encodedPassword);
+        //authService.login(request);
 
         Optional<UserAG> oUserAG = userAGRepository.findByEmail(userAGEmail);
 
         if (oUserAG.isPresent()){
             UserAG foundUserAG = oUserAG.get();
-            if(Objects.equals(foundUserAG.getPassword(), userAGPassword)){
+            if(passwordEncoder.matches(userAGPassword, foundUserAG.getPassword())){
                 System.out.println(foundUserAG.getName());
-                AuthResponse loginResponse = authService.login(request);
-                Map<String, Object> response = new HashMap<>();
-                response.put("loginResponse", loginResponse);
-                response.put("foundUserAG", foundUserAG);
-                return ResponseEntity.ok(response);
-                //return ResponseEntity.ok(authService.login(request));
+                //AuthResponse loginResponse = authService.login(request);
+                //Map<String, Object> response = new HashMap<>();
+                //response.put("loginResponse", loginResponse);
+                //response.put("foundUserAG", foundUserAG);
+                //return ResponseEntity.ok(response);
+                return ResponseEntity.ok(authService.login(request));
                 //return ResponseEntity.status(200).body(foundUserAG);
             }
             return ResponseEntity.status(401).body("Invalid password.");

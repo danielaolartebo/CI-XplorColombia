@@ -10,8 +10,9 @@
 
         <named-native-query name="Destination.seeDestinations" result-set-mapping="seeDestinations">
             <query>
-                select name nameD
-                from destination
+                SELECT id, name AS nameD
+                FROM destination
+                WHERE state = 'A'
             </query>
         </named-native-query>
 

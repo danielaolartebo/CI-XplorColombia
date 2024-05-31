@@ -57,7 +57,6 @@ public class DestinationServiceImpl implements DestinationService {
         return destinationRepository.count();
     }
 
-    @Override
     public List<DestinationDTO> seeDestinations() {
         return destinationRepository.seeDestinations();
     }
@@ -75,5 +74,10 @@ public class DestinationServiceImpl implements DestinationService {
     @Override
     public List<DestinationDTO> destinationsForReservation(int clientId) {
         return destinationRepository.destinationForReservation(clientId);
+    }
+
+    @Override
+    public Destination findByName(String name) {
+        return destinationRepository.findByName(name);
     }
 }

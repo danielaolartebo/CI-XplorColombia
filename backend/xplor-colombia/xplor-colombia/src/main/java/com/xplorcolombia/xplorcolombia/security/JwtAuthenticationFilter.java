@@ -3,6 +3,7 @@ package com.xplorcolombia.xplorcolombia.security;
 import java.io.IOException;
 
 import com.xplorcolombia.xplorcolombia.service.UserAGService;
+import jakarta.servlet.ServletOutputStream;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -31,6 +32,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             throws ServletException, IOException {
 
         final String token = getTokenFromRequest(request);
+        System.out.println(token);
         final String username;
 
         if (token==null)
@@ -40,10 +42,13 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         }
 
         username=jwtService.getUsernameFromToken(token);
+        System.out.println("hola "+username);
+        System.out.println(SecurityContextHolder.getContext().getAuthentication());
 
         if (username!=null && SecurityContextHolder.getContext().getAuthentication()==null)
         {
-            UserDetails userDetails=userDetailsService.loadUserByUsername(username);
+            UserDetails userDetails= userDetailsService.loadUserByUsername(username);
+            System.out.println("detalles "+userDetails.getUsername()+"---"+userDetails.getPassword());
 
             if (jwtService.isTokenValid(token, userDetails))
             {

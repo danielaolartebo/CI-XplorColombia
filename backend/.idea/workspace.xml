@@ -5,14 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6ab76f6-c3ae-4353-acf1-26921f105d7f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/domain/DestinationMeal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/domain/ReservationAccommoadation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/domain/ReservationDestination.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/domain/ReservationLodging.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/domain/ReservationMeal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/domain/ReservationTransportation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/resources/META-INFO/orm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/resources/META-INFO/orm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/controllers/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/controllers/DestinationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/controllers/DestinationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/domain/Destination.java" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/domain/Destination.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/domain/UserAG.java" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/domain/UserAG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/dto/DestinationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/dto/DestinationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/repository/DestinationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/repository/DestinationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/security/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/security/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/security/JwtTokenProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/service/DestinationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/service/DestinationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/service/DestinationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/java/com/xplorcolombia/xplorcolombia/service/DestinationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/xplor-colombia/xplor-colombia/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/createTrip/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/createTrip/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,21 +44,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sebas/OneDrive/Documentos/Comp_Internet_II/CI-XplorColombia/backend/xplor-colombia&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "new-feature",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/sebas/OneDrive/Documentos/Comp_Internet_II/CI-XplorColombia/backend/xplor-colombia",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\sebas\OneDrive\Documentos\Comp_Internet_II\CI-XplorColombia\backend\xplor-colombia" />
@@ -57,8 +67,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
       </set>
     </attachedChunks>
   </component>
@@ -75,6 +85,7 @@
       <workItem from="1714066581208" duration="310000" />
       <workItem from="1714437047213" duration="24000" />
       <workItem from="1715215924424" duration="35000" />
+      <workItem from="1717174340316" duration="253000" />
     </task>
     <servers />
   </component>
