@@ -3,6 +3,7 @@ package com.xplorcolombia.xplorcolombia.controllers;
 import com.xplorcolombia.xplorcolombia.domain.Destination;
 import com.xplorcolombia.xplorcolombia.dto.DestinationDTO;
 import com.xplorcolombia.xplorcolombia.service.DestinationService;
+import com.xplorcolombia.xplorcolombia.service.MealService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,7 @@ public class DestinationController {
 
     @Autowired
     private DestinationService destination;
+    private MealService meal;
     private List<DestinationDTO> lstDestination;
 
     @RequestMapping(value = "/getDestination", method = RequestMethod.GET)
@@ -42,7 +44,9 @@ public class DestinationController {
 
     @RequestMapping(value = "/createDestiantion", method = RequestMethod.POST)
     public ResponseEntity<?> registDestination(@RequestBody Destination destination){
+
         destination.getMeal().getType();
+        if(meal.findByType())
     }
 
 

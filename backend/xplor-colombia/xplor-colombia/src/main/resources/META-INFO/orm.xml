@@ -27,7 +27,7 @@
             <query>
                 select dest.name
                 from destination dest
-                where dest.id = (select id
+                where package_id = (select id
                 from package
                 where name = :pPackage)
             </query>
@@ -51,8 +51,8 @@
             <query>
                 select type typeTp
                 from transportation
-                where destination_id = (select d.id
-                from destination d where d.name = :pDest)
+                where destination_id = (select id
+                from destination where name = :pDest)
             </query>
         </named-native-query>
 
@@ -64,7 +64,7 @@
                 join reservation r on r.id = rt.reservation_id
                 where r.id = (select id
                 from reservation where user_id = :pClientId) and
-                t.destination_id = (select id from destination where id = :pDest)
+                t.destination_id = (select id from destination where name = :pDest)
             </query>
         </named-native-query>
     </entity>
