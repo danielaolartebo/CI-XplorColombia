@@ -47,21 +47,13 @@ public class Destination implements Serializable {
     @Column(name = "name", nullable = false, columnDefinition = "varchar(100)")
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "package_id")
-    private Package package_id;
-
-    //@ManyToOne
-    //@JoinColumn(name = "meal_id")
-    //private Meal meal;
+    @Column(name = "base_price", nullable = false)
+    private double basePrice;
 
     @Column(name = "state", columnDefinition = "char(1)")
     private String state;
 
-    @Column(name = "price", nullable = false)
-    private double price;
-
-    //@Column(name = "description", columnDefinition = "char(500)")
-    //private String description;
+    @Column(name = "description", columnDefinition = "char(1000)")
+    private String description;
 
 }

@@ -15,13 +15,13 @@ import java.util.List;
 @RequestMapping("/accommodation")
 public class AccomodationController {
 
-    @Autowired
-    private AccommodationRepository accommodationRepository;
-    private List<AccommodationDTO> lstAccommodation;
+    //@Autowired
+    //private AccommodationRepository accommodationRepository;
+    //private List<AccommodationDTO> lstAccommodation;
 
-    @PostMapping(value = "getAccommodation")
+    /*@PostMapping(value = "getAccommodation")
     public ResponseEntity<?> seeAccommodations(@RequestBody String destination){
        lstAccommodation = accommodationRepository.seeAccommodations(destination);
         return ResponseEntity.ok().body(lstAccommodation);
-    }
+    }*/
 }

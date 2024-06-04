@@ -34,6 +34,12 @@ public class Package implements Serializable {
     @Column(name = "name", nullable = false, columnDefinition = "varchar(100)")
     private String name;
 
+    @Column(name = "description", columnDefinition = "char(1000)")
+    private String description;
+
+    @Column(name = "base_price", nullable = false)
+    private double basePrice;
+
     @Column(name = "state", columnDefinition = "char(1)")
     private String state;
 

@@ -13,6 +13,7 @@ import java.util.Optional;
 @Scope("singleton")
 @Service
 public class TransportationServiceImpl implements TransportationService {
+
     @Autowired
     private TransportationRepository transportationRepository;
 

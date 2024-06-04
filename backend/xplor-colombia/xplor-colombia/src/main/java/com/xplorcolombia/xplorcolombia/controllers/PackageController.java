@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/package")
 public class PackageController {
 
-    @Autowired
+    /*@Autowired
     private PackageService packages;
      private List<PackageDTO> lstPackage;
 
@@ -22,6 +22,6 @@ public class PackageController {
     public ResponseEntity<?> seePackage(){
         lstPackage = packages.seePackages();
         return ResponseEntity.ok().body(lstPackage);
-    }
+    }*/
 
 }

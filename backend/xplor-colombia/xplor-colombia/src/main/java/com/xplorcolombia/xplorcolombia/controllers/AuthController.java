@@ -46,13 +46,14 @@ public class AuthController {
         String encodedPassword = passwordEncoder.encode(userAGPassword);
 
         System.out.println("Estamos en el loginn");
-        System.out.println("Contraseña cifradan"+encodedPassword);
+        System.out.println("Contraseña cifrada "+encodedPassword);
         //authService.login(request);
 
         Optional<UserAG> oUserAG = userAGRepository.findByEmail(userAGEmail);
 
         if (oUserAG.isPresent()){
             UserAG foundUserAG = oUserAG.get();
+            //System.out.println(foundUserAG.getPassword());
             if(passwordEncoder.matches(userAGPassword, foundUserAG.getPassword())){
                 System.out.println(foundUserAG.getName());
                 //AuthResponse loginResponse = authService.login(request);

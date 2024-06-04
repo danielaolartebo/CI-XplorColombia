@@ -21,6 +21,7 @@ public class UserAG implements Serializable, UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
+
     @Column(name = "name", nullable = false, columnDefinition = "varchar(100)")
     private String name;
 

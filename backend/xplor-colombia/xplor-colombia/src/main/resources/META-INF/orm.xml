@@ -45,7 +45,7 @@
             </query>
         </named-native-query>
     </entity>
-    <!-- -->
+
 
     <entity class="com.xplorcolombia.xplorcolombia.domain.Transportation">
         <named-native-query name="Transportation.seeTranportationbyDestination" result-set-mapping="seeTranportationbyDestination">
@@ -70,7 +70,7 @@
         </named-native-query>
     </entity>
 
-    <entity class="com.xplorcolombia.xplorcolombia.domain.Lodging">
+    <!--<entity class="com.xplorcolombia.xplorcolombia.domain.Lodging">
         <named-native-query name="Lodging.seeHotels" result-set-mapping="seeHotels">
             <query>
                 select name
@@ -91,9 +91,9 @@
                 l.destination_id = (select id from destination where id = :pDest)
             </query>
         </named-native-query>
-    </entity>
+    </entity>-->
 
-    <entity class="com.xplorcolombia.xplorcolombia.domain.Meal">
+    <entity class="com.xplorcolombia.xplorcolombia.domain.Meals">
         <named-native-query name="Meal.seeMeals" result-set-mapping="seeMeals">
             <query>
                 select type
