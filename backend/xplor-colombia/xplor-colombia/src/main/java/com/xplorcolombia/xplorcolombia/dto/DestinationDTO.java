@@ -10,6 +10,7 @@ public class DestinationDTO implements Serializable {
     private String nameD;
     private double basePrice;
     private String state;
+    private int maxPeople;
 
     public DestinationDTO() {
     }
@@ -19,11 +20,12 @@ public class DestinationDTO implements Serializable {
         this.id = id;
     }
 
-    public DestinationDTO(Integer id, String nameD, double basePrice, String state) {
+    public DestinationDTO(Integer id, String nameD, double basePrice, String state, int maxPeople) {
         this.id = id;
         this.nameD = nameD;
         this.basePrice = basePrice;
         this.state = state;
+        this.maxPeople = maxPeople;
     }
 
     public String getNameD() {

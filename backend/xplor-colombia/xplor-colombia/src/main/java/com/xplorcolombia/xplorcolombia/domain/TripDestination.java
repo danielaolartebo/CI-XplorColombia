@@ -51,4 +51,9 @@ public class TripDestination implements Serializable {
     @JoinColumn(name = "trip_insurance_id", nullable = false)
     private TripInsurance tripInsurance;
 
+    @Column(name = "both_transportation", nullable = false)
+    private boolean bothTransportation;
+
+
+
 }

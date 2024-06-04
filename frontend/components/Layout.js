@@ -17,7 +17,7 @@ export default function Layout({ children }) {
               <ul className="submenu">
                 <li><a href="/createDestination" className="white-link">Crea un destino</a></li>
                 <li><a href="/editDestination" className="white-link">Edita un destino</a></li>
-                <li><a href="/editDestination" className="white-link">Elimina un destino</a></li>
+                <li><a href="/deleteDestination" className="white-link">Elimina un destino</a></li>
               </ul>
             </li>
             <Link href='/'><button className="btn_btn_login"> Salir </button></Link>

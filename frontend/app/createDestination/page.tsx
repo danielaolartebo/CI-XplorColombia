@@ -8,7 +8,7 @@ import '../../styles/createDestination.css';
 
 
 
-export default function CreateTripPage() {
+export default function createDestinationPage() {
     const [destination, setDestination] = useState({
         name: '',
         description: '',
@@ -45,7 +45,8 @@ export default function CreateTripPage() {
           basePrice: destination.price,
           description: destination.description,
           //package_id: initPackage,
-          state: "A"
+          state: "A",
+          maxPeople: 10
         };
 
         console.log('Destination:', destination);

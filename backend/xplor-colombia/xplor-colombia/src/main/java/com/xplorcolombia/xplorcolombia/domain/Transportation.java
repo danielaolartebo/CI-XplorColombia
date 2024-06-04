@@ -1,29 +1,31 @@
 package com.xplorcolombia.xplorcolombia.domain;
 
+import com.xplorcolombia.xplorcolombia.dto.TransportationDTO;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.io.Serializable;
 
 @NamedNativeQueries({
-        @NamedNativeQuery(name="Transportation.seeTranportationbyDestination",
+        @NamedNativeQuery(name="Transportation.seeTransportationbyDestination",
                 query="",
-                resultSetMapping = "seeTranportationbyDestination"),
-        @NamedNativeQuery(name="Transportation.transportationForReservation",
-                query="",
-                resultSetMapping = "transportationForReservation")
+                resultSetMapping = "seeTransportationbyDestination")
 })
 
 @SqlResultSetMappings({
-        @SqlResultSetMapping(name="seeTranportationbyDestination",
-                columns = {
-                        @ColumnResult(name = "typeTp", type = String.class)
-                }),
-        @SqlResultSetMapping(name="transportationForReservation",
-                columns = {
-                        @ColumnResult(name = "type", type = String.class)
+        @SqlResultSetMapping(name="seeTransportationbyDestination",
+                classes = {
+                        @ConstructorResult(
+                                targetClass = TransportationDTO.class,
+                                columns = {
+                                        @ColumnResult(name = "id", type = Integer.class),
+                                        @ColumnResult(name = "name", type = String.class),
+                                        @ColumnResult(name = "price", type = Double.class)
+                                }
+                        )
                 })
 })
+
 
 @Data
 @Entity
@@ -37,14 +39,11 @@ public class Transportation implements Serializable {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(name = "type", nullable = false, columnDefinition = "varchar(100)")
-    private String type;
+    @Column(name = "name", nullable = false, columnDefinition = "varchar(100)")
+    private String name;
 
     @Column(name = "price", nullable = false)
     private double price;
-
-    @Column(name = "both", nullable = false)
-    private boolean both;
 
     @Column(name = "state", columnDefinition = "varchar(1)")
     private String state;
@@ -53,4 +52,68 @@ public class Transportation implements Serializable {
     @JoinColumn(name = "destination_id", nullable = false)
     private Destination destination;
 
+    public Transportation(Integer id, String name, double price, String state) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.state = state;
+    }
+
+    public Transportation() {
+    }
+
+    public Transportation(String name, double price, String state, Destination destination) {
+        this.name = name;
+        this.price = price;
+        this.state = state;
+        this.destination = destination;
+    }
+
+    public Transportation(Integer id, String name, double price, String state, Destination destination) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.state = state;
+        this.destination = destination;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public Destination getDestination() {
+        return destination;
+    }
+
+    public void setDestination(Destination destination) {
+        this.destination = destination;
+    }
 }

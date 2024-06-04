@@ -1,9 +1,8 @@
 package com.xplorcolombia.xplorcolombia.service;
 
-import com.xplorcolombia.xplorcolombia.domain.Trip;
 import com.xplorcolombia.xplorcolombia.domain.TripInsurance;
+import com.xplorcolombia.xplorcolombia.dto.TripInsuranceDTO;
 import com.xplorcolombia.xplorcolombia.repository.TripInsuranceRepository;
-import com.xplorcolombia.xplorcolombia.repository.TripRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
@@ -59,4 +58,8 @@ public class TripInsuranceServiceImpl implements TripInsuranceService {
     }
 
 
+    @Override
+    public List<TripInsuranceDTO> seeTripInsurancebyDestination(Integer idDestination) {
+        return tripInsuranceRepository.seeTripInsurancebyDestination(idDestination);
+    }
 }

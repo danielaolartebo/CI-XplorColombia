@@ -56,4 +56,7 @@ public class Destination implements Serializable {
     @Column(name = "description", columnDefinition = "char(1000)")
     private String description;
 
+    @Column(name = "max_people", nullable = false)
+    private int maxPeople;
+
 }

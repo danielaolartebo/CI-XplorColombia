@@ -9,5 +9,5 @@ import java.util.List;
 
 public interface TransportationService extends GenericService<Transportation, Integer> {
 
-    public List<TransportationDTO> seeTranportationbyDestination(String id);
+    public List<TransportationDTO> seeTransportationbyDestination(Integer idDestination);
 }

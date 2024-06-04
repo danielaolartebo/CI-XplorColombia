@@ -1,5 +1,7 @@
 package com.xplorcolombia.xplorcolombia.domain;
 
+import com.xplorcolombia.xplorcolombia.dto.AccommodationDTO;
+import com.xplorcolombia.xplorcolombia.dto.MealsDTO;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -7,29 +9,22 @@ import java.io.Serializable;
 
 
 @NamedNativeQueries({
-        @NamedNativeQuery(name="Meal.seeMeals",
+        @NamedNativeQuery(name="Meals.seeMealbyDestination",
                 query="",
-                resultSetMapping = "seeMeals"),
-        @NamedNativeQuery(name="Meal.mealForReservation",
-                query="",
-                resultSetMapping = "mealForReservation"),
-        @NamedNativeQuery(name="Destination.seeMealsForDestination",
-                query="",
-                resultSetMapping = "seeMealsForDestination")
+                resultSetMapping = "seeMealbyDestination")
 })
 
 @SqlResultSetMappings({
-        @SqlResultSetMapping(name="seeMeals",
-                columns = {
-                        @ColumnResult(name = "type", type = String.class)
-                }),
-        @SqlResultSetMapping(name="mealForReservation",
-                columns = {
-                        @ColumnResult(name = "type", type = String.class)
-                }),
-        @SqlResultSetMapping(name="seeMealsForDestination",
-                columns = {
-                        @ColumnResult(name = "type", type = String.class)
+        @SqlResultSetMapping(name="seeMealbyDestination",
+                classes = {
+                        @ConstructorResult(
+                                targetClass = MealsDTO.class,
+                                columns = {
+                                        @ColumnResult(name = "id", type = Integer.class),
+                                        @ColumnResult(name = "type", type = String.class),
+                                        @ColumnResult(name = "price", type = Double.class)
+                                }
+                        )
                 })
 })
 
@@ -58,4 +53,59 @@ public class Meals implements Serializable {
     @JoinColumn(name = "destination_id", nullable = false)
     private Destination destination;
 
+    public Meals(Integer id, double price, String state, String type) {
+        this.id = id;
+        this.price = price;
+        this.state = state;
+        this.type = type;
+    }
+
+    public Meals() {}
+
+    public Meals(String type, double price, String state, Destination destination) {
+        this.type = type;
+        this.price = price;
+        this.state = state;
+        this.destination = destination;
+    }
+
+    public Destination getDestination() {
+        return destination;
+    }
+
+    public void setDestination(Destination destination) {
+        this.destination = destination;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }

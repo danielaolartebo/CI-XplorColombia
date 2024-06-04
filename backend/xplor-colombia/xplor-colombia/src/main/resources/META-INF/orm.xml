@@ -48,16 +48,16 @@
 
 
     <entity class="com.xplorcolombia.xplorcolombia.domain.Transportation">
-        <named-native-query name="Transportation.seeTranportationbyDestination" result-set-mapping="seeTranportationbyDestination">
+        <named-native-query name="Transportation.seeTransportationbyDestination" result-set-mapping="seeTransportationbyDestination">
             <query>
-                select type typeTp
-                from transportation
-                where destination_id = (select d.id
-                from destination d where d.name = :pDest)
+                select t.id as id, t.name as name, t.price as price
+                from transportation t
+                where t.destination_id = :pDest
+                and t.state = 'A'
             </query>
         </named-native-query>
 
-        <named-native-query name="Transportation.transportationForReservation" result-set-mapping="transportationForReservation">
+        <!--<named-native-query name="Transportation.transportationForReservation" result-set-mapping="transportationForReservation">
             <query>
                 select t.type
                 from transportation t
@@ -66,6 +66,17 @@
                 where r.id = (select id
                 from reservation where user_id = :pClientId) and
                 t.destination_id = (select id from destination where id = :pDest)
+            </query>
+        </named-native-query>-->
+    </entity>
+
+    <entity class="com.xplorcolombia.xplorcolombia.domain.TripInsurance">
+        <named-native-query name="TripInsurance.seeTripInsurancebyDestination" result-set-mapping="seeTripInsurancebyDestination">
+            <query>
+                select t.id as id, t.type as type, t.price as price
+                from trip_insurance t
+                where t.destination_id = :pDest
+                and t.state = 'A'
             </query>
         </named-native-query>
     </entity>
@@ -94,14 +105,14 @@
     </entity>-->
 
     <entity class="com.xplorcolombia.xplorcolombia.domain.Meals">
-        <named-native-query name="Meal.seeMeals" result-set-mapping="seeMeals">
+        <!--<named-native-query name="Meals.seeMeals" result-set-mapping="seeMeals">
             <query>
                 select type
                 from meal
             </query>
         </named-native-query>
 
-        <named-native-query name="Meal.mealForReservation" result-set-mapping="mealForReservation">
+        <named-native-query name="Meals.mealForReservation" result-set-mapping="mealForReservation">
             <query>
                 select m.type
                 from meal m
@@ -111,16 +122,14 @@
                 from reservation where user_id = :pClientId) and
                 rm.destination_name = :pDest
             </query>
-        </named-native-query>
+        </named-native-query>-->
 
-        <named-native-query name="Destination.seeMealsForDestination" result-set-mapping="seeMealsForDestination">
+        <named-native-query name="Meals.seeMealbyDestination" result-set-mapping="seeMealbyDestination">
             <query>
-                select m.type
-                from meal m
-                join destination_meal dm on m.id = dm.meal_id
-                join destination d on d.id = dm.destination_id
-                where d.id = (select id
-                from destination where name = :pDest)
+                select m.id as id, m.type as type, m.price as price
+                from meals m
+                where m.destination_id = :pDest
+                and m.state = 'A'
             </query>
         </named-native-query>
     </entity>
@@ -134,7 +143,14 @@
                 from destination where name = :pDest)
             </query>
         </named-native-query>
-
+        <named-native-query name="Accommodation.seeAccommodationbyDestination" result-set-mapping="seeAccommodationbyDestination">
+            <query>
+                select a.id as id, a.name as name, a.price as price, a.lodging as lodging
+                from accommodation a
+                where a.destination_id = :pDest
+                and a.state = 'A'
+            </query>
+        </named-native-query>
         <named-native-query name="Accommodation.accommodationForReservation" result-set-mapping="accommodationForReservation">
             <query>
                 select a.name
