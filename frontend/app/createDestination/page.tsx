@@ -13,6 +13,7 @@ export default function createDestinationPage() {
         name: '',
         description: '',
         price: '',
+        maxPeople:'',
         image: null
     });
 
@@ -46,7 +47,7 @@ export default function createDestinationPage() {
           description: destination.description,
           //package_id: initPackage,
           state: "A",
-          maxPeople: 10
+          maxPeople: destination.maxPeople
         };
 
         console.log('Destination:', destination);
@@ -136,6 +137,20 @@ export default function createDestinationPage() {
                                     <div className='right-right-side-create-trip'>
                                         <div className="col-create-textbox-container">
                                             <input className="txtbox-create" placeholder="$0.00" type="text" name="price" value={destination.price} onChange={handleChange} />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Max People */}
+                            <div className="cont-createtrip">
+                                <div className='left-create'>
+                                    <h5> Max People</h5>
+                                </div>
+                                <div className='right-create'>
+                                    <div className='right-right-side-create-trip'>
+                                        <div className="col-create-textbox-container">
+                                            <input className="txtbox-create" placeholder="0" type="text" name="maxPeople" value={destination.maxPeople} onChange={handleChange} />
                                         </div>
                                     </div>
                                 </div>

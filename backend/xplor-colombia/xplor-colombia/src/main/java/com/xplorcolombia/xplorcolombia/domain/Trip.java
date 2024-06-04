@@ -26,7 +26,7 @@ public class Trip implements Serializable {
     private int numPeople;
 
     @ManyToOne
-    @JoinColumn(name = "package_id", nullable = false)
+    @JoinColumn(name = "package_id")
     private Package tripPackage;
 
     @Column(name = "state", columnDefinition = "varchar(1)")
