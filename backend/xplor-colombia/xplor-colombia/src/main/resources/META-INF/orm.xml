@@ -16,134 +16,107 @@
             </query>
         </named-native-query>
 
-        <named-native-query name="Destination.seeDestinationId" result-set-mapping="seeDestinations">
-            <query>
-                select id idDest
-                from destination
-                where name = :pDest
-            </query>
-        </named-native-query>
-
         <named-native-query name="Destination.seeDestinationsPerPackage" result-set-mapping="seeDestinationsPerPackage">
             <query>
                 select dest.name
                 from destination dest
-                where dest.id = (select id
-                from package
-                where name = :pPackage)
+                join package_destination pd on dest.id = pd.destination_id
+                join package p on p.id = pd.package_id
+                where package_id = (select id from package where name = :pPack)
+                and dest.state = 'A'
+            </query>
+        </named-native-query>
+        <named-native-query name="Destination.seeDestinationPerTripDestination" result-set-mapping="seeDestinations">
+            <query>
+                select name
+                from destination
+                where id = (select destination_id
+                from trip_destination where id = :pId)
             </query>
         </named-native-query>
 
-        <named-native-query name="Destination.destinationForReservation" result-set-mapping="destinationForReservation">
-            <query>
-                select d.name
-                from destination d
-                join reservation_destination rd on d.id = rd.destination_id
-                join reservation r on r.id = rd.reservation_id
-                where r.id = (select id
-                from reservation where user_id = :pClientId)
-            </query>
-        </named-native-query>
     </entity>
     <!-- -->
 
     <entity class="com.xplorcolombia.xplorcolombia.domain.Transportation">
         <named-native-query name="Transportation.seeTranportationbyDestination" result-set-mapping="seeTranportationbyDestination">
             <query>
-                select type typeTp
+                select name, price
                 from transportation
-                where destination_id = (select d.id
-                from destination d where d.name = :pDest)
+                where destination_id = (select id
+                from destination where name = :pDest)
+                and state = 'A'
             </query>
         </named-native-query>
 
-        <named-native-query name="Transportation.transportationForReservation" result-set-mapping="transportationForReservation">
+        <named-native-query name="Transportation.seeTransportationPerTripDestination" result-set-mapping="transportationForReservation">
             <query>
-                select t.type
-                from transportation t
-                join reservation_transportation rt on t.id = rt.transportation_id
-                join reservation r on r.id = rt.reservation_id
-                where r.id = (select id
-                from reservation where user_id = :pClientId) and
-                t.destination_id = (select id from destination where id = :pDest)
+                select name
+                from transportation
+                where id = (select transportation_id
+                from trip_destination where id = :pId)
             </query>
         </named-native-query>
     </entity>
 
-    <entity class="com.xplorcolombia.xplorcolombia.domain.Lodging">
-        <named-native-query name="Lodging.seeHotels" result-set-mapping="seeHotels">
+    <entity class="com.xplorcolombia.xplorcolombia.domain.TripInsurance">
+        <named-native-query name="TripInsurance.seeTripInsurancebyDestination" result-set-mapping="seeHotels">
             <query>
-                select name
-                from lodging
-                where destination_id = (select d.id
-                from destination d where d.name = :pDest)
+                select type, price
+                from trip_insurance
+                where destination_id = (select id
+                from destination where name = :pDest)
             </query>
         </named-native-query>
 
-        <named-native-query name="Lodging.lodgingforReservation" result-set-mapping="lodgingforReservation">
+        <named-native-query name="TripInsurance.seeTripInsurancePerTripDestination" result-set-mapping="lodgingforReservation">
             <query>
-                select l.name
-                from lodging l
-                join reservation_lodging rl on l.id = rl.lodging_id
-                join reservation r on r.id = rl.reservation_id
-                where r.id = (select id
-                from reservation where user_id = :pClientId) and
-                l.destination_id = (select id from destination where id = :pDest)
+                select type
+                from trip_insurance
+                where id = (select tripinsurance_id
+                from trip_destination where id = :pId)
             </query>
         </named-native-query>
     </entity>
 
     <entity class="com.xplorcolombia.xplorcolombia.domain.Meal">
-        <named-native-query name="Meal.seeMeals" result-set-mapping="seeMeals">
+        <named-native-query name="Meal.seeMealsbyDestination" result-set-mapping="seeMeals">
+            <query>
+                select type,price
+                from meals
+                where destination_id = (select id
+                from destination where name = :pDest)
+                and state = 'A'
+            </query>
+        </named-native-query>
+
+        <named-native-query name="Meal.seeMealsPerTripDestination" result-set-mapping="mealForReservation">
             <query>
                 select type
-                from meal
-            </query>
-        </named-native-query>
-
-        <named-native-query name="Meal.mealForReservation" result-set-mapping="mealForReservation">
-            <query>
-                select m.type
-                from meal m
-                join reservation_meal rm on m.id = rm.meal_id
-                join reservation r on r.id = rm.reservation_id
-                where r.id = (select id
-                from reservation where user_id = :pClientId) and
-                rm.destination_name = :pDest
-            </query>
-        </named-native-query>
-
-        <named-native-query name="Destination.seeMealsForDestination" result-set-mapping="seeMealsForDestination">
-            <query>
-                select m.type
-                from meal m
-                join destination_meal dm on m.id = dm.meal_id
-                join destination d on d.id = dm.destination_id
-                where d.id = (select id
-                from destination where name = :pDest)
+                from meals
+                where id = (select meals_id
+                from trip_destination where id = :pId)
             </query>
         </named-native-query>
     </entity>
 
     <entity class="com.xplorcolombia.xplorcolombia.domain.Accommodation">
-        <named-native-query name="Accommodation.seeAccommodations" result-set-mapping="seeAccommodations">
+        <named-native-query name="Accommodation.seeAccommodationbyDestination" result-set-mapping="seeAccommodations">
             <query>
-                select name nameAc
+                select name, price
                 from accommodation
-                where id = (select id
+                where destination_id = (select id
                 from destination where name = :pDest)
+                and state = 'A'
             </query>
         </named-native-query>
 
-        <named-native-query name="Accommodation.accommodationForReservation" result-set-mapping="accommodationForReservation">
+        <named-native-query name="Accommodation.accommodationPerTripDestination" result-set-mapping="accommodationForReservation">
             <query>
-                select a.name
-                from accommodation a
-                join reservation_accommodation ra on a.id = ra.accommodation_id
-                join reservation r on r.id = ra.reservation_id
-                where r.id = (select id
-                from reservation where user_id = :pClientId) and
-                a.destination_id = (select id from destination where id = :pDest)
+                select name
+                from accommodation
+                where id = (select accommodation_id
+                from trip_destination where id = :pId)
             </query>
         </named-native-query>
     </entity>
@@ -151,8 +124,28 @@
     <entity class="com.xplorcolombia.xplorcolombia.domain.Package">
         <named-native-query name="Package.seePackages" result-set-mapping="seePackages">
             <query>
-                select name namePa, img imgP
+                select name, id
                 from package
+                where state = 'A'
+            </query>
+        </named-native-query>
+    </entity>
+
+    <entity class="com.xplorcolombia.xplorcolombia.domain.Trip">
+        <named-native-query name="Trip.seeTripPerClient" result-set-mapping="seePackages">
+            <query>
+                select id,num_people
+                from trip
+                where customer_id = :pId
+                and state = 'A'
+            </query>
+        </named-native-query>
+        <named-native-query name="Trip.seeTripPerPackage" result-set-mapping="seePackages">
+            <query>
+                select id
+                from trip
+                where package_id = (select id
+                from package where name = :pPack)
             </query>
         </named-native-query>
     </entity>
