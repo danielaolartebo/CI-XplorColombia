@@ -26,7 +26,7 @@
                 and dest.state = 'A'
             </query>
         </named-native-query>
-        <named-native-query name="Destination.seeDestinationPerTripDestination" result-set-mapping="seeDestinations">
+        <named-native-query name="Destination.seeDestinationPerTripDestination" result-set-mapping="seeDestinationPerTripDestination">
             <query>
                 select name
                 from destination
@@ -36,7 +36,7 @@
         </named-native-query>
 
     </entity>
-    <!-- -->
+
 
     <entity class="com.xplorcolombia.xplorcolombia.domain.Transportation">
         <named-native-query name="Transportation.seeTranportationbyDestination" result-set-mapping="seeTranportationbyDestination">
@@ -49,7 +49,7 @@
             </query>
         </named-native-query>
 
-        <named-native-query name="Transportation.seeTransportationPerTripDestination" result-set-mapping="transportationForReservation">
+        <named-native-query name="Transportation.seeTransportationPerTripDestination" result-set-mapping="seeTransportationPerTripDestination">
             <query>
                 select name
                 from transportation
@@ -60,7 +60,7 @@
     </entity>
 
     <entity class="com.xplorcolombia.xplorcolombia.domain.TripInsurance">
-        <named-native-query name="TripInsurance.seeTripInsurancebyDestination" result-set-mapping="seeHotels">
+        <named-native-query name="TripInsurance.seeTripInsurancebyDestination" result-set-mapping="seeTripInsurancebyDestination">
             <query>
                 select type, price
                 from trip_insurance
@@ -69,7 +69,7 @@
             </query>
         </named-native-query>
 
-        <named-native-query name="TripInsurance.seeTripInsurancePerTripDestination" result-set-mapping="lodgingforReservation">
+        <named-native-query name="TripInsurance.seeTripInsurancePerTripDestination" result-set-mapping="seeTripInsurancePerTripDestination">
             <query>
                 select type
                 from trip_insurance
@@ -79,8 +79,8 @@
         </named-native-query>
     </entity>
 
-    <entity class="com.xplorcolombia.xplorcolombia.domain.Meal">
-        <named-native-query name="Meal.seeMealsbyDestination" result-set-mapping="seeMeals">
+    <entity class="com.xplorcolombia.xplorcolombia.domain.Meals">
+        <named-native-query name="Meals.seeMealsbyDestination" result-set-mapping="seeMealsbyDestination">
             <query>
                 select type,price
                 from meals
@@ -90,7 +90,7 @@
             </query>
         </named-native-query>
 
-        <named-native-query name="Meal.seeMealsPerTripDestination" result-set-mapping="mealForReservation">
+        <named-native-query name="Meals.seeMealsPerTripDestination" result-set-mapping="seeMealsPerTripDestination">
             <query>
                 select type
                 from meals
@@ -101,7 +101,7 @@
     </entity>
 
     <entity class="com.xplorcolombia.xplorcolombia.domain.Accommodation">
-        <named-native-query name="Accommodation.seeAccommodationbyDestination" result-set-mapping="seeAccommodations">
+        <named-native-query name="Accommodation.seeAccommodationbyDestination" result-set-mapping="seeAccommodationbyDestination">
             <query>
                 select name, price
                 from accommodation
@@ -111,7 +111,7 @@
             </query>
         </named-native-query>
 
-        <named-native-query name="Accommodation.accommodationPerTripDestination" result-set-mapping="accommodationForReservation">
+        <named-native-query name="Accommodation.seeAccommodationPerTripDestination" result-set-mapping="seeAccommodationPerTripDestination">
             <query>
                 select name
                 from accommodation
@@ -132,7 +132,7 @@
     </entity>
 
     <entity class="com.xplorcolombia.xplorcolombia.domain.Trip">
-        <named-native-query name="Trip.seeTripPerClient" result-set-mapping="seePackages">
+        <named-native-query name="Trip.seeTripPerClient" result-set-mapping="seeTripPerClient">
             <query>
                 select id,num_people
                 from trip
@@ -140,7 +140,7 @@
                 and state = 'A'
             </query>
         </named-native-query>
-        <named-native-query name="Trip.seeTripPerPackage" result-set-mapping="seePackages">
+        <named-native-query name="Trip.seeTripPerPackage" result-set-mapping="seeTripPerPackage">
             <query>
                 select id
                 from trip

@@ -36,13 +36,16 @@ public class Accommodation implements Serializable {
     @Column(name = "name", nullable = false, columnDefinition = "varchar(100)")
     private String name;
 
-    @Column(name = "destination_id", nullable = false)
-    private Integer destinationId;
-
-    @Column(name = "price", nullable = false)
-    private Integer price;
+    @Column(name = "price", nullable = false, columnDefinition = "numeric(10,2)")
+    private double price;
 
     @Column(name = "state", nullable = false, columnDefinition = "char(1)")
     private String state;
+
+    @Column(name = "destination_id", nullable = false)
+    private Integer destinationId;
+
+    @Column(name = "lodging", nullable = false, columnDefinition = "varchar(100)")
+    private String lodging;
 
 }

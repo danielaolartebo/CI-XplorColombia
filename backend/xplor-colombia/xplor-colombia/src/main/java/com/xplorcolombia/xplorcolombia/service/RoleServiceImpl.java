@@ -1,7 +1,6 @@
 package com.xplorcolombia.xplorcolombia.service;
 
 import com.xplorcolombia.xplorcolombia.domain.Role;
-import com.xplorcolombia.xplorcolombia.repository.ReservationRepository;
 import com.xplorcolombia.xplorcolombia.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;

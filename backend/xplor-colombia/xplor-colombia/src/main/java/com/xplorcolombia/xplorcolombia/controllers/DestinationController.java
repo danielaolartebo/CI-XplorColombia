@@ -34,7 +34,7 @@ public class DestinationController {
         }
     }
 
-    @RequestMapping(value = "/getDestination", method = RequestMethod.GET)
+    /*@RequestMapping(value = "/getDestination", method = RequestMethod.GET)
     public ResponseEntity<?> seeDestinationPerId(@RequestBody String id){
 
         lstDestination = destination.seeDestinationId(id);
@@ -55,14 +55,14 @@ public class DestinationController {
 
         lstDestination = destination.destinationsForReservation(idChange);
         return ResponseEntity.ok().body(lstDestination);
-    }
+    }*/
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public ResponseEntity<?> registDestination(@RequestBody Destination destination){
-        //System.out.println(destination);
+        System.out.println(destination);
         destinationRepository.save(destination);
         Destination data = destinationRepository.findByName(destination.getName());
-        //System.out.println(destination);
+        System.out.println(destination);
         return ResponseEntity.status(200).body(data);
         //destination.getMeal().getType();
         //return ResponseEntity.status(400).body("NO ESTA TERMINADA ESTA PARTE");

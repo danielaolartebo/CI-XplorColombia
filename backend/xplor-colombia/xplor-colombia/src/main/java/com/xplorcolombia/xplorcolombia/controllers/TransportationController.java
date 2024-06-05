@@ -15,7 +15,7 @@ import java.util.List;
 @RequestMapping("/transportation")
 public class TransportationController {
 
-    @Autowired
+    /*@Autowired
     private TransportationService transportation;
     private List<TransportationDTO> lstTransportation;
 
@@ -24,5 +24,5 @@ public class TransportationController {
         lstTransportation = transportation.seeTranportationbyDestination(dest);
 
         return ResponseEntity.ok().body(lstTransportation);
-    }
+    }*/
 }

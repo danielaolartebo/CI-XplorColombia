@@ -6,8 +6,10 @@ import java.io.Serializable;
 
 public class DestinationDTO implements Serializable {
 
-    private String nameD;
     private Integer id;
+    private String nameD;
+    private double basePrice;
+    private String state;
 
     public DestinationDTO() {
     }
@@ -15,6 +17,13 @@ public class DestinationDTO implements Serializable {
     public DestinationDTO(String nameD, Integer id) {
         this.nameD = nameD;
         this.id = id;
+    }
+
+    public DestinationDTO(Integer id, String nameD, double basePrice, String state) {
+        this.id = id;
+        this.nameD = nameD;
+        this.basePrice = basePrice;
+        this.state = state;
     }
 
     public String getNameD() {
@@ -32,4 +41,6 @@ public class DestinationDTO implements Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
+
 }

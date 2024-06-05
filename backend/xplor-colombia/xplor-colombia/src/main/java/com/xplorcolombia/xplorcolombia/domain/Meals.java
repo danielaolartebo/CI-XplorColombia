@@ -5,21 +5,29 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+
 @NamedNativeQueries({
-        @NamedNativeQuery(name="Transportation.seeTranportationbyDestination",
+        @NamedNativeQuery(name="Meal.seeMeals",
                 query="",
-                resultSetMapping = "seeTranportationbyDestination"),
-        @NamedNativeQuery(name="Transportation.transportationForReservation",
+                resultSetMapping = "seeMeals"),
+        @NamedNativeQuery(name="Meal.mealForReservation",
                 query="",
-                resultSetMapping = "transportationForReservation")
+                resultSetMapping = "mealForReservation"),
+        @NamedNativeQuery(name="Destination.seeMealsForDestination",
+                query="",
+                resultSetMapping = "seeMealsForDestination")
 })
 
 @SqlResultSetMappings({
-        @SqlResultSetMapping(name="seeTranportationbyDestination",
+        @SqlResultSetMapping(name="seeMeals",
                 columns = {
-                        @ColumnResult(name = "typeTp", type = String.class)
+                        @ColumnResult(name = "type", type = String.class)
                 }),
-        @SqlResultSetMapping(name="transportationForReservation",
+        @SqlResultSetMapping(name="mealForReservation",
+                columns = {
+                        @ColumnResult(name = "type", type = String.class)
+                }),
+        @SqlResultSetMapping(name="seeMealsForDestination",
                 columns = {
                         @ColumnResult(name = "type", type = String.class)
                 })
@@ -27,8 +35,8 @@ import java.io.Serializable;
 
 @Data
 @Entity
-@Table(name = "transportation")
-public class Transportation implements Serializable {
+@Table(name = "meals")
+public class Meals implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -43,10 +51,7 @@ public class Transportation implements Serializable {
     @Column(name = "price", nullable = false)
     private double price;
 
-    @Column(name = "both", nullable = false)
-    private boolean both;
-
-    @Column(name = "state", columnDefinition = "varchar(1)")
+    @Column(name = "state", columnDefinition = "char(1)")
     private String state;
 
     @ManyToOne
