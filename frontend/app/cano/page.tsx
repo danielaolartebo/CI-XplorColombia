@@ -12,11 +12,11 @@ export default function Cano() {
           <header className="main-header"> 
               <div className="container">
                 <div className="nav-header">
-                  <Link href='/welcome'><button className="btn_btn_login"> Go back </button></Link>
-                  <li><a href="/welcome" className="white-link">Home</a></li>
-                  <li><a href="/welcome" className="white-link">Create trip</a></li>
-                  <li><a href="/welcome" className="white-link">Deals</a></li>
-                  <li><a href="/welcome" className="white-link">Most Popular</a></li>
+                  <Link href='/home'><button className="btn_btn_login"> Go back </button></Link>
+                  <li><a href="/home" className="white-link">Home</a></li>
+                  <li><a href="/home" className="white-link">Create trip</a></li>
+                  <li><a href="/home" className="white-link">Deals</a></li>
+                  <li><a href="/home" className="white-link">Most Popular</a></li>
                   <li><a className="white-link">Destionation options</a>
                       <ul className="submenu">
                           <li><a href="/createTrip" className="white-link">Create destination</a></li>
@@ -39,11 +39,11 @@ export default function Cano() {
                                 <div className="heading-section pl-lg-5 ml-md-5">
                                     <h2>
                                         <br></br><br></br>
-                                        Caño Cristales
+                                        Elegir Destino
                                     </h2>
                                 </div>
                                 <div className="pl-lg-5 ml-md-5">
-                                    <p>Caño Cristales, often referred to as the River of Five Colors or the Liquid Rainbow, is a mesmerizing natural wonder located in the Serranía de la Macarena region of Colombia. Renowned for its vibrant hues, particularly during the months of July through November, Caño Cristales captivates visitors with its stunning display of colors. The rivers unique shades of red, blue, green, yellow, and black are attributed to the presence of various aquatic plants, including the endemic Macarenia clavigera. As sunlight filters through the water, it illuminates the riverbed, creating a spectacular kaleidoscope of colors. Visitors can embark on guided tours to explore the pristine landscapes surrounding Caño Cristales, immersing themselves in the unparalleled beauty of this natural gem.</p>
+                                    <p>Elije a donde quieres ir</p>
                                     <div className="row">
                                         <div className="trips-container">
                                           <div className="half-trips-container">
@@ -56,6 +56,22 @@ export default function Cano() {
                                                   <div className="sub-title"> Create plan: </div>                                           
                                             </div>
 
+                                            <div className="cont-subtitle">
+                                                <div className="half-descrip-container left-right-side">
+                                                    <i className="fa fa-bus" style={{ fontSize: '36px'}}></i>
+                                                </div>
+                                                <div className="half-descrip-container right-right-side">
+                                                    <p> Destino</p>
+                                                </div>
+                                                <div className="half-descrip-container right-left-side">
+                                                    <select className="dropdown-menu" id="menu"> 
+                                                        <option value="" disabled selected>Select option</option>
+                                                        <option value=""> No </option> 
+                                                        
+                                                    </select>
+
+                                                </div>
+                                            </div>
                                              {/* ---------------------- # DAYS STARTS ----------------------------*/}
 
 

@@ -134,8 +134,15 @@ export default function Welcome() {
                   <div className="title-price" style={{textAlign:'center'}}>Princing & Details</div>
                   <div className="columns">
                     <ul className="price">
-                      <li className="header">Trip name</li>
-                      <li className="grey">$ 0 COP </li>
+                      <li className="header">
+                        <th>Trip name</th></li>
+                      <li className="grey"><tbody>
+                        $ 0 COP 
+                        {/*dataModification.map((modification) => (
+                            <tr key={modification.id} className="user-item">
+                                <td>{modification.id}</td>
+                            </tr>
+                        ))*/}</tbody></li>
                       <li></li>
                       <li></li>
                       <li></li>
@@ -207,7 +214,7 @@ export default function Welcome() {
               {/* MOST POPULAR PAGE STARTS */}
                 <div className="mostpop-container" id="mostpopular">
                   <div className="deals-subtitle">
-                    Get to know our most popular trips
+                    Get to know our most popular destinations
                   </div>
                   <div className="progressbar-container">
                       <div className="">
@@ -227,6 +234,29 @@ export default function Welcome() {
                           <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '40%'} as React.CSSProperties}> Caño Cristales </div>
                           {/* 8 PROGRESS BAR */}
                           <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '25%'} as React.CSSProperties}> Ciudad Perdida </div>
+                      </div>
+                  </div>
+                  <ul className="report1">
+                        <li className="button-report1"><a href="#" className="button">Download Report</a></li>
+                  </ul>
+                </div>
+              {/* MOST POPULAR PAGE ENDS */}
+
+               {/* MOST POPULAR PAQUETE */}
+               <div className="mostpop-container" id="mostpopular">
+                  <div className="deals-subtitle">
+                    Get to know our most popular package
+                  </div>
+                  <div className="progressbar-container">
+                      <div className="">
+                          {/* 1 PROGRESS BAR */}
+                          <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '95%'} as React.CSSProperties}> Nature </div>
+                          {/* 2 PROGRESS BAR */}
+                          <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '87%'} as React.CSSProperties}> Wonder</div>
+                          {/* 3 PROGRESS BAR */}
+                          <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '80%'} as React.CSSProperties}> Explore </div>
+                          {/* 4 PROGRESS BAR */}
+                          <div className="w3-container w3-blue w3-round-xlarge" style={{ width: '70%'} as React.CSSProperties}> Discover </div>
                       </div>
                   </div>
                   <ul className="report1">
