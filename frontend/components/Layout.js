@@ -1,6 +1,33 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function Layout({ children }) {
+      useEffect(() => {
+        showDestinations();
+    }, []);
+
+    const [dataRole, setDataRole] = useState([]);
+
+    async function showDestinations(){
+        try {
+          const token = localStorage.getItem('token');
+          const response = await fetch('http://localhost:5433/user/role/get', {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${token}`
+            }
+          });
+          const dataRole = await response.json(); 
+          console.log("Role:", dataRole);
+          console.log("Role:", dataRole.name);
+          setDataRole(dataRole);
+        } catch (error) {
+          console.error('Error al procesar la solicitud:', error);
+        }
+    }
   return (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,6 +47,15 @@ export default function Layout({ children }) {
                 <li><a href="/deleteDestination" className="white-link">Elimina un destino</a></li>
               </ul>
             </li>
+            {dataRole.name === "ROLE_ADMIN" && (
+              <li><a className="white-link">Opciones de Usuarios</a>
+                <ul className="submenu">
+                  <li><a href="/createUser" className="white-link">Crea un Usuario</a></li>
+                  <li><a href="/seeUsers" className="white-link">Ver informacion de Usuarios</a></li>
+                  <li><a href="/seeModifications" className="white-link">Ver modificaciones</a></li>
+                </ul>
+              </li>
+            )}
             <Link href='/'><button className="btn_btn_login"> Salir </button></Link>
           </div>
         </div>

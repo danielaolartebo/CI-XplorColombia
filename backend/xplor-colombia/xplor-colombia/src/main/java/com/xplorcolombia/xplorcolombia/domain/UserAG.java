@@ -31,7 +31,7 @@ public class UserAG implements Serializable, UserDetails {
     @Column(name = "password", nullable = false, columnDefinition = "varchar(100)")
     private String password;
 
-    @Column(name = "state", columnDefinition = "char(1)")
+    @Column(name = "state")
     private String state;
 
     @ManyToOne

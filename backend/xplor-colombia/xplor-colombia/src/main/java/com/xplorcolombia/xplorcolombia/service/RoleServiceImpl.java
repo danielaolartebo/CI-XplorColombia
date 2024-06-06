@@ -1,6 +1,7 @@
 package com.xplorcolombia.xplorcolombia.service;
 
 import com.xplorcolombia.xplorcolombia.domain.Role;
+import com.xplorcolombia.xplorcolombia.domain.UserAG;
 import com.xplorcolombia.xplorcolombia.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -54,5 +55,12 @@ public class RoleServiceImpl implements RoleService {
     @Override
     public Long count() {
         return roleRepository.count();
+    }
+
+
+    @Override
+    public Optional<Role> findByName(String role) {
+
+        return roleRepository.findByName(role);
     }
 }
