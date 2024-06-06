@@ -45,6 +45,8 @@ export default function Home() {
       } else {
         // Manejar errores de la solicitud
         console.error('Error al iniciar sesión:', response.statusText);
+        const errorMessage = await response.text();
+        alert(errorMessage);
       }
     } catch (error) {
       // Manejar errores de red u otros errores

@@ -1,19 +1,20 @@
 package com.xplorcolombia.xplorcolombia.controllers;
 
-import com.xplorcolombia.xplorcolombia.domain.Accommodation;
-import com.xplorcolombia.xplorcolombia.domain.Destination;
-import com.xplorcolombia.xplorcolombia.domain.Transportation;
+import com.xplorcolombia.xplorcolombia.domain.*;
 import com.xplorcolombia.xplorcolombia.dto.AccommodationDTO;
 import com.xplorcolombia.xplorcolombia.dto.TransportationDTO;
-import com.xplorcolombia.xplorcolombia.repository.AccommodationRepository;
-import com.xplorcolombia.xplorcolombia.repository.DestinationRepository;
-import com.xplorcolombia.xplorcolombia.repository.TransportationRepository;
+import com.xplorcolombia.xplorcolombia.repository.*;
 import com.xplorcolombia.xplorcolombia.service.AccommodationService;
 import com.xplorcolombia.xplorcolombia.service.TransportationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,6 +30,10 @@ public class AccomodationController {
     private DestinationRepository destinationRepository;
     @Autowired
     private AccommodationRepository accommodationRepository;
+    @Autowired
+    private UserAGRepository userAGRepository;
+    @Autowired
+    private ModificationsRepository modificationsRepository;
 
     @RequestMapping(value = "/PerDestination", method = RequestMethod.GET)
     public ResponseEntity<?> getAccommodationPerDestination(@RequestHeader Integer idDestination){
@@ -51,6 +56,21 @@ public class AccomodationController {
             Destination destinationInRepository = oDestination.get();
             Accommodation accommodation = new Accommodation(request.getName(), request.getPrice(), request.getState(), destinationInRepository,request.getLodging());
             accommodationRepository.save(accommodation);
+
+            //---Añadir modificacion
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            UserAG temporaryUser = userAGRepository.findByEmail(authentication.getName())
+                    .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+            //INFORMACION DE LA MODIFICACION
+            String modiDescription="Se permite registrar un nuevo alojamiento desde cualquier usuario.";
+            String modi="Se creó el alojamiento "+request.getName()+" en el Hotel "+request.getLodging()+" que pertenece al destino "+destinationInRepository.getName()+".";
+            LocalDateTime localDateTime = LocalDateTime.now();
+            Date modiDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+            String modiName="CREATE-ACCOMMODATION";
+            //----------------------------------
+            Modifications modifications = new Modifications(modiDescription,modi,modiDate,modiName,temporaryUser);
+            modificationsRepository.save(modifications);
+
             return ResponseEntity.status(200).body("Guardado correctamente");
         }
         return ResponseEntity.status(404).body("Destination not found.");
@@ -63,6 +83,21 @@ public class AccomodationController {
             Accommodation accommodationToDelete = oAccommodation.get();
             accommodationToDelete.setState("D");
             accommodationRepository.save(accommodationToDelete);
+
+            //---Añadir modificacion
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            UserAG temporaryUser = userAGRepository.findByEmail(authentication.getName())
+                    .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+            //INFORMACION DE LA MODIFICACION
+            String modiDescription="Se permite eliminar (Cambio de estado a desactivado) un alojamiento desde cualquier usuario.";
+            String modi="Se eliminó el alojamiento "+accommodationToDelete.getName()+" del hotel "+accommodationToDelete.getLodging()+" que pertenecia al destino "+accommodationToDelete.getDestination().getName()+".";
+            LocalDateTime localDateTime = LocalDateTime.now();
+            Date modiDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+            String modiName="DELETE-ACCOMMODATION";
+            //----------------------------------
+            Modifications modifications = new Modifications(modiDescription,modi,modiDate,modiName,temporaryUser);
+            modificationsRepository.save(modifications);
+
             return ResponseEntity.status(200).body("Guardado correctamente");
         }
         return ResponseEntity.status(404).body("Accommodation not found.");

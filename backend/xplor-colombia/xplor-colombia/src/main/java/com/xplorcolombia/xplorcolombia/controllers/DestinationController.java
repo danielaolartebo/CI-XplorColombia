@@ -1,15 +1,21 @@
 package com.xplorcolombia.xplorcolombia.controllers;
 
-import com.xplorcolombia.xplorcolombia.domain.Destination;
+import com.xplorcolombia.xplorcolombia.domain.*;
 import com.xplorcolombia.xplorcolombia.domain.Package;
-import com.xplorcolombia.xplorcolombia.domain.Transportation;
 import com.xplorcolombia.xplorcolombia.dto.DestinationDTO;
 import com.xplorcolombia.xplorcolombia.repository.DestinationRepository;
+import com.xplorcolombia.xplorcolombia.repository.ModificationsRepository;
+import com.xplorcolombia.xplorcolombia.repository.UserAGRepository;
 import com.xplorcolombia.xplorcolombia.service.DestinationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,6 +29,10 @@ public class DestinationController {
     private List<DestinationDTO> lstDestination;
     @Autowired
     private DestinationRepository destinationRepository;
+    @Autowired
+    private UserAGRepository userAGRepository;
+    @Autowired
+    private ModificationsRepository modificationsRepository;
 
     @RequestMapping(value = "/getAll", method = RequestMethod.GET)
     public ResponseEntity<?> getAllDestination(){
@@ -51,6 +61,21 @@ public class DestinationController {
         destinationRepository.save(destination);
         Destination data = destinationRepository.findByName(destination.getName());
         System.out.println(destination);
+
+        //---Añadir modificacion
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserAG temporaryUser = userAGRepository.findByEmail(authentication.getName())
+                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+        //INFORMACION DE LA MODIFICACION
+        String modiDescription="Se permite registrar un nuevo destino desde cualquier usuario.";
+        String modi="Se creó el destino "+destination.getName()+".";
+        LocalDateTime localDateTime = LocalDateTime.now();
+        Date modiDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+        String modiName="CREATE-DESTINATION";
+        //----------------------------------
+        Modifications modifications = new Modifications(modiDescription,modi,modiDate,modiName,temporaryUser);
+        modificationsRepository.save(modifications);
+
         return ResponseEntity.status(200).body(data);
         //destination.getMeal().getType();
         //return ResponseEntity.status(400).body("NO ESTA TERMINADA ESTA PARTE");
@@ -63,6 +88,21 @@ public class DestinationController {
             Destination destinationToDelete = oDestination.get();
             destinationToDelete.setState("D");
             destinationRepository.save(destinationToDelete);
+
+            //---Añadir modificacion
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            UserAG temporaryUser = userAGRepository.findByEmail(authentication.getName())
+                    .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+            //INFORMACION DE LA MODIFICACION
+            String modiDescription="Se permite eliminar (Cambio de estado a desactivado) un destino desde cualquier usuario.";
+            String modi="Se eliminó el destino "+destinationToDelete.getName()+".";
+            LocalDateTime localDateTime = LocalDateTime.now();
+            Date modiDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+            String modiName="DELETE-DESTINATION";
+            //----------------------------------
+            Modifications modifications = new Modifications(modiDescription,modi,modiDate,modiName,temporaryUser);
+            modificationsRepository.save(modifications);
+
             return ResponseEntity.status(200).body("Guardado correctamente");
         }
         return ResponseEntity.status(404).body("Destination not found.");

@@ -34,4 +34,13 @@ public class Modifications implements Serializable {
     @JoinColumn(name = "userag_id", nullable = false)
     private UserAG userAG;
 
+    public Modifications() {}
+
+    public Modifications(String description, String modification, Date modificationDate, String name, UserAG userAG) {
+        this.description = description;
+        this.modification = modification;
+        this.modificationDate = modificationDate;
+        this.name = name;
+        this.userAG = userAG;
+    }
 }

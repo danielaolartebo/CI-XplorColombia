@@ -61,8 +61,10 @@ public class AuthController {
                 //response.put("loginResponse", loginResponse);
                 //response.put("foundUserAG", foundUserAG);
                 //return ResponseEntity.ok(response);
-                return ResponseEntity.ok(authService.login(request));
-                //return ResponseEntity.status(200).body(foundUserAG);
+                if(foundUserAG.getState().equals("A")){
+                    return ResponseEntity.ok(authService.login(request));
+                }
+                return ResponseEntity.status(401).body("Invalid user (status disabled).");
             }
             return ResponseEntity.status(401).body("Invalid password.");
         }
