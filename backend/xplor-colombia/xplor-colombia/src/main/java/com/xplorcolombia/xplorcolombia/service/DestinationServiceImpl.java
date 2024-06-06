@@ -72,8 +72,8 @@ public class DestinationServiceImpl implements DestinationService {
     }
 
     @Override
-    public List<DestinationDTO> destinationsForReservation(int clientId) {
-        return destinationRepository.destinationForReservation(clientId);
+    public DestinationDTO seeDestinationPerTripDestination(Integer clientId) {
+        return destinationRepository.seeDestinationPerTripDestination(clientId);
     }
 
     @Override

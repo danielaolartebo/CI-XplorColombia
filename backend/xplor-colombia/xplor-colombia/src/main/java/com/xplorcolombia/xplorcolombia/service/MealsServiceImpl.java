@@ -2,6 +2,7 @@ package com.xplorcolombia.xplorcolombia.service;
 
 import com.xplorcolombia.xplorcolombia.domain.Meals;
 import com.xplorcolombia.xplorcolombia.dto.MealsDTO;
+import com.xplorcolombia.xplorcolombia.dto.TransportationDTO;
 import com.xplorcolombia.xplorcolombia.repository.MealsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -59,8 +60,18 @@ public class MealsServiceImpl implements MealsService {
     }
 
 
-    @Override
+    /*@Override
     public List<MealsDTO> seeMeals() {
         return List.of();
+    }*/
+
+    @Override
+    public List<MealsDTO> seeMealbyDestination(Integer idDestination) {
+        return mealsRepository.seeMealbyDestination(idDestination);
+    }
+
+    @Override
+    public MealsDTO seeMealsPerTripDestination(Integer idTripDestination) {
+        return mealsRepository.seeMealsPerTripDestination(idTripDestination);
     }
 }

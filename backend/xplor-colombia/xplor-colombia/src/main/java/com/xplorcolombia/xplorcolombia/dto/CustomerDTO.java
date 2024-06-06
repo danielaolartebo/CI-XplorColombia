@@ -17,6 +17,15 @@ public class CustomerDTO implements Serializable {
         this.nit = nit;
         this.state = state;
     }
+
+    public CustomerDTO(Integer id, String name, String email, Integer nit) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.nit = nit;
+    }
+
+
 }
 
 

@@ -2,6 +2,7 @@ package com.xplorcolombia.xplorcolombia.service;
 
 import com.xplorcolombia.xplorcolombia.domain.TripDestination;
 import com.xplorcolombia.xplorcolombia.domain.TripInsurance;
+import com.xplorcolombia.xplorcolombia.dto.TripDestinationDTO;
 import com.xplorcolombia.xplorcolombia.repository.TripDestinationRepository;
 import com.xplorcolombia.xplorcolombia.repository.TripInsuranceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,4 +61,8 @@ public class TripDestinationServiceImpl implements TripDestinationService {
     }
 
 
+    @Override
+    public List<TripDestinationDTO> seeTripDestPerClient(Integer idTrip) {
+        return tripDestinationRepository.seeTripDestPerClient(idTrip);
+    }
 }

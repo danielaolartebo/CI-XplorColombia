@@ -1,10 +1,29 @@
 package com.xplorcolombia.xplorcolombia.domain;
 
+import com.xplorcolombia.xplorcolombia.dto.CustomerDTO;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.io.Serializable;
+@NamedNativeQueries({
+        @NamedNativeQuery(name="Customer.seeCustomer",
+                query="",
+                resultSetMapping = "seeCustomer")
 
+})
+
+@SqlResultSetMappings({
+        @SqlResultSetMapping(name="seeCustomer",
+                classes = {@ConstructorResult(targetClass = CustomerDTO.class,
+                        columns = {
+                                @ColumnResult(name = "id", type = Integer.class),
+                                @ColumnResult(name = "email", type = String.class),
+                                @ColumnResult(name = "name", type = String.class),
+                                @ColumnResult(name = "nit", type = String.class)
+                        }
+                )
+                })
+})
 
 @Data
 @Entity

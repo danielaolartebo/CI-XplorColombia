@@ -16,7 +16,7 @@ public interface DestinationService extends GenericService<Destination, Integer>
 
     public List<DestinationDTO> seeDestinationsPerPackage(String packageName);
 
-    public List<DestinationDTO> destinationsForReservation(int clientId);
+    public DestinationDTO seeDestinationPerTripDestination(Integer clientId);
 
     public Destination findByName(String name);
 }

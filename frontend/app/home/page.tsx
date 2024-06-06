@@ -1,10 +1,35 @@
 'use client';
 
 import Link from "next/link";
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Layout from '../../components/Layout';
 
 export default function Welcome() {
+  useEffect(() => {
+        showDestinations();
+    }, []);
+    
+    const [data, setData] = useState([]);
+    const [selectedDestination, setSelectedDestination] = useState("");
+
+    async function showDestinations(){
+        try {
+          const token = localStorage.getItem('token');
+          const response = await fetch('http://localhost:5433/destination/getAll', {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${token}`
+            }
+          });
+          const data = await response.json();
+          console.log("Lista de destinos:", data);
+          setData(data); // Almacena los datos en el estado local
+        } catch (error) {
+          console.error('Error al procesar la solicitud:', error);
+        }
+    }
+
   useEffect(() => {
     const path = window.location.pathname;
     if (path === '/home#createTrip') {
@@ -39,10 +64,10 @@ export default function Welcome() {
                     </div>
                     <div className="items-container">
                       <div className="text-aboutus">
-                        {/* ---------------------- ID AND USER NAME ----------------------------*/}
+                        {/* ---------------------- NIT AND USER NAME ----------------------------*/}
                         <div className="cont-subtitle">
                           <div className="items-half1">
-                            <input className="form-items1" placeholder="ID" type="id" name="id" required/>
+                            <input className="form-items1" placeholder="NIT" type="nit" name="nit" required/>
                           </div>
                           <div className="items-half2">
                             <input className="form-items2" placeholder="Full Name" type="name" name="name" required/>
@@ -57,19 +82,13 @@ export default function Welcome() {
                               </div>
                           </div>
                           <div className="items-half2">
-                            <select className="dropdown-menu" id="menu"> 
-                                <option value="" disabled selected>Select option</option>
-                                <option value=""> 1 </option> 
-                                <option value=""> 2 </option> 
-                                <option value=""> 3 </option> 
-                                <option value=""> 4 </option> 
-                                <option value=""> 5 </option> 
-                                <option value=""> 6 </option> 
-                                <option value=""> 7 </option> 
-                                <option value=""> 8 </option> 
-                                <option value=""> 9 </option> 
-                                <option value=""> 10 </option> 
-                            </select>
+                          <div className='right-create'>
+                                    <div className='right-right-side-create-trip'>
+                                        <div className="col-create-textbox-container">
+                                            <input className="txtbox-create" placeholder="0" type="text" name="maxPeople" />
+                                        </div>
+                                    </div>
+                                </div>
                           </div>
                         </div>
 
@@ -81,17 +100,17 @@ export default function Welcome() {
                               </div>
                           </div>
                           <div className="items-half2">
-                            <select className="dropdown-items" id="menu"> 
-                                <option value="" disabled selected> Select trip</option>
-                                <option value=""> Caño Cristales </option> 
-                                <option value=""> Parque Tayrona </option> 
-                                <option value=""> Ciudad Perdida </option> 
-                                <option value=""> Desierto de la Tatacoa </option> 
-                                <option value=""> Parque del Café </option> 
-                                <option value=""> Piedra del Peñol </option> 
-                                <option value=""> Nevado del Ruiz </option> 
-                                <option value=""> Valle del Cocora </option>
-                            </select>
+                          <select
+                                    className="dropdown-addtrip"
+                                    id="destination"
+                                    value={selectedDestination}
+                                    onChange={(e) => setSelectedDestination(e.target.value)}
+                                >
+                                    <option value="" disabled selected>Destination 1</option>
+                                    {data.map(destination => (
+                                        <option key={destination.id} value={destination.id}>{destination.nameD}</option>
+                                    ))}
+                                </select>
                            </div>
                           </div>
                            {/* ---------------------- ADD BUTTON ----------------------------*/}

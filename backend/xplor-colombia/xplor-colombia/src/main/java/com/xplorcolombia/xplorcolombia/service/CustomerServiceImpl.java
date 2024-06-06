@@ -1,6 +1,7 @@
 package com.xplorcolombia.xplorcolombia.service;
 
 import com.xplorcolombia.xplorcolombia.domain.Customer;
+import com.xplorcolombia.xplorcolombia.dto.CustomerDTO;
 import com.xplorcolombia.xplorcolombia.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -53,5 +54,10 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public Long count() {
         return customerRepository.count();
+    }
+
+    @Override
+    public CustomerDTO seeCustomer(Integer idCustomer) {
+        return customerRepository.seeCustomer(idCustomer);
     }
 }

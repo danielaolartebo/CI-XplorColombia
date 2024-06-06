@@ -24,6 +24,6 @@ public interface DestinationRepository extends JpaRepository<Destination,Integer
     public List<DestinationDTO> seeDestinationsPerPackage(@Param("pPackage") String packageName);
 
     @Query(nativeQuery = true)
-    public List<DestinationDTO> destinationForReservation(@Param("pClientId") int clientId);
+    public DestinationDTO seeDestinationPerTripDestination(@Param("pClientId") Integer clientId);
 
 }

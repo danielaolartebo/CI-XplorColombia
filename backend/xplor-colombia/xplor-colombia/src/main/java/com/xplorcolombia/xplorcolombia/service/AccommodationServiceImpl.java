@@ -3,6 +3,7 @@ package com.xplorcolombia.xplorcolombia.service;
 import com.xplorcolombia.xplorcolombia.domain.Accommodation;
 import com.xplorcolombia.xplorcolombia.dto.AccommodationDTO;
 import com.xplorcolombia.xplorcolombia.dto.DestinationDTO;
+import com.xplorcolombia.xplorcolombia.dto.TransportationDTO;
 import com.xplorcolombia.xplorcolombia.repository.AccommodationRepository;
 import com.xplorcolombia.xplorcolombia.repository.DestinationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,8 +62,18 @@ public class AccommodationServiceImpl implements AccommodationService {
         return accommodationRepository.count();
     }
 
-    @Override
-    public List<AccommodationDTO> seeAccommodations(String destination) {
+    /*@Override
+    public List<AccommodationDTO> seeAccommodations(String Iestination) {
         return accommodationRepository.seeAccommodations(destination);
+    }*/
+
+    @Override
+    public AccommodationDTO seeAccommodationPerTripDestination(Integer idTripDestination) {
+        return accommodationRepository.seeAccommodationPerTripDestination(idTripDestination);
+    }
+
+    @Override
+    public List<AccommodationDTO> seeAccommodationbyDestination(Integer idDestination) {
+        return accommodationRepository.seeAccommodationbyDestination(idDestination);
     }
 }

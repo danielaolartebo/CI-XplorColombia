@@ -58,7 +58,12 @@ public class TransportationServiceImpl implements TransportationService {
     }
 
     @Override
-    public List<TransportationDTO> seeTranportationbyDestination(String destination) {
-        return transportationRepository.seeTranportationbyDestination(destination);
+    public List<TransportationDTO> seeTransportationbyDestination(Integer idDestination) {
+        return transportationRepository.seeTransportationbyDestination(idDestination);
+    }
+
+    @Override
+    public TransportationDTO seeTransportationPerTripDestination(Integer idTripDestination) {
+        return transportationRepository.seeTransportationPerTripDestination(idTripDestination);
     }
 }

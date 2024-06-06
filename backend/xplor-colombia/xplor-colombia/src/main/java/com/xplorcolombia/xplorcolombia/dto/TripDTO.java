@@ -1,10 +1,13 @@
 package com.xplorcolombia.xplorcolombia.dto;
 
 import jakarta.persistence.criteria.CriteriaBuilder;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
 
+
+@Data
 public class TripDTO implements Serializable {
 
     private int id;
@@ -14,6 +17,8 @@ public class TripDTO implements Serializable {
     private String state;
     private Date startTripDate;
     private Date endTripDate;
+
+
 
     public TripDTO() {
 
@@ -27,5 +32,14 @@ public class TripDTO implements Serializable {
         this.state = state;
         this.startTripDate = startTripDate;
         this.endTripDate = endTripDate;
+    }
+
+    public TripDTO(int id, int numPeople) {
+        this.id = id;
+        this.numPeople = numPeople;
+    }
+
+    public TripDTO(int id) {
+        this.id = id;
     }
 }

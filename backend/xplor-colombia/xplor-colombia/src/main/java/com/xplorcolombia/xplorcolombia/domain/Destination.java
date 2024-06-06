@@ -9,9 +9,8 @@ import java.io.Serializable;
 
 @NamedNativeQueries({
         @NamedNativeQuery(name="Destination.seeDestinations",query="",resultSetMapping = "seeDestinations"),
-        @NamedNativeQuery(name="Destination.seeDestinationId",query="",resultSetMapping = "seeDestinations"),
         @NamedNativeQuery(name="Destination.seeDestinationsPerPackage",query="",resultSetMapping = "seeDestinationsPerPackage"),
-        @NamedNativeQuery(name="Destination.destinationForReservation",query="",resultSetMapping = "destinationForReservation")
+        @NamedNativeQuery(name="Destination.seeDestinationPerTripDestination",query="",resultSetMapping = "seeDestinationPerTripDestination")
 })
 @SqlResultSetMappings({
         @SqlResultSetMapping(name="seeDestinations",
@@ -23,12 +22,18 @@ import java.io.Serializable;
                         )
                 }),
         @SqlResultSetMapping(name="seeDestinationsPerPackage",
-                columns = {
-                        @ColumnResult(name = "name", type = String.class)
+                classes = {@ConstructorResult(targetClass = DestinationDTO.class,
+                        columns = {
+                                @ColumnResult(name = "name", type = String.class)
+                        }
+                )
                 }),
-        @SqlResultSetMapping(name="destinationForReservation",
-                columns = {
-                        @ColumnResult(name = "name", type = String.class)
+        @SqlResultSetMapping(name="seeDestinationPerTripDestination",
+                classes = {@ConstructorResult(targetClass = DestinationDTO.class,
+                        columns = {
+                                @ColumnResult(name = "name", type = String.class)
+                        }
+                )
                 })
 })
 
@@ -55,5 +60,8 @@ public class Destination implements Serializable {
 
     @Column(name = "description", columnDefinition = "char(1000)")
     private String description;
+
+    @Column(name = "max_people", nullable = false)
+    private int maxPeople;
 
 }

@@ -19,6 +19,11 @@ public class PackageDTO implements Serializable {
         this.state = state;
     }
 
+    public PackageDTO(String name, Integer id) {
+        this.name = name;
+        this.id = id;
+    }
+
     public PackageDTO(String name){
         this.name = name;
     }

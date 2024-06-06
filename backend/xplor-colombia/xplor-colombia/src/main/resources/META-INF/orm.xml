@@ -22,16 +22,17 @@
                 from destination dest
                 join package_destination pd on dest.id = pd.destination_id
                 join package p on p.id = pd.package_id
-                where package_id = (select id from package where name = :pPack)
+                where package_id = (select id from package where name = :pPackage)
                 and dest.state = 'A'
             </query>
         </named-native-query>
+
         <named-native-query name="Destination.seeDestinationPerTripDestination" result-set-mapping="seeDestinationPerTripDestination">
             <query>
                 select name
                 from destination
                 where id = (select destination_id
-                from trip_destination where id = :pId)
+                from trip_destination where id = :pClientId)
             </query>
         </named-native-query>
 
@@ -39,17 +40,17 @@
 
 
     <entity class="com.xplorcolombia.xplorcolombia.domain.Transportation">
-        <named-native-query name="Transportation.seeTranportationbyDestination" result-set-mapping="seeTranportationbyDestination">
+        <named-native-query name="Transportation.seeTransportationbyDestination" result-set-mapping="seeTransportationbyDestination">
             <query>
-                select name, price
-                from transportation
-                where destination_id = (select id
-                from destination where name = :pDest)
-                and state = 'A'
+                select t.id as id, t.name as name, t.price as price
+                from transportation t
+                where t.destination_id = :pDest
+                and t.state = 'A'
             </query>
         </named-native-query>
 
         <named-native-query name="Transportation.seeTransportationPerTripDestination" result-set-mapping="seeTransportationPerTripDestination">
+
             <query>
                 select name
                 from transportation
@@ -62,14 +63,15 @@
     <entity class="com.xplorcolombia.xplorcolombia.domain.TripInsurance">
         <named-native-query name="TripInsurance.seeTripInsurancebyDestination" result-set-mapping="seeTripInsurancebyDestination">
             <query>
-                select type, price
-                from trip_insurance
-                where destination_id = (select id
-                from destination where name = :pDest)
+                select t.id as id, t.type as type, t.price as price
+                from trip_insurance t
+                where t.destination_id = :pDest
+                and t.state = 'A'
             </query>
         </named-native-query>
 
         <named-native-query name="TripInsurance.seeTripInsurancePerTripDestination" result-set-mapping="seeTripInsurancePerTripDestination">
+
             <query>
                 select type
                 from trip_insurance
@@ -80,13 +82,12 @@
     </entity>
 
     <entity class="com.xplorcolombia.xplorcolombia.domain.Meals">
-        <named-native-query name="Meals.seeMealsbyDestination" result-set-mapping="seeMealsbyDestination">
+        <named-native-query name="Meals.seeMealbyDestination" result-set-mapping="seeMealbyDestination">
             <query>
-                select type,price
-                from meals
-                where destination_id = (select id
-                from destination where name = :pDest)
-                and state = 'A'
+                select m.id as id, m.type as type, m.price as price
+                from meals m
+                where m.destination_id = :pDest
+                and m.state = 'A'
             </query>
         </named-native-query>
 
@@ -96,6 +97,7 @@
                 from meals
                 where id = (select meals_id
                 from trip_destination where id = :pId)
+
             </query>
         </named-native-query>
     </entity>
@@ -103,11 +105,10 @@
     <entity class="com.xplorcolombia.xplorcolombia.domain.Accommodation">
         <named-native-query name="Accommodation.seeAccommodationbyDestination" result-set-mapping="seeAccommodationbyDestination">
             <query>
-                select name, price
-                from accommodation
-                where destination_id = (select id
-                from destination where name = :pDest)
-                and state = 'A'
+                select a.id as id, a.name as name, a.price as price, a.lodging as lodging
+                from accommodation a
+                where a.destination_id = :pDest
+                and a.state = 'A'
             </query>
         </named-native-query>
 
@@ -146,6 +147,26 @@
                 from trip
                 where package_id = (select id
                 from package where name = :pPack)
+            </query>
+        </named-native-query>
+    </entity>
+
+    <entity class="com.xplorcolombia.xplorcolombia.domain.Customer">
+        <named-native-query name="Customer.seeCustomer" result-set-mapping="seeCustomer">
+            <query>
+                select id, email, name, nit
+                from customer
+                where id = :pId
+            </query>
+        </named-native-query>
+    </entity>
+
+    <entity class="com.xplorcolombia.xplorcolombia.domain.TripDestination">
+        <named-native-query name="TripDestination.seeTripDestPerClient" result-set-mapping="seeCustomer">
+            <query>
+                select id
+                from trip_destination
+                where trip_id = :pId
             </query>
         </named-native-query>
     </entity>

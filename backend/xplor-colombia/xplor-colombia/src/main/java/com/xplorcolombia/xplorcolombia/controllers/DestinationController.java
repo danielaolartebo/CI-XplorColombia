@@ -2,6 +2,7 @@ package com.xplorcolombia.xplorcolombia.controllers;
 
 import com.xplorcolombia.xplorcolombia.domain.Destination;
 import com.xplorcolombia.xplorcolombia.domain.Package;
+import com.xplorcolombia.xplorcolombia.domain.Transportation;
 import com.xplorcolombia.xplorcolombia.dto.DestinationDTO;
 import com.xplorcolombia.xplorcolombia.repository.DestinationRepository;
 import com.xplorcolombia.xplorcolombia.service.DestinationService;
@@ -34,32 +35,19 @@ public class DestinationController {
         }
     }
 
-    /*@RequestMapping(value = "/getDestination", method = RequestMethod.GET)
-    public ResponseEntity<?> seeDestinationPerId(@RequestBody String id){
-
-        lstDestination = destination.seeDestinationId(id);
-        return ResponseEntity.ok().body(lstDestination);
+    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    public ResponseEntity<?> seeDestinationPerId(@RequestHeader Integer id){
+        Optional<Destination> oDestination = destinationRepository.findById(id);
+        if(oDestination.isPresent()){
+            Destination destinationInRepository = oDestination.get();
+            return ResponseEntity.status(200).body(destinationInRepository);
+        }
+        return ResponseEntity.status(404).body("Destination not found.");
     }
-
-    @RequestMapping(value = "/getDestinationPerPackage", method = RequestMethod.GET)
-    public ResponseEntity<?> seeDestinationPerPackage(@RequestBody String packages){
-
-        lstDestination = destination.seeDestinationsPerPackage(packages);
-        return ResponseEntity.ok().body(lstDestination);
-    }
-
-    @RequestMapping(value = "/getDestinationPerReservation",method = RequestMethod.GET)
-    public ResponseEntity<?> destinationForReservation(@RequestBody String id){
-
-        int idChange = Integer.parseInt(id);
-
-        lstDestination = destination.destinationsForReservation(idChange);
-        return ResponseEntity.ok().body(lstDestination);
-    }*/
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public ResponseEntity<?> registDestination(@RequestBody Destination destination){
-        System.out.println(destination);
+        //System.out.println(destination);
         destinationRepository.save(destination);
         Destination data = destinationRepository.findByName(destination.getName());
         System.out.println(destination);
@@ -68,5 +56,15 @@ public class DestinationController {
         //return ResponseEntity.status(400).body("NO ESTA TERMINADA ESTA PARTE");
     }
 
-
+    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    public ResponseEntity<?> registDestination(@RequestHeader Integer destinationId){
+        Optional<Destination> oDestination = destinationRepository.findById(destinationId);
+        if(oDestination.isPresent()){
+            Destination destinationToDelete = oDestination.get();
+            destinationToDelete.setState("D");
+            destinationRepository.save(destinationToDelete);
+            return ResponseEntity.status(200).body("Guardado correctamente");
+        }
+        return ResponseEntity.status(404).body("Destination not found.");
+    }
 }

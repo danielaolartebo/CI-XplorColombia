@@ -1,10 +1,40 @@
 package com.xplorcolombia.xplorcolombia.domain;
 
+import com.xplorcolombia.xplorcolombia.dto.DestinationDTO;
+import com.xplorcolombia.xplorcolombia.dto.TripDTO;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
+
+@NamedNativeQueries({
+        @NamedNativeQuery(name="Trip.seeTripPerClient",
+                query="",
+                resultSetMapping = "seeTripPerClient"),
+        @NamedNativeQuery(name="Trip.seeTripPerPackage",
+                query="",
+                resultSetMapping = "seeTripPerPackage")
+
+})
+
+@SqlResultSetMappings({
+        @SqlResultSetMapping(name="seeTripPerClient",
+                classes = {@ConstructorResult(targetClass = TripDTO.class,
+                        columns = {
+                                @ColumnResult(name = "id", type = Integer.class),
+                                @ColumnResult(name = "num_people", type = String.class)
+                        }
+                )
+                }),
+        @SqlResultSetMapping(name="seeTripPerPackage",
+                classes = {@ConstructorResult(targetClass = TripDTO.class,
+                        columns = {
+                                @ColumnResult(name = "id", type = Integer.class),
+                        }
+                )
+                })
+})
 
 @Data
 @Entity
@@ -26,7 +56,7 @@ public class Trip implements Serializable {
     private int numPeople;
 
     @ManyToOne
-    @JoinColumn(name = "package_id", nullable = false)
+    @JoinColumn(name = "package_id")
     private Package tripPackage;
 
     @Column(name = "state", columnDefinition = "varchar(1)")

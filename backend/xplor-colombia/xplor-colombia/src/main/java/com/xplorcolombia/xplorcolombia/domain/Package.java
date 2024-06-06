@@ -14,8 +14,8 @@ import java.io.Serializable;
 @SqlResultSetMappings({
         @SqlResultSetMapping(name="seePackages",
                 columns = {
-                        @ColumnResult(name = "namePa", type = String.class),
-                        @ColumnResult(name = "imgP", type = String.class)
+                        @ColumnResult(name = "name", type = String.class),
+                        @ColumnResult(name = "id", type = String.class)
                 })
 })
 

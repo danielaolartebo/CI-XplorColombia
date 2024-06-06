@@ -4,6 +4,7 @@ import com.xplorcolombia.xplorcolombia.domain.Destination;
 import com.xplorcolombia.xplorcolombia.domain.Trip;
 import com.xplorcolombia.xplorcolombia.domain.UserAG;
 import com.xplorcolombia.xplorcolombia.dto.DestinationDTO;
+import com.xplorcolombia.xplorcolombia.dto.TripDTO;
 import com.xplorcolombia.xplorcolombia.dto.UserAGDTO;
 import com.xplorcolombia.xplorcolombia.repository.DestinationRepository;
 import com.xplorcolombia.xplorcolombia.repository.TripRepository;
@@ -63,4 +64,13 @@ public class TripServiceImpl implements TripService {
     }
 
 
+    @Override
+    public List<TripDTO> seeTripPerClient(Integer idCustomer) {
+        return tripRepository.seeTripPerClient(idCustomer);
+    }
+
+    @Override
+    public List<TripDTO> seeTripPerPackage(String packName) {
+        return tripRepository.seeTripPerPackage(packName);
+    }
 }
