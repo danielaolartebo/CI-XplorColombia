@@ -54,12 +54,41 @@ public class DestinationController {
         }
         return ResponseEntity.status(404).body("Destination not found.");
     }
-
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public ResponseEntity<?> registDestination(@RequestBody Destination destination){
         //System.out.println(destination);
-        destinationRepository.save(destination);
         Destination data = destinationRepository.findByName(destination.getName());
+
+        String destinationNameWithoutSpaces = destination.getName().replaceAll("\\s+", "");
+
+        List<Destination> existingDestinations = destinationRepository.findAll();
+        for (Destination existingDestination : existingDestinations) {
+            String existingNameWithoutSpaces = existingDestination.getName().replaceAll("\\s+", "");
+
+            if (destinationNameWithoutSpaces.equalsIgnoreCase(existingNameWithoutSpaces)) {
+                System.out.println("No se puede guardar porque existe un duplicado");
+                return ResponseEntity.status(400).body("Destination name already exists in the database.");
+            }
+
+            String[] existingNameWords = existingDestination.getName().split("\\s+");
+            String[] destinationNameWords = destination.getName().split("\\s+");
+
+            if (existingNameWords.length == destinationNameWords.length) {
+                boolean isSameOrder = true;
+                for (int i = 0; i < existingNameWords.length; i++) {
+                    if (!existingNameWords[i].equalsIgnoreCase(destinationNameWords[i])) {
+                        isSameOrder = false;
+                        break;
+                    }
+                }
+                if (isSameOrder) {
+                    System.out.println("No se puede guardar porque existe un duplicado");
+                    return ResponseEntity.status(400).body("Destination name with the same order of words already exists.");
+                }
+            }
+        }
+        System.out.println("Se ha guardado exitosamente");
+        destinationRepository.save(destination);
         System.out.println(destination);
 
         //---Añadir modificacion
@@ -79,32 +108,7 @@ public class DestinationController {
         return ResponseEntity.status(200).body(data);
         //destination.getMeal().getType();
         //return ResponseEntity.status(400).body("NO ESTA TERMINADA ESTA PARTE");
-    }
 
-    @RequestMapping(value = "/delete", method = RequestMethod.POST)
-    public ResponseEntity<?> registDestination(@RequestHeader Integer destinationId){
-        Optional<Destination> oDestination = destinationRepository.findById(destinationId);
-        if(oDestination.isPresent()){
-            Destination destinationToDelete = oDestination.get();
-            destinationToDelete.setState("D");
-            destinationRepository.save(destinationToDelete);
 
-            //---Añadir modificacion
-            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-            UserAG temporaryUser = userAGRepository.findByEmail(authentication.getName())
-                    .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
-            //INFORMACION DE LA MODIFICACION
-            String modiDescription="Se permite eliminar (Cambio de estado a desactivado) un destino desde cualquier usuario.";
-            String modi="Se eliminó el destino "+destinationToDelete.getName()+".";
-            LocalDateTime localDateTime = LocalDateTime.now();
-            Date modiDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
-            String modiName="DELETE-DESTINATION";
-            //----------------------------------
-            Modifications modifications = new Modifications(modiDescription,modi,modiDate,modiName,temporaryUser);
-            modificationsRepository.save(modifications);
-
-            return ResponseEntity.status(200).body("Guardado correctamente");
-        }
-        return ResponseEntity.status(404).body("Destination not found.");
     }
 }

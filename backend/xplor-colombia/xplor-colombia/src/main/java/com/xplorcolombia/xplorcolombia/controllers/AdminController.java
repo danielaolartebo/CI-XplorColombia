@@ -38,23 +38,32 @@ public class AdminController {
 
     @PostMapping("/register")
     public ResponseEntity<UserAG> registerUser(@RequestBody UserAG user) {
-        UserAG newUser = authService.register(user);
 
-        //---Añadir modificacion
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        UserAG temporaryUser = userAGRepository.findByEmail(authentication.getName())
-                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
-        //INFORMACION DE LA MODIFICACION
-        String modiDescription="Se permite registrar un nuevo usuario desde el usuario administrador.";
-        String modi="Se registró el usuario "+user.getName()+".";
-        LocalDateTime localDateTime = LocalDateTime.now();
-        Date modiDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
-        String modiName="REGISTER-USERS-ADMIN";
-        //----------------------------------
-        Modifications modifications = new Modifications(modiDescription,modi,modiDate,modiName,temporaryUser);
-        modificationsRepository.save(modifications);
+        if(userAGRepository.findByEmail(user.getEmail()).isEmpty()){
 
-        return ResponseEntity.ok(newUser);
+            UserAG newUser = authService.register(user);
+
+            //---Añadir modificacion
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            UserAG temporaryUser = userAGRepository.findByEmail(authentication.getName())
+                    .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+            //INFORMACION DE LA MODIFICACION
+            String modiDescription="Se permite registrar un nuevo usuario desde el usuario administrador.";
+            String modi="Se registró el usuario "+user.getName()+".";
+            LocalDateTime localDateTime = LocalDateTime.now();
+            Date modiDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+            String modiName="REGISTER-USERS-ADMIN";
+            //----------------------------------
+            Modifications modifications = new Modifications(modiDescription,modi,modiDate,modiName,temporaryUser);
+            modificationsRepository.save(modifications);
+
+            return ResponseEntity.ok(newUser);
+
+        }
+        else
+            return ResponseEntity.status(400).body(null);
+
+
     }
 
     @PutMapping("/users/{id}/status")
