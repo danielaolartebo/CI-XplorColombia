@@ -61,10 +61,10 @@ public class DestinationServiceImpl implements DestinationService {
         return destinationRepository.seeDestinations();
     }
 
-    @Override
+    /*@Override
     public List<DestinationDTO> seeDestinationId(String destination) {
         return destinationRepository.seeDestinationId(destination);
-    }
+    }*/
 
     @Override
     public List<DestinationDTO> seeDestinationsPerPackage(String packageName) {

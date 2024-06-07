@@ -17,10 +17,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+
+
+
 @RestController
 @CrossOrigin(maxAge = 3600)
 @RequestMapping("/trip")
-public class TripController {
+ public class TripController {
 
     @Autowired
     private DestinationService destination;
@@ -50,54 +53,49 @@ public class TripController {
 
     private List<TripDestinationDTO> lstDest;
 
-    public class TripController(){
 
+    @RequestMapping(value = "/PerClient", method = RequestMethod.GET)
+    public ResponseEntity<?> getMealPerDestination(@RequestHeader Integer idDestination) {
 
-        @RequestMapping(value = "/PerClient", method = RequestMethod.GET)
-        public ResponseEntity<?> getMealPerDestination(@RequestHeader Integer idDestination){
+        if (customer.findById(idDestination).isPresent()) {
+            Customer cust = customer.findById(idDestination).get();
 
-            if(customer.findById(idDestination).isPresent() ){
-                Customer cust = customer.findById(idDestination).get();
+            if (!trip.seeTripPerClient(idDestination).isEmpty()) {
+                lstTrip = trip.seeTripPerClient(idDestination);
+                lstRep = null;
 
-                if(!trip.seeTripPerClient(idDestination).isEmpty()){
-                    lstTrip = trip.seeTripPerClient(idDestination);
-                    lstRep = null;
+                for (TripDTO opt : lstTrip) {
+                    lstDest = tripDestination.seeTripDestPerClient(opt.getId());
 
-                    for(TripDTO opt:lstTrip){
-                        lstDest = tripDestination.seeTripDestPerClient(opt.getId());
-
-                        ReportDTO report = new ReportDTO();
-                        for(TripDestinationDTO topt:lstDest){
-                            report.setNameCustomer(cust.getName());
-                            report.setId(String.valueOf(cust.getId()));
-                            report.setEmail(cust.getEmail());
-                            report.setDestination(destination.seeDestinationPerTripDestination(topt.getId()).getNameD());
-                            report.setStartDate(topt.getStartDate());
-                            report.setEndDate(topt.getEndDate());
-                            report.setNum_people(topt.getNumPeople());
-                            report.setAccommodation(accommodation.seeAccommodationPerTripDestination(topt.getId()).getName());
-                            report.setMeal(meal.seeMealsPerTripDestination(topt.getId()).getType());
-                            report.setTransportation(transportation.seeTransportationPerTripDestination(topt.getId()).getName());
-                            report.setInsurance(insure.seeTripInsurancePerTripDestination(topt.getId()).getType());
-                        }
-                        lstRep.add(report);
-
+                    ReportDTO report = new ReportDTO();
+                    for (TripDestinationDTO topt : lstDest) {
+                        report.setNameCustomer(cust.getName());
+                        report.setId(String.valueOf(cust.getId()));
+                        report.setEmail(cust.getEmail());
+                        report.setDestination(destination.seeDestinationPerTripDestination(topt.getId()).getNameD());
+                        report.setStartDate(topt.getStartDate());
+                        report.setEndDate(topt.getEndDate());
+                        report.setNum_people(topt.getNumPeople());
+                        report.setAccommodation(accommodation.seeAccommodationPerTripDestination(topt.getId()).getName());
+                        report.setMeal(meal.seeMealsPerTripDestination(topt.getId()).getType());
+                        report.setTransportation(transportation.seeTransportationPerTripDestination(topt.getId()).getName());
+                        report.setInsurance(insure.seeTripInsurancePerTripDestination(topt.getId()).getType());
                     }
-                    return ResponseEntity.status(200).body(lstRep);
+                    lstRep.add(report);
 
                 }
-                else
-                    return ResponseEntity.status(400).body("El cliente no tiene reservas disponibles");
+                return ResponseEntity.status(200).body(lstRep);
 
-            }
-            else
-                return ResponseEntity.status(400).body("No existe un cliente con esta identificación");
+            } else
+                return ResponseEntity.status(400).body("El cliente no tiene reservas disponibles");
 
-        }
+        } else
+            return ResponseEntity.status(400).body("No existe un cliente con esta identificación");
 
-        @RequestMapping(value = "/addTrip", method = RequestMethod.POST)
-        public ResponseEntity<?> getMealPerDestination(@RequestHeader TripDestination trip){
-            
-        }
     }
+
+    /*@RequestMapping(value = "/addTrip", method = RequestMethod.POST)
+    public ResponseEntity<?> getMealPerDestination(@RequestHeader TripDestination trip){
+
+    }*/
 }

@@ -58,8 +58,38 @@ public class DestinationController {
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public ResponseEntity<?> registDestination(@RequestBody Destination destination){
         //System.out.println(destination);
-        destinationRepository.save(destination);
         Destination data = destinationRepository.findByName(destination.getName());
+
+        String destinationNameWithoutSpaces = destination.getName().replaceAll("\\s+", "");
+
+        List<Destination> existingDestinations = destinationRepository.findAll();
+        for (Destination existingDestination : existingDestinations) {
+            String existingNameWithoutSpaces = existingDestination.getName().replaceAll("\\s+", "");
+
+            if (destinationNameWithoutSpaces.equalsIgnoreCase(existingNameWithoutSpaces)) {
+                System.out.println("No se puede guardar porque existe un duplicado");
+                return ResponseEntity.status(400).body("Destination name already exists in the database.");
+            }
+
+            String[] existingNameWords = existingDestination.getName().split("\\s+");
+            String[] destinationNameWords = destination.getName().split("\\s+");
+
+            if (existingNameWords.length == destinationNameWords.length) {
+                boolean isSameOrder = true;
+                for (int i = 0; i < existingNameWords.length; i++) {
+                    if (!existingNameWords[i].equalsIgnoreCase(destinationNameWords[i])) {
+                        isSameOrder = false;
+                        break;
+                    }
+                }
+                if (isSameOrder) {
+                    System.out.println("No se puede guardar porque existe un duplicado");
+                    return ResponseEntity.status(400).body("Destination name with the same order of words already exists.");
+                }
+            }
+        }
+        System.out.println("Se ha guardado exitosamente");
+        destinationRepository.save(destination);
         System.out.println(destination);
 
         //---Añadir modificacion
@@ -79,6 +109,8 @@ public class DestinationController {
         return ResponseEntity.status(200).body(data);
         //destination.getMeal().getType();
         //return ResponseEntity.status(400).body("NO ESTA TERMINADA ESTA PARTE");
+
+
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
