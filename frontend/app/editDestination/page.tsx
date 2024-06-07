@@ -624,9 +624,6 @@ export default function editDestinationPage() {
                         </div>
                     </div>
                     {renderCategoryFields()}
-                    <div className='cont-table'>
-                        <h6>Tabla dinámica debería de estar aquí que se actualice una vez se elimine o se añada una opción</h6>
-                    </div>
                 </div>
             </div>
         </Layout>

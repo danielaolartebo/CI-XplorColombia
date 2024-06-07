@@ -18,7 +18,8 @@ import java.io.Serializable;
                 classes = {@ConstructorResult(targetClass = DestinationDTO.class,
                                 columns = {
                                         @ColumnResult(name = "id", type = Integer.class),
-                                        @ColumnResult(name = "nameD", type = String.class)
+                                        @ColumnResult(name = "nameD", type = String.class),
+                                        @ColumnResult(name = "basePrice", type = Double.class)
                                 }
                         )
                 }),

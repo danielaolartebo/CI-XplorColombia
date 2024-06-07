@@ -28,10 +28,16 @@ export default function Layout({ children }) {
           console.error('Error al procesar la solicitud:', error);
         }
     }
+
+    function handleLogout() {
+      localStorage.clear();
+  }
   return (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+      <link rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.js"></link>
       {/* HEADER BEGINS */}
       <header className="main-header">
         <div className="container">
@@ -56,7 +62,7 @@ export default function Layout({ children }) {
                 </ul>
               </li>
             )}
-            <Link href='/'><button className="btn_btn_login"> Salir </button></Link>
+            <Link href='/'><button className="btn_btn_login" onClick={handleLogout}> Salir </button></Link>
           </div>
         </div>
       </header>

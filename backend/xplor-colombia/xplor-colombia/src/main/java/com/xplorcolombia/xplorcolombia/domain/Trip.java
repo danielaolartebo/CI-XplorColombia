@@ -38,4 +38,14 @@ public class Trip implements Serializable {
     @Column(name = "end_trip_date", nullable = false)
     private Date endTripDate;
 
+    public Trip() {
+    }
+
+    public Trip(Customer customer, int numPeople, String state, Date startTripDate, Date endTripDate) {
+        this.customer = customer;
+        this.endTripDate = endTripDate;
+        this.numPeople = numPeople;
+        this.startTripDate = startTripDate;
+        this.state = state;
+    }
 }

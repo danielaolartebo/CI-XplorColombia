@@ -10,7 +10,7 @@
 
         <named-native-query name="Destination.seeDestinations" result-set-mapping="seeDestinations">
             <query>
-                SELECT id, name AS nameD
+                SELECT id, name AS nameD, base_price as basePrice
                 FROM destination
                 WHERE state = 'A'
             </query>
@@ -77,6 +77,16 @@
                 from trip_insurance t
                 where t.destination_id = :pDest
                 and t.state = 'A'
+            </query>
+        </named-native-query>
+    </entity>
+
+    <entity class="com.xplorcolombia.xplorcolombia.domain.Customer">
+        <named-native-query name="Customer.findByNit" result-set-mapping="findByNit">
+            <query>
+                SELECT id, name, email
+                FROM customer
+                WHERE nit = :pNit
             </query>
         </named-native-query>
     </entity>

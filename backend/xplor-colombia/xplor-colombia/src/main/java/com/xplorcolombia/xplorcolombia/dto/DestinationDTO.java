@@ -20,6 +20,12 @@ public class DestinationDTO implements Serializable {
         this.id = id;
     }
 
+    public DestinationDTO(String nameD, Integer id, double basePrice) {
+        this.nameD = nameD;
+        this.id = id;
+        this.basePrice = basePrice;
+    }
+
     public DestinationDTO(Integer id, String nameD, double basePrice, String state, int maxPeople) {
         this.id = id;
         this.nameD = nameD;
@@ -44,5 +50,11 @@ public class DestinationDTO implements Serializable {
         this.id = id;
     }
 
+    public double getBasePrice() {
+        return basePrice;
+    }
 
+    public void setBasePrice(double basePrice) {
+        this.basePrice = basePrice;
+    }
 }

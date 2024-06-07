@@ -1538,11 +1538,87 @@ textarea{
   border-collapse: collapse;
   margin-top: 20px;
 }
+#destinations-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px;
+  max-height: 800px; /* Establece el máximo de 800px */
+  width: 1000px; /* Ajusta el ancho al contenedor padre */
+  flex-direction: row;
+  overflow-y: auto; /* Añade scroll vertical si se supera el máximo */
+}
+
+.tarjeta {
+  flex: 0 1 calc(25% - 20px);
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 2px 0;
+  height: 360px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.tarjeta h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.tarjeta p {
+  margin: 10px 0;
+}
+
+.tarjeta h4 {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #4CAF50;
+}
+
+.delete-button-destination {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.delete-button-destination:hover {
+  background-color: darkred;
+}
 
 
 
 
 
 
+.w3-container {
+  margin-bottom: 10px;
+}
 
+.w3-container.w3-blue {
+  color: white; 
+  padding: 10px; 
+}
 
+.w3-round-xlarge {
+  border-radius: 30px;
+}
+
+.w3-container {
+  height: 30px;
+  width: 100%; 
+}
+
+.w3-blue, .w3-hover-blue:hover {
+  color: #fff !important;
+  background-color: #2196F3 !important;
+}

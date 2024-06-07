@@ -36,7 +36,7 @@ public class TripDestination implements Serializable {
     private int numPeople;
 
     @ManyToOne
-    @JoinColumn(name = "trasnportation_id", nullable = false)
+    @JoinColumn(name = "transportation_id", nullable = false)
     private Transportation trasnportation;
 
     @ManyToOne
@@ -54,6 +54,21 @@ public class TripDestination implements Serializable {
     @Column(name = "both_transportation", nullable = false)
     private boolean bothTransportation;
 
+    public TripDestination() {
+    }
+
+    public TripDestination(Trip trip, Destination destination, Date startDate, Date endDate, int numPeople, Transportation trasnportation, Accommodation accommodation, Meals meals, TripInsurance tripInsurance, boolean bothTransportation) {
+        this.trip = trip;
+        this.destination = destination;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.numPeople = numPeople;
+        this.trasnportation = trasnportation;
+        this.accommodation = accommodation;
+        this.meals = meals;
+        this.tripInsurance = tripInsurance;
+        this.bothTransportation = bothTransportation;
+    }
 
 
 }

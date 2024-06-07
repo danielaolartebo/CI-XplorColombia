@@ -3,6 +3,7 @@ package com.xplorcolombia.xplorcolombia.service;
 import com.xplorcolombia.xplorcolombia.domain.Destination;
 import com.xplorcolombia.xplorcolombia.domain.Trip;
 import com.xplorcolombia.xplorcolombia.domain.UserAG;
+import com.xplorcolombia.xplorcolombia.dto.CustomerDTO;
 import com.xplorcolombia.xplorcolombia.dto.DestinationDTO;
 import com.xplorcolombia.xplorcolombia.dto.UserAGDTO;
 import com.xplorcolombia.xplorcolombia.repository.DestinationRepository;
@@ -61,6 +62,4 @@ public class TripServiceImpl implements TripService {
     public Long count() {
         return tripRepository.count();
     }
-
-
 }
